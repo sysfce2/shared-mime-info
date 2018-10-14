@@ -782,6 +782,8 @@ virtual-boy-wario-land.vb application/x-virtual-boy-rom ox
 3ds-tloz-mm.3ds application/x-nintendo-3ds-rom
 # TSI9 truncated to 1Ko
 3ds-tsi9.3dsx application/x-nintendo-3ds-executable
+# Wonder Boy 3, Dragon's Trap, truncated to 512 bytes
+nintendo-switch-encrypted.xci application/x-nintendo-switch-xci
 
 # Video game packages
 # DOOM1.WAD trucated to 1Ko
