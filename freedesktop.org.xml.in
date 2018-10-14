@@ -7242,4 +7242,9 @@ command to generate the output files.
     </magic>
   </mime-type>
 
+  <mime-type type="application/x-nintendo-switch-xci">
+    <_comment>Nintendo Switch encrypted ROM</_comment>
+    <glob pattern="*.xci"/>
+  </mime-type>
+
 </mime-info>
