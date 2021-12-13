@@ -7920,6 +7920,16 @@ command to generate the output files.
     </magic>
   </mime-type>
 
+  <mime-type type="text/x-devicetree-binary">
+    <comment>Flattened Devicetree</comment>
+    <acronym>DTB</acronym>
+    <expanded-acronym>Device Tree Binary</expanded-acronym>
+    <glob pattern="*.dtb"/>
+    <magic>
+      <match type="big32" value="0xd00dfeed" offset="0"/>
+    </magic>
+  </mime-type>
+
   <mime-type type="image/avif">
     <comment>AVIF image</comment>
     <acronym>AVIF</acronym>

@@ -904,6 +904,10 @@ devicetree1.dts text/x-devicetree-source xoo
 devicetree2.dts text/x-devicetree-source xoo
 devicetree.dtsi text/x-devicetree-source
 
+# Flattened Device Tree (binary)
+# dtc -I dts -O dtb -o test.dtb test1.dts
+devicetree.dtb text/x-devicetree-binary
+
 # AV1 Image File Format (AVIF)
 # https://aomediacodec.github.io/av1-avif/
 test.avif image/avif
