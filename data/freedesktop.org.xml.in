@@ -7898,6 +7898,28 @@ command to generate the output files.
     <glob pattern="*.kt"/>
   </mime-type>
 
+  <mime-type type="text/x-devicetree-source">
+    <comment>Devicetree source code</comment>
+    <acronym>DTS</acronym>
+    <expanded-acronym>Device Tree Source</expanded-acronym>
+    <sub-class-of type="text/plain"/>
+    <glob pattern="*.dts"/>
+    <glob pattern="*.dtsi"/>
+    <magic>
+      <match type="string" mask="0x8080" value="\000\000" offset="0">
+        <match type="string" value="/dts-v1/" offset="0:4080"/>
+      </match>
+    </magic>
+    <magic priority="40">
+      <match type="string" mask="0x8080" value="\000\000" offset="0">
+        <match type="string" value="/ {" offset="0:4090"/>
+        <match type="string" value="include " offset="0:4080">
+          <match type="string" value=".dts" offset="10:4090"/>
+        </match>
+      </match>
+    </magic>
+  </mime-type>
+
   <mime-type type="image/avif">
     <comment>AVIF image</comment>
     <acronym>AVIF</acronym>

@@ -899,6 +899,11 @@ test.gd application/x-gdscript ox
 # Kotlin source code
 test.kt text/x-kotlin ox
 
+# Device Tree Source
+devicetree1.dts text/x-devicetree-source xoo
+devicetree2.dts text/x-devicetree-source xoo
+devicetree.dtsi text/x-devicetree-source
+
 # AV1 Image File Format (AVIF)
 # https://aomediacodec.github.io/av1-avif/
 test.avif image/avif
