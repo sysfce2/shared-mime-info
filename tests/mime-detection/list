@@ -608,6 +608,8 @@ stranger_-_run.mod audio/x-mod
 # Copied from https://github.com/inAudible-NG/audible-samples
 test.aa audio/x-pn-audibleaudio
 test.aax audio/vnd.audible.aax
+# Audible AAX without embedded file keys (2019 and later)
+test.aaxc audio/vnd.audible.aaxc
 # MPEG-4 files
 mp4v1-video-header.mp4 video/mp4
 mp4v2-video-header.mp4 video/mp4
