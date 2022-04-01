@@ -357,6 +357,11 @@ of the document element.
 				</para><para>
 If <userinput>localName</userinput> is present but empty then the document element may have
 any name, but the namespace must still match.
+				</para><para>
+If <userinput>namespaceURI</userinput> is present but empty then the match is done entirely on
+the document element’s local name and any namespace URI present in the document is ignored.
+				</para><para>
+Both attributes must be specified, and at least one of them must be non-empty.
 				</para></listitem>
 				<listitem><para>
 <userinput>treemagic</userinput> elements contain a list of <userinput>treematch</userinput> elements,
