@@ -931,7 +931,7 @@ command to generate the output files.
     <alias type="application/vnd.stardivision.writer-global"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.calc">
-    <comment>OpenOffice Calc spreadsheet</comment>
+    <comment>LibreOffice Calc spreadsheet</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-spreadsheet"/>
     <magic priority="70">
@@ -944,7 +944,7 @@ command to generate the output files.
     <glob pattern="*.sxc"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.calc.template">
-    <comment>OpenOffice Calc template</comment>
+    <comment>LibreOffice Calc template</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-spreadsheet"/>
     <magic priority="70">
@@ -957,7 +957,7 @@ command to generate the output files.
     <glob pattern="*.stc"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.draw">
-    <comment>OpenOffice Draw drawing</comment>
+    <comment>LibreOffice Draw drawing</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="image-x-generic"/>
     <magic priority="70">
@@ -970,7 +970,7 @@ command to generate the output files.
     <glob pattern="*.sxd"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.draw.template">
-    <comment>OpenOffice Draw template</comment>
+    <comment>LibreOffice Draw template</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="image-x-generic"/>
     <magic priority="70">
@@ -983,7 +983,7 @@ command to generate the output files.
     <glob pattern="*.std"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.impress">
-    <comment>OpenOffice Impress presentation</comment>
+    <comment>LibreOffice Impress presentation</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-presentation"/>
     <magic priority="70">
@@ -996,7 +996,7 @@ command to generate the output files.
     <glob pattern="*.sxi"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.impress.template">
-    <comment>OpenOffice Impress template</comment>
+    <comment>LibreOffice Impress template</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-presentation"/>
     <magic priority="70">
@@ -1009,7 +1009,7 @@ command to generate the output files.
     <glob pattern="*.sti"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.math">
-    <comment>OpenOffice Math formula</comment>
+    <comment>LibreOffice Math formula</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-document"/>
     <magic priority="70">
@@ -1022,7 +1022,7 @@ command to generate the output files.
     <glob pattern="*.sxm"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.writer">
-    <comment>OpenOffice Writer document</comment>
+    <comment>LibreOffice Writer document</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-document"/>
     <magic priority="70">
@@ -1035,7 +1035,7 @@ command to generate the output files.
     <glob pattern="*.sxw"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.writer.global">
-    <comment>OpenOffice Writer global document</comment>
+    <comment>LibreOffice Writer global document</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-document"/>
     <magic priority="70">
@@ -1048,7 +1048,7 @@ command to generate the output files.
     <glob pattern="*.sxg"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.writer.template">
-    <comment>OpenOffice Writer template</comment>
+    <comment>LibreOffice Writer template</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-document"/>
     <magic priority="70">
