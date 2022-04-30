@@ -1396,6 +1396,9 @@ command to generate the output files.
     <comment>YouTube media archive</comment>
     <alias type="application/vnd.youtube.yt"/>
     <generic-icon name="video-x-generic"/>
+    <magic>
+      <match type="string" value="ftypyt4 " offset="4"/>
+    </magic>
     <glob pattern="*.yt"/>
     <sub-class-of type="application/zip"/>
   </mime-type>
