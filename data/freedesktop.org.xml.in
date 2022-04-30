@@ -1392,8 +1392,9 @@ command to generate the output files.
     <glob pattern="*.wpd"/>
     <glob pattern="*.wpp"/>
   </mime-type>
-  <mime-type type="application/vnd.youtube.yt">
+  <mime-type type="video/vnd.youtube.yt">
     <comment>YouTube media archive</comment>
+    <alias type="application/vnd.youtube.yt"/>
     <generic-icon name="video-x-generic"/>
     <glob pattern="*.yt"/>
     <sub-class-of type="application/zip"/>
