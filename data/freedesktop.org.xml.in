@@ -639,6 +639,17 @@ command to generate the output files.
     </magic>
     <glob pattern="*.lwp"/>
   </mime-type>
+  <mime-type type="application/x-lmdb">
+    <comment>LMDB database</comment>
+    <acronym>LMDB</acronym>
+    <expanded-acronym>Lightning Memory-Mapped Database</expanded-acronym>
+    <generic-icon name="x-office-document"/>
+    <magic>
+      <match offset="16" type="little32" value="0xBEEFC0DE" />
+    </magic>
+    <glob pattern="*.mdb" />
+    <glob pattern="*.lmdb" />
+  </mime-type>
   <mime-type type="application/vnd.ms-access">
     <comment>JET database</comment>
     <acronym>JET</acronym>
@@ -647,7 +658,7 @@ command to generate the output files.
     <magic>
       <match offset="0" type="string" value="\x00\x01\x00\x00Standard Jet DB" />
     </magic>
-    <glob pattern="*.mdb" />
+    <glob pattern="*.mdb" weight="60"/>
     <alias type="application/msaccess"/>
     <alias type="application/vnd.msaccess"/>
     <alias type="application/x-msaccess"/>
