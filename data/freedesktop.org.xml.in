@@ -4394,6 +4394,15 @@ command to generate the output files.
     <glob pattern="*.flac"/>
     <alias type="audio/x-flac"/>
   </mime-type>
+  <mime-type type="audio/x-tak">
+    <comment>TAK audio</comment>
+    <acronym>TAK</acronym>
+    <expanded-acronym>Tom's lossless Audio Kompressor</expanded-acronym>
+    <magic>
+      <match type="string" value="tBaK" offset="0"/>
+    </magic>
+    <glob pattern="*.tak"/>
+  </mime-type>
   <mime-type type="audio/x-wavpack">
     <comment>WavPack audio</comment>
     <magic>

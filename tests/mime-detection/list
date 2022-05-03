@@ -276,6 +276,8 @@ test.mpc audio/x-musepack
 test.dsf audio/x-dsf
 # Created using https://tascam.com/us/product/hi-res_editor/top
 test.dff audio/x-dff
+# Created using http://thbeck.de/Download/TAK_2.3.1.zip (source input: ffmpeg -f lavfi -i anullsrc=r=44100:cl=mono -t 0.1 silence.wav)
+test.tak audio/x-tak
 
 # text
 text-iso8859-15.txt text/plain
