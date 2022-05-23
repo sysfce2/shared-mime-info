@@ -302,11 +302,11 @@ helloworld.vbs text/vbscript ox
 build.gradle text/x-gradle ox
 ico.ksy text/x-kaitai-struct ox
 # Copied from http://asurvey.net/ccsfagent/media/survey.js
-survey.js application/javascript ox
+survey.js text/javascript ox
 # Copied from gecko/accessible/src/jsat/Utils.jsm in Boot2Gecko
-Utils.jsm application/javascript ox
-esm.mjs application/javascript ox
-javascript-without-extension application/javascript xoo
+Utils.jsm text/javascript ox
+esm.mjs text/javascript ox
+javascript-without-extension text/javascript xoo
 # The following two copied from RFC 4627.
 json_object.json application/json ox
 json_array.json application/json ox
