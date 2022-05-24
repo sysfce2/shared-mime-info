@@ -546,6 +546,8 @@ test.xar application/x-xar
 serafettin.rar application/vnd.rar
 # From https://github.com/electron/asar/tree/main/test/input
 extractthis.asar application/x-asar
+# Created using StuffIt Deluxe 7.0
+test.sitx application/x-stuffitx
 
 # Audio/Video files
 # https://bugs.freedesktop.org/show_bug.cgi?id=20070#c4
