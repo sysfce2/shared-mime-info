@@ -283,6 +283,9 @@ test.tak audio/x-tak
 text-iso8859-15.txt text/plain
 text-utf8.txt text/plain
 test.tex text/x-tex
+test2.tex text/x-tex
+# Generate from test2.tex with texi2dvi from Texinfo 6.5
+test2.dvi application/x-dvi
 # Copied from http://www.computerperformance.co.uk/vista/vista_reg_examples.htm
 registry.reg text/x-ms-regedit
 # Copied from http://www.ss64.com/nt/regedit.html
