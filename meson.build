@@ -56,7 +56,9 @@ foreach function : check_functions
 endforeach
 
 
-subdir('po')
+if get_option('build-translations')
+    subdir('po')
+endif
 subdir('data')
 if get_option('build-tools')
     libxml = dependency('libxml-2.0',   version: '>=2.4')
@@ -65,7 +67,9 @@ if get_option('build-tools')
     gio = dependency('gio-2.0', required: false)
     subdir('src')
 endif
-subdir('tests')
+if get_option('build-tests')
+    subdir('tests')
+endif
 
 configure_file(
     input: 'shared-mime-info.pc.in',
