@@ -1,5 +1,7 @@
 
-install_man('update-mime-database.1')
+if build_machine.system() != 'windows'
+    install_man('update-mime-database.1')
+endif
 
 freedesktop_org_xml = i18n.merge_file(
     input: 'freedesktop.org.xml.in',
