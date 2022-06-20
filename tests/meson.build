@@ -56,10 +56,12 @@ test('Case sensitivity',
     find_program('test-case-sensitivity.sh'),
 )
 
-test('update-mime-database',
-    update_mime_database,
-    args: meson.current_source_dir() / 'mime-db-tests',
-)
+if get_option('build-tools')
+    test('update-mime-database',
+        update_mime_database,
+        args: meson.current_source_dir() / 'mime-db-tests',
+    )
+endif
 
 its20_elements_rng = meson.source_root() / 'data/its/its20-elements.rng'
 shared_mime_info_its = meson.source_root() / 'data/its/shared-mime-info.its'

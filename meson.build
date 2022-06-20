@@ -78,7 +78,7 @@ configure_file(
 )
 
 if get_option('update-mimedb')
-    upd_tool = (meson.is_cross_build()
+    upd_tool = (meson.is_cross_build() or not get_option('build-tools')
         ? find_program('update-mime-database').path()
         : update_mime_database.full_path()
     )
