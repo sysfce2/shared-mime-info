@@ -5390,6 +5390,18 @@ command to generate the output files.
       <match type="string" value="\x45\x50\x2A\x00" offset="0"/>
     </magic>
   </mime-type>
+  <mime-type type="image/jxr">
+    <comment>JPEG XR image</comment>
+    <acronym>XR</acronym>
+    <expanded-acronym>Extended Range</expanded-acronym>
+    <glob pattern="*.jxr"/>
+    <glob pattern="*.hdp"/>
+    <glob pattern="*.wdp"/>
+    <magic>
+      <match type="string" value="II\xBC\x01" offset="0"/>
+    </magic>
+    <alias type="image/vnd.ms-photo"/>
+  </mime-type>
   <mime-type type="image/webp">
     <comment>WebP image</comment>
     <magic>
