@@ -966,6 +966,9 @@ dbus-comment.service text/x-systemd-unit xxx
 dbus.service text/x-dbus-service
 dbus-comment.service text/x-dbus-service
 
+# QBrew recipe
+robust_porter.qbrew application/x-qbrew ox
+
 # 3D models and GCODEs
 # "cube(10);" exported by OpenSCAD
 cube.3mf model/3mf ox
