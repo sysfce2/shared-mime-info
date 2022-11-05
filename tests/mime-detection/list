@@ -430,6 +430,7 @@ test.ttl text/turtle ox
 test.twig text/x-twig ox
 # Crystal
 test.cr text/x-crystal ox
+test.jl text/julia ox
 test.rs text/rust ox
 # Copied from http://digital-preservation.github.io/csv-schema/csv-schema-1.0.html#basics
 test.csvs text/csv-schema ox
