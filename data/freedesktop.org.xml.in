@@ -5872,6 +5872,7 @@ command to generate the output files.
     <comment>glTF model</comment>
     <acronym>glTF</acronym>
     <expanded-acronym>GL Transmission Format</expanded-acronym>
+    <generic-icon name="image-x-generic"/>
     <magic>
       <match type="string" value="glTF" offset="0"/>
     </magic>
@@ -5881,6 +5882,7 @@ command to generate the output files.
     <comment>glTF model</comment>
     <acronym>glTF</acronym>
     <expanded-acronym>GL Transmission Format</expanded-acronym>
+    <generic-icon name="image-x-generic"/>
     <sub-class-of type="application/json"/>
     <glob pattern="*.gltf"/>
   </mime-type>
@@ -5900,6 +5902,7 @@ command to generate the output files.
   <mime-type type="model/obj">
     <comment>OBJ 3D model</comment>
     <sub-class-of type="text/plain"/>
+    <generic-icon name="image-x-generic"/>
     <magic>
       <match type="string" value=" OBJ File: '" offset="0:64"/>
       <match type="string" value="mtllib " offset="0:256"/>
@@ -5908,6 +5911,7 @@ command to generate the output files.
   </mime-type>
   <mime-type type="model/mtl">
     <comment>OBJ 3D model material library</comment>
+    <generic-icon name="image-x-generic"/>
     <sub-class-of type="text/plain"/>
     <magic>
       <match type="string" value="# Blender MTL File: '" offset="0"/>
@@ -7742,12 +7746,14 @@ command to generate the output files.
     <glob pattern="*.3mf"/>
     <alias type="application/vnd.ms-3mfdocument"/>
     <sub-class-of type="application/zip"/>
+    <generic-icon name="image-x-generic"/>
   </mime-type>
 
   <mime-type type="model/stl">
     <comment>STL 3D model</comment>
     <acronym>STL</acronym>
     <expanded-acronym>StereoLithography</expanded-acronym>
+    <generic-icon name="image-x-generic"/>
     <magic>
       <match type="string" value="solid" offset="0"/>
       <match type="string" value="SOLID" offset="0"/>
