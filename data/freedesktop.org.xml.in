@@ -1141,7 +1141,7 @@ command to generate the output files.
     </magic>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.calc">
-    <comment>LibreOffice Calc spreadsheet</comment>
+    <comment>OpenOffice.org 1.0 Calc spreadsheet</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-spreadsheet"/>
     <magic priority="70">
@@ -1154,7 +1154,7 @@ command to generate the output files.
     <glob pattern="*.sxc"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.calc.template">
-    <comment>LibreOffice Calc template</comment>
+    <comment>OpenOffice.org 1.0 Calc template</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-spreadsheet"/>
     <magic priority="70">
@@ -1167,7 +1167,7 @@ command to generate the output files.
     <glob pattern="*.stc"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.draw">
-    <comment>LibreOffice Draw drawing</comment>
+    <comment>OpenOffice.org 1.0 Draw drawing</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="image-x-generic"/>
     <magic priority="70">
@@ -1180,7 +1180,7 @@ command to generate the output files.
     <glob pattern="*.sxd"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.draw.template">
-    <comment>LibreOffice Draw template</comment>
+    <comment>OpenOffice.org 1.0 Draw template</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="image-x-generic"/>
     <magic priority="70">
@@ -1193,7 +1193,7 @@ command to generate the output files.
     <glob pattern="*.std"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.impress">
-    <comment>LibreOffice Impress presentation</comment>
+    <comment>OpenOffice.org 1.0 Impress presentation</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-presentation"/>
     <magic priority="70">
@@ -1206,7 +1206,7 @@ command to generate the output files.
     <glob pattern="*.sxi"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.impress.template">
-    <comment>LibreOffice Impress template</comment>
+    <comment>OpenOffice.org 1.0 Impress template</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-presentation"/>
     <magic priority="70">
@@ -1219,7 +1219,7 @@ command to generate the output files.
     <glob pattern="*.sti"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.math">
-    <comment>LibreOffice Math formula</comment>
+    <comment>OpenOffice.org 1.0 Math formula</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-document"/>
     <magic priority="70">
@@ -1232,7 +1232,7 @@ command to generate the output files.
     <glob pattern="*.sxm"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.writer">
-    <comment>LibreOffice Writer document</comment>
+    <comment>OpenOffice.org 1.0 Writer document</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-document"/>
     <magic priority="70">
@@ -1245,7 +1245,7 @@ command to generate the output files.
     <glob pattern="*.sxw"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.writer.global">
-    <comment>LibreOffice Writer global document</comment>
+    <comment>OpenOffice.org 1.0 Writer global document</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-document"/>
     <magic priority="70">
@@ -1258,7 +1258,7 @@ command to generate the output files.
     <glob pattern="*.sxg"/>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.writer.template">
-    <comment>LibreOffice Writer template</comment>
+    <comment>OpenOffice.org 1.0 Writer template</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-document"/>
     <magic priority="70">
@@ -1560,7 +1560,7 @@ command to generate the output files.
     <glob pattern="*.odi"/>
   </mime-type>
   <mime-type type="application/vnd.openofficeorg.extension">
-    <comment>OpenOffice.org extension</comment>
+    <comment>LibreOffice extension</comment>
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-document"/>
     <glob pattern="*.oxt" />
