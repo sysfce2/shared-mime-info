@@ -7763,6 +7763,16 @@ command to generate the output files.
     <alias type="model/x.stl-binary"/>
   </mime-type>
 
+  <mime-type type="model/step">
+    <comment>STEP 3D model</comment>
+    <generic-icon name="image-x-generic"/>
+    <glob pattern="*.step"/>
+    <glob pattern="*.stp"/>
+    <alias type="model/step+xml"/>
+    <alias type="model/step+zip"/>
+    <alias type="model/step-xml+zip"/>
+  </mime-type>
+
   <mime-type type="text/x.gcode">
     <comment>G-code file</comment>
     <sub-class-of type="text/plain"/>
