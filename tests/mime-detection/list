@@ -376,6 +376,9 @@ simple-troff.mm text/x-troff-mm xx
 test.cl text/x-opencl-src ox
 # hand-made
 test.mc2 text/vnd.senx.warpscript ox
+# From https://github.com/OpenVPN/openvpn/blob/master/sample/sample-plugins/keying-material-exporter-demo/client.ovpn
+openvpn.ovpn application/x-openvpn-profile ox
+openvpn.openvpn application/x-openvpn-profile ox
 
 # http://www.apps.ietf.org/rfc/rfc4716.html#sec-3.6
 ssh-public-key.txt text/plain
