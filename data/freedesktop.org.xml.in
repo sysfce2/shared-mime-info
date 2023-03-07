@@ -8040,4 +8040,17 @@ command to generate the output files.
     <glob pattern="*.openvpn"/>
     <glob pattern="*.ovpn"/>
   </mime-type>
+  <mime-type type="application/x-freedesktop-appstream">
+    <comment>Freedesktop AppStream</comment>
+    <sub-class-of type="application/xml"/>
+    <generic-icon name="text-x-generic"/>
+    <glob pattern="*.metainfo.xml"/>
+    <glob pattern="*.appdata.xml"/>
+  </mime-type>
+  <mime-type type="application/x-freedesktop-appstream-releases">
+    <comment>Freedesktop AppStream Releases</comment>
+    <sub-class-of type="application/xml"/>
+    <generic-icon name="text-x-generic"/>
+    <glob pattern="*.releases.xml"/>
+  </mime-type>
 </mime-info>
