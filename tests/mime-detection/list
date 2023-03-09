@@ -506,6 +506,8 @@ archive.lrz application/x-lrzip
 test.lz4 application/x-lz4
 # Created using Ark 16.07.70 + libarchive 3.2.0
 test.tar.lz4 application/x-lz4-compressed-tar ox
+# Created using zpaq v7.15
+test.zpaq application/x-zpaq
 # Created by zstd v1.3.5
 test.zst application/zstd
 # Created using Ark 18.11.70 + libarchive 3.3.3
