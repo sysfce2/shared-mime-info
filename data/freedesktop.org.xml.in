@@ -1609,6 +1609,21 @@ command to generate the output files.
     <comment>Bzip archive</comment>
     <generic-icon name="package-x-generic"/>
     <magic>
+      <match type="string" value="BZ0" offset="0"/>
+    </magic>
+    <glob pattern="*.bz"/>
+  </mime-type>
+  <mime-type type="application/x-bzip-compressed-tar">
+    <comment>Tar archive (bzip-compressed)</comment>
+    <generic-icon name="package-x-generic"/>
+    <sub-class-of type="application/x-bzip"/>
+    <glob pattern="*.tar.bz"/>
+    <glob pattern="*.tbz"/>
+  </mime-type>
+  <mime-type type="application/x-bzip2">
+    <comment>Bzip2 archive</comment>
+    <generic-icon name="package-x-generic"/>
+    <magic>
       <match type="string" value="BZh" offset="0"/>
     </magic>
     <glob pattern="*.bz2"/>
