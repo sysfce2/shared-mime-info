@@ -379,6 +379,8 @@ simple-troff.mm text/x-troff-mm xx
 test.cl text/x-opencl-src ox
 # hand-made
 test.mc2 text/vnd.senx.warpscript ox
+# Copied from http://todotxt.org/todo.txt
+todo.txt text/x-todo-txt
 # From https://github.com/OpenVPN/openvpn/blob/master/sample/sample-plugins/keying-material-exporter-demo/client.ovpn
 openvpn.ovpn application/x-openvpn-profile ox
 openvpn.openvpn application/x-openvpn-profile ox

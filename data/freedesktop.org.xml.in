@@ -6734,6 +6734,15 @@ command to generate the output files.
     <sub-class-of type="text/x-readme"/>
     <glob pattern="*.nfo"/>
   </mime-type>
+  <mime-type type="text/x-todo-txt">
+    <comment>todo.txt file</comment>
+    <sub-class-of type="text/plain"/>
+    <magic priority="10">
+      <match type="string" value="(A) " offset="0"/>
+      <match type="string" value="x " offset="0"/>
+    </magic>
+    <glob weight="10" pattern="todo.txt"/>
+  </mime-type>
   <mime-type type="text/x-rpm-spec">
     <comment>RPM Spec File</comment>
     <acronym>RPM</acronym>
