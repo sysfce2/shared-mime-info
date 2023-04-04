@@ -919,6 +919,11 @@ devicetree.dtb text/x-devicetree-binary
 test.avif image/avif
 test.avifs image/avif
 
+# QOI - The "Quite OK Image Format"
+# https://github.com/phoboslab/qoi
+rgb.qoi image/qoi
+rgba.qoi image/qoi
+
 # Org-mode file
 test.org text/org ox
 # OpenZIM file
