@@ -959,3 +959,6 @@ nuscript.nu application/x-nuscript
 
 # Perf Data file
 perf.data application/x-perf-data
+
+# Blueprint (https://gitlab.gnome.org/jwestman/blueprint-compiler)
+blueprint.blp text/x-blueprint ox
