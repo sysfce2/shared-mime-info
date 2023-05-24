@@ -4897,7 +4897,7 @@ command to generate the output files.
     <glob pattern="*.wav"/>
   </mime-type>
   <mime-type type="audio/x-xi">
-    <comment>Scream Tracker instrument</comment>
+    <comment>FastTracker II instrument</comment>
     <magic>
       <match value="Extended Instrument:" type="string" offset="0"/>
     </magic>
