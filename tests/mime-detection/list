@@ -617,8 +617,8 @@ mp4v1-video-header.mp4 video/mp4
 mp4v2-video-header.mp4 video/mp4
 
 # Disk and CD/DVD images
-iso-file.iso application/x-cd-image oxo
-bug106330.iso application/x-cd-image oxo
+iso-file.iso application/vnd.efi.iso oxo
+bug106330.iso application/vnd.efi.iso oxo
 # N+ for PSP truncated to 1Ko
 n-plus.cso application/x-compressed-iso
 disk.img application/x-raw-disk-image oxo
