@@ -7782,6 +7782,7 @@ command to generate the output files.
 
   <mime-type type="application/vnd.squashfs">
     <comment>Squashfs filesystem image</comment>
+    <sub-class-of type="application/vnd.efi.img"/>
     <magic>
       <match type="string" value="sqsh" offset="0"/>
       <match type="string" value="hsqs" offset="0"/>
