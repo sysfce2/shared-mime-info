@@ -5908,6 +5908,7 @@ command to generate the output files.
     <sub-class-of type="text/plain"/>
     <magic>
       <match type="string" value="#! rnews" offset="0"/>
+      <match type="string" value="Content-Type:" offset="0"/>
       <match type="string" value="Forward to" offset="0"/>
       <match type="string" value="From:" offset="0"/>
       <match type="string" value="N#! rnews" offset="0"/>
@@ -5917,6 +5918,7 @@ command to generate the output files.
       <match type="string" value="Return-Path:" offset="0"/>
       <match type="string" value="Return-path:" offset="0"/>
       <match type="string" value="Subject: " offset="0"/>
+      <match type="string" value="To:" offset="0"/>
     </magic>
     <glob pattern="*.eml"/>
   </mime-type>
