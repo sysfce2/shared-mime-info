@@ -8075,4 +8075,14 @@ command to generate the output files.
     <expanded-acronym>Concise Binary Object Representation</expanded-acronym>
     <glob pattern="*.cbor"/>
   </mime-type>
+  <mime-type type="application/x-eris-link+cbor">
+    <comment>ERIS Link</comment>
+    <acronym>ERIS</acronym>
+    <expanded-acronym>Encoding for Robust Immutable Storage</expanded-acronym>
+    <sub-class-of type="application/cbor"/>
+    <glob pattern="*.eris"/>
+    <magic priority="90">
+      <match type="string" value="\xD9\xD9\xF7\x84\xD9\x01\x14\x58\x42" offset="0"/>
+    </magic>
+  </mime-type>
 </mime-info>
