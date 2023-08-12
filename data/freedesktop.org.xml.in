@@ -4799,10 +4799,10 @@ command to generate the output files.
     <comment>VOC Audio</comment>
     <glob pattern="*.voc"/>
   </mime-type>
-  <mime-type type="audio/x-wav">
+  <mime-type type="audio/vnd.wave">
     <comment>WAV Audio</comment>
     <alias type="audio/wav"/>
-    <alias type="audio/vnd.wave"/>
+    <alias type="audio/x-wav"/>
     <sub-class-of type="application/x-riff"/>
     <magic>
       <match type="string" value="WAVE" offset="8"/>

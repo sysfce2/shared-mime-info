@@ -549,7 +549,7 @@ extractthis.asar application/x-asar
 # https://bugs.freedesktop.org/show_bug.cgi?id=20070#c4
 test.aiff audio/x-aiff
 # Copied from /usr/share/sounds/generic.wav
-test.wav audio/x-wav
+test.wav audio/vnd.wave
 test.avi video/x-msvideo
 # https://bugs.freedesktop.org/show_bug.cgi?id=55336
 test.avf video/x-msvideo
