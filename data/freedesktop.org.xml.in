@@ -7214,7 +7214,7 @@ command to generate the output files.
     <sub-class-of type="application/vnd.ms-asf"/>
     <glob pattern="*.wmv"/>
   </mime-type>
-  <mime-type type="video/x-msvideo">
+  <mime-type type="video/vnd.avi">
     <comment>AVI Video</comment>
     <acronym>AVI</acronym>
     <expanded-acronym>Audio Video Interleave</expanded-acronym>
@@ -7223,6 +7223,7 @@ command to generate the output files.
     <alias type="video/divx"/>
     <alias type="video/msvideo"/>
     <alias type="video/vnd.divx"/>
+    <alias type="video/x-msvideo"/>
     <magic>
       <match type="string" value="RIFF" offset="0">
         <match type="string" value="AVI " offset="8"/>

@@ -550,9 +550,9 @@ extractthis.asar application/x-asar
 test.aiff audio/x-aiff
 # Copied from /usr/share/sounds/generic.wav
 test.wav audio/vnd.wave
-test.avi video/x-msvideo
+test.avi video/vnd.avi
 # https://bugs.freedesktop.org/show_bug.cgi?id=55336
-test.avf video/x-msvideo
+test.avf video/vnd.avi
 # Copied from http://modarchive.org/index.php?request=view_by_moduleid&query=155849
 hereyes_remake.mo3 audio/x-mo3
 # Copied from http://media.annodex.net/cmmlwiki/CCFilm
