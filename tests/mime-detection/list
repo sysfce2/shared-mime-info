@@ -934,3 +934,6 @@ test.zim application/x-openzim
 test.qs application/sparql-query
 # SPARQL query results
 test.srx application/sparql-results+xml ox
+
+# Modrinth Modpack
+test.mrpack application/x-modrinth-modpack+zip ox

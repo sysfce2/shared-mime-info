@@ -8056,4 +8056,10 @@ command to generate the output files.
     <glob pattern="*.openvpn"/>
     <glob pattern="*.ovpn"/>
   </mime-type>
+  <mime-type type="application/x-modrinth-modpack+zip">
+    <comment>Modrinth Modpack</comment>
+    <sub-class-of type="application/zip"/>
+    <generic-icon name="package-x-generic"/>
+    <glob pattern="*.mrpack"/>
+  </mime-type>
 </mime-info>
