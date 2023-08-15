@@ -8069,4 +8069,10 @@ command to generate the output files.
     <generic-icon name="package-x-generic"/>
     <glob pattern="*.mrpack"/>
   </mime-type>
+  <mime-type type="application/cbor">
+    <comment>CBOR Data</comment>
+    <acronym>CBOR</acronym>
+    <expanded-acronym>Concise Binary Object Representation</expanded-acronym>
+    <glob pattern="*.cbor"/>
+  </mime-type>
 </mime-info>
