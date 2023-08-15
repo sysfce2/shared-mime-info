@@ -22,8 +22,8 @@ variables:
 
 build:meson:
   before_script:
-    - dnf update -y --nogpgcheck
-    - dnf install -y --nogpgcheck $DEPENDENCIES
+    - dnf5 update -y --nogpgcheck
+    - dnf5 install -y --nogpgcheck $DEPENDENCIES
   script:
     # Compile xdgmime
     - make -C xdgmime
