@@ -954,6 +954,10 @@ test.qs application/sparql-query
 # SPARQL query results
 test.srx application/sparql-results+xml ox
 
+# Tiled files
+tiledsample/tiledsample.tmx
+tiledsample/tiledsample.tsx
+
 # Modrinth Modpack
 test.mrpack application/x-modrinth-modpack+zip ox
 

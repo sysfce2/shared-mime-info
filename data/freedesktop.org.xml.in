@@ -8273,4 +8273,14 @@ command to generate the output files.
     </magic>
     <generic-icon name="text-x-generic"/>
   </mime-type>
+  <mime-type type="application/x-tiled-tmx">
+    <comment>Tiled map files</comment>
+    <sub-class-of type="application/xml"/>
+    <glob pattern="*.tmx"/>
+  </mime-type>
+  <mime-type type="application/x-tiled-tsx">
+    <comment>Tiled tileset files</comment>
+    <sub-class-of type="application/xml"/>
+    <glob pattern="*.tsx"/>
+  </mime-type>
 </mime-info>
