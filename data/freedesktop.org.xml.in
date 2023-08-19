@@ -3449,6 +3449,18 @@ command to generate the output files.
       <match type="little32" value="0xe011cfd0" offset="0"/>
     </magic>
   </mime-type>
+  <mime-type type="application/vnd.microsoft.windows.thumbnail-cache">
+    <comment>Microsoft Windows Thumbnail Cache</comment>
+    <sub-class-of type="application/x-ole-storage"/>
+    <generic-icon name="image-x-generic"/>
+    <glob pattern="ehthumbs.db"/>
+    <glob pattern="ehthumbs_vista.db"/>
+    <glob pattern="image.db"/>
+    <glob pattern="musicthumbs.db"/>
+    <glob pattern="thumbs.db"/>
+    <glob pattern="tvthumb.db"/>
+    <glob pattern="video.db"/>
+  </mime-type>
   <mime-type type="application/vnd.ms-publisher">
     <comment>Microsoft Publisher document</comment>
     <sub-class-of type="application/x-ole-storage"/>
