@@ -3176,6 +3176,13 @@ command to generate the output files.
     </magic>
     <glob pattern="*.exe"/>
   </mime-type>
+  <mime-type type="application/x-bat">
+    <comment>DOS/Windows batch file</comment>
+    <sub-class-of type="text/plain"/>
+    <alias type="application/bat"/>
+    <generic-icon name="text-x-script"/>
+    <glob pattern="*.bat"/>
+  </mime-type>
   <mime-type type="application/x-mswinurl">
     <comment>Internet shortcut</comment>
     <sub-class-of type="text/plain"/>
