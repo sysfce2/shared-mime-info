@@ -3764,6 +3764,28 @@ command to generate the output files.
     </magic>
     <glob pattern="*.sh"/>
   </mime-type>
+  <mime-type type="application/x-fishscript">
+    <comment>Fish shell script</comment>
+    <sub-class-of type="application/x-executable"/>
+    <sub-class-of type="text/plain"/>
+    <alias type="text/x-fish"/>
+    <generic-icon name="text-x-script"/>
+    <magic>
+      <match type="string" value="/bin/env fish" offset="2:16"/>
+    </magic>
+    <glob pattern="*.fish"/>
+  </mime-type>
+  <mime-type type="application/x-nuscript">
+    <comment>Nu shell script</comment>
+    <sub-class-of type="application/x-executable"/>
+    <sub-class-of type="text/plain"/>
+    <alias type="text/x-nu"/>
+    <generic-icon name="text-x-script"/>
+    <magic>
+      <match type="string" value="/bin/env nu" offset="2:16"/>
+    </magic>
+    <glob pattern="*.nu"/>
+  </mime-type>
   <mime-type type="application/vnd.adobe.flash.movie">
     <comment>Shockwave Flash file</comment>
     <alias type="application/x-shockwave-flash"/>
