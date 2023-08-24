@@ -948,3 +948,6 @@ test.mrpack application/x-modrinth-modpack+zip ox
 # ERIS link file
 # https://eris.codeberg.page/eer/linkfile.xml
 test.eris application/x-eris-link+cbor
+
+# Perf Data file
+perf.data application/x-perf-data

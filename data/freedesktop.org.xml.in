@@ -1826,6 +1826,13 @@ command to generate the output files.
     <generic-icon name="package-x-generic"/>
     <glob pattern="*.cpio.gz"/>
   </mime-type>
+  <mime-type type="application/x-perf-data">
+    <comment>Perf data</comment>
+    <glob pattern="perf.data" case-sensitive="true"/>
+    <magic priority="50">
+      <match type="string" value="PERFILE2" offset="0"/>
+    </magic>
+  </mime-type>
   <mime-type type="application/x-csh">
     <comment>C shell script</comment>
     <sub-class-of type="application/x-shellscript"/>
