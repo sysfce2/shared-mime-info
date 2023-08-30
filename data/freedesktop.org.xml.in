@@ -22,7 +22,7 @@
   <!-- a generic icon name as per the Icon Naming Specification, only required if computing
   it from the mime-type would not work, See "generic-icon" in the Shared Mime Specification -->
   <!ELEMENT generic-icon EMPTY>
-  <!ATTLIST generic-icon name (application-x-executable|audio-x-generic|folder|font-x-generic|image-x-generic|package-x-generic|text-html|text-x-generic|text-x-generic-template|text-x-script|video-x-generic|x-office-address-book|x-office-calendar|x-office-document|x-office-presentation|x-office-spreadsheet) #REQUIRED>
+  <!ATTLIST generic-icon name (application-x-executable|audio-x-generic|folder|font-x-generic|image-x-generic|media-optical|package-x-generic|text-html|text-x-generic|text-x-generic-template|text-x-script|video-x-generic|x-office-address-book|x-office-calendar|x-office-document|x-office-presentation|x-office-spreadsheet) #REQUIRED>
 
   <!ELEMENT glob EMPTY>
   <!ATTLIST glob pattern CDATA #REQUIRED>
@@ -1696,6 +1696,7 @@ command to generate the output files.
   <mime-type type="application/vnd.efi.iso">
     <comment>Raw CD image</comment>
     <sub-class-of type="application/vnd.efi.img"/>
+    <generic-icon name="media-optical"/>
     <alias type="application/x-cd-image"/>
     <alias type="application/x-iso9660-image"/>
     <!-- No magic, see https://bugs.freedesktop.org/show_bug.cgi?id=10049 -->
@@ -1704,6 +1705,7 @@ command to generate the output files.
   </mime-type>
   <mime-type type="application/x-compressed-iso">
     <comment>Compressed CD image</comment>
+    <generic-icon name="media-optical"/>
     <magic>
       <match value="CISO" type="string" offset="0"/>
     </magic>
@@ -1752,6 +1754,7 @@ command to generate the output files.
   </mime-type>
   <mime-type type="application/x-discjuggler-cd-image">
     <comment>Padus DiscJuggler CD image</comment>
+    <generic-icon name="media-optical"/>
     <glob pattern="*.cdi"/>
   </mime-type>
   <mime-type type="application/vnd.chess-pgn">
@@ -5599,6 +5602,7 @@ command to generate the output files.
     <comment>PCD image</comment>
     <acronym>PCD</acronym>
     <expanded-acronym>PhotoCD</expanded-acronym>
+    <generic-icon name="media-optical"/>
     <glob pattern="*.pcd"/>
   </mime-type>
   <mime-type type="image/x-portable-anymap">
