@@ -5,7 +5,7 @@ configure_file(
 )
 
 update_mime_database = executable('update-mime-database',
-    'update-mime-database.c',
+    'update-mime-database.cpp',
     dependencies: [
         glib2,
         libxml,
