@@ -962,3 +962,8 @@ perf.data application/x-perf-data
 
 # Blueprint (https://gitlab.gnome.org/jwestman/blueprint-compiler)
 blueprint.blp text/x-blueprint ox
+
+# Nim source code
+test.nim text/x-nim ox
+test.nims text/x-nimscript ox
+test.nimble text/x-nimscript ox

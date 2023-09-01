@@ -6717,6 +6717,17 @@ command to generate the output files.
     <sub-class-of type="text/plain"/>
     <glob pattern="*.dart"/>
   </mime-type>
+  <mime-type type="text/x-nim">
+    <comment>Nim source code</comment>
+    <sub-class-of type="text/plain"/>
+    <glob pattern="*.nim"/>
+  </mime-type>
+  <mime-type type="text/x-nimscript">
+    <comment>Nimscript source code</comment>
+    <sub-class-of type="text/x-nim"/>
+    <glob pattern="*.nims"/>
+    <glob pattern="*.nimble"/>
+  </mime-type>
   <mime-type type="text/x-go">
     <comment>Go source code</comment>
     <sub-class-of type="text/plain"/>
