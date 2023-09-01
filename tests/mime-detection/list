@@ -967,3 +967,6 @@ blueprint.blp text/x-blueprint ox
 test.nim text/x-nim ox
 test.nims text/x-nimscript ox
 test.nimble text/x-nimscript ox
+
+# Typst document
+test.typ text/x-typst ox
