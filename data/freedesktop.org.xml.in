@@ -7464,6 +7464,12 @@ command to generate the output files.
     <sub-class-of type="application/zip"/>
     <generic-icon name="x-office-spreadsheet"/>
   </mime-type>
+  <mime-type type="application/vnd.ms-officetheme">
+    <comment>Microsoft Office 2007 theme</comment>
+    <glob pattern="*.thmx"/>
+    <sub-class-of type="application/zip"/>
+    <generic-icon name="text-x-generic-template"/>
+  </mime-type>
   <mime-type type="application/x-t602">
     <comment>T602 document</comment>
     <generic-icon name="x-office-document"/>
