@@ -40,6 +40,8 @@ balloon.jp2 image/jp2
 balloon.jpf image/jpx
 balloon.jpm image/jpm
 balloon.mj2 video/mj2
+# JPEG-XR
+blue.wdp image/jxr
 # From https://bugzilla.freedesktop.org/show_bug.cgi?id=55339
 test.mng video/x-mng
 test.pbm image/x-portable-bitmap
