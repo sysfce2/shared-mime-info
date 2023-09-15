@@ -6749,9 +6749,6 @@ command to generate the output files.
     <magic priority="10">
       <match type="string" value="%" offset="0"/>
     </magic>
-    <magic priority="10">
-      <match type="string" value="##" offset="0"/>
-    </magic>
     <magic>
       <match type="string" value="function" offset="0"/>
     </magic>
