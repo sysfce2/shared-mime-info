@@ -5320,6 +5320,20 @@ command to generate the output files.
     </magic>
     <glob pattern="*.png"/>
   </mime-type>
+  <mime-type type="image/apng">
+    <comment>Animated PNG image</comment>
+    <acronym>PNG</acronym>
+    <expanded-acronym>Portable Network Graphics</expanded-acronym>
+    <sub-class-of type="image/png"/>
+    <magic>
+      <match type="string" value="\x89PNG\r\n\x1A\n" offset="0">
+        <match type="string" value="acTL" offset="37"/>
+      </match>
+    </magic>
+    <glob pattern="*.apng"/>
+    <glob pattern="*.png" weight="40"/>
+    <alias type="image/vnd.mozilla.apng"/>
+  </mime-type>
   <mime-type type="image/rle">
     <comment>RLE bitmap image</comment>
     <acronym>RLE</acronym>
