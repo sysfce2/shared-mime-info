@@ -8212,4 +8212,39 @@ command to generate the output files.
       <match type="string" value="\xD9\xD9\xF7\x84\xD9\x01\x14\x58\x42" offset="0"/>
     </magic>
   </mime-type>
+  <mime-type type="application/vnd.gerber">
+    <comment>Gerber file</comment>
+    <sub-class-of type="text/plain"/>
+    <glob pattern="*.gbr"/>
+    <!--Try to match with some common opening commands-->
+    <magic>
+      <!--A comment line-->
+      <match type="string" value="G04 " offset="0"/>
+      <!--Some setup macros-->
+      <match type="string" value="%FSLA" offset="0"/>
+      <match type="string" value="%MO" offset="0"/>
+      <match type="string" value="%TF." offset="0"/>
+      <!--Seems to be common with files exported from some programs-->
+      <match type="string" value="G75*" offset="0"/>
+    </magic>
+    <generic-icon name="text-x-generic"/>
+    <!--Already being used as the MIME identifier by some programs-->
+    <alias type="application/x-gerber"/>
+  </mime-type>
+  <mime-type type="application/x-gerber-job">
+    <comment>Gerber job file</comment>
+    <sub-class-of type="application/json"/>
+    <glob pattern="*.gbrjob"/>
+    <generic-icon name="text-x-generic"/>
+  </mime-type>
+  <mime-type type="application/x-excellon">
+    <comment>Excellon drill file</comment>
+    <sub-class-of type="text/plain"/>
+    <glob pattern="*.drl"/>
+    <magic>
+      <!--This is always the header for an excellon drill file-->
+      <match type="string" value="M48\n" offset="0"/>
+    </magic>
+    <generic-icon name="text-x-generic"/>
+  </mime-type>
 </mime-info>

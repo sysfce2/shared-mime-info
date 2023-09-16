@@ -978,3 +978,19 @@ test.nimble text/x-nimscript ox
 
 # Typst document
 test.typ text/x-typst ox
+
+# PCB Fabrication data transfer formats
+# Both GIMP brush and Gerber files share the glob for .gbr, so we can't use filename-based
+# tests here because the files are identified as GIMP brushes using the glob.
+pcb-gerber.gbr application/vnd.gerber x
+pcb-gerber.gts application/vnd.gerber x
+pcb-gerber-CommentNoExt application/vnd.gerber x
+pcb-gerber-FSLANoExt application/vnd.gerber x
+pcb-gerber-G75NoExt application/vnd.gerber x
+pcb-gerber-MONoExt application/vnd.gerber x
+pcb-gerber-TFNoExt application/vnd.gerber x
+
+pcb-gerberjob.gbrjob application/x-gerber-job ox
+
+pcb-drillFile.drl application/x-excellon
+pcb-drillFileNoExt application/x-excellon x
