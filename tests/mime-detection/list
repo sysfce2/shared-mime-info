@@ -967,8 +967,8 @@ test.qs application/sparql-query
 test.srx application/sparql-results+xml ox
 
 # Tiled files
-tiledsample/tiledsample.tmx
-tiledsample/tiledsample.tsx
+tiledsample/tiled_sample.tmx application/x-tiled-tmx ox
+tiledsample/tiled_sample.tsx application/x-tiled-tsx ox
 
 # Modrinth Modpack
 test.mrpack application/x-modrinth-modpack+zip ox
