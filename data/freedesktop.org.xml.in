@@ -3546,9 +3546,6 @@ command to generate the output files.
   <mime-type type="application/x-pak">
     <comment>PAK archive</comment>
     <generic-icon name="package-x-generic"/>
-    <magic priority="80">
-      <match offset="0" type="string" value="PACK" />
-    </magic>
     <glob pattern="*.pak" />
   </mime-type>
   <mime-type type="application/vnd.palm">
