@@ -17,5 +17,8 @@ if [ ! -f .tx/config ] ; then
 	exit 1
 fi
 
+# NOTE: tx should be installed from https://github.com/transifex/cli
+# The older transifex-client project (in python) is outdated and rejected by the server
+
 tx pull --all --force --skip
 tx push --source
