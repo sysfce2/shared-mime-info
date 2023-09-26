@@ -6799,10 +6799,11 @@ command to generate the output files.
     <glob pattern="*.diff"/>
     <glob pattern="*.patch"/>
   </mime-type>
-  <mime-type type="text/x-dart">
+  <mime-type type="application/vnd.dart">
     <comment>Dart source code</comment>
     <sub-class-of type="text/plain"/>
     <glob pattern="*.dart"/>
+    <alias type="text/x-dart"/>
   </mime-type>
   <mime-type type="text/x-nim">
     <comment>Nim source code</comment>

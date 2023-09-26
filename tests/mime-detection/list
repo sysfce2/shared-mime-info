@@ -918,7 +918,7 @@ test.pys application/x-pyspread-bz-spreadsheet oxo
 test.pysu application/x-pyspread-spreadsheet
 
 # Dart source code
-test.dart text/x-dart oxo
+test.dart application/vnd.dart oxo
 
 # Godot files
 project.godot application/x-godot-project ox
