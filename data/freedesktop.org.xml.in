@@ -1892,13 +1892,14 @@ command to generate the output files.
     </magic>
     <glob pattern="*.csh"/>
   </mime-type>
-  <mime-type type="application/x-dbf">
+  <mime-type type="application/vnd.dbf">
     <comment>Xbase document</comment>
     <generic-icon name="x-office-document"/>
     <glob pattern="*.dbf"/>
-    <alias type="application/x-dbase"/>
-    <alias type="application/dbf"/>
     <alias type="application/dbase"/>
+    <alias type="application/dbf"/>
+    <alias type="application/x-dbase"/>
+    <alias type="application/x-dbf"/>
   </mime-type>
   <mime-type type="application/ecmascript">
     <comment>ECMAScript program</comment>
