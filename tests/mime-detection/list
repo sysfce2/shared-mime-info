@@ -957,6 +957,8 @@ data.mdb application/x-lmdb x
 # MS Access DB, copied from Qt5's qtbase/tests/auto/sql/kernel/qsqldatabase/testdata/qtest.mdb (LGPL)
 msaccess.mdb application/vnd.ms-access
 
+1EO8.pdb chemical/x-pdb x
+
 # Org-mode file
 test.org text/org ox
 # OpenZIM file
