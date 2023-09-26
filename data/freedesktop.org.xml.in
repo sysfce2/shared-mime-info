@@ -469,7 +469,7 @@ command to generate the output files.
     <glob pattern="*.spx" weight="40"/>
     <root-XML namespaceURI="http://www.apple.com/DTDs/PropertyList-1.0.dtd" localName="plist"/>
   </mime-type>
-  <mime-type type="application/x-gedcom">
+  <mime-type type="text/vnd.familysearch.gedcom">
     <comment>GEDCOM family history</comment>
     <acronym>GEDCOM</acronym>
     <expanded-acronym>GEnealogical Data COMmunication</expanded-acronym>
@@ -480,6 +480,7 @@ command to generate the output files.
     </magic>
     <glob pattern="*.ged"/>
     <glob pattern="*.gedcom"/>
+    <alias type="application/x-gedcom"/>
     <alias type="text/gedcom"/>
   </mime-type>
   <mime-type type="video/x-flv">
