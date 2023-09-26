@@ -382,7 +382,7 @@ command to generate the output files.
     <comment>RAML document</comment>
     <acronym>RAML</acronym>
     <expanded-acronym>RESTful API Modeling Language</expanded-acronym>
-    <sub-class-of type="application/x-yaml"/>
+    <sub-class-of type="application/yaml"/>
     <magic>
       <match type="string" value="#%RAML " offset="0"/>
     </magic>
@@ -571,7 +571,7 @@ command to generate the output files.
     <generic-icon name="text-x-generic"/>
     <glob pattern="*.toml"/>
   </mime-type>
-  <mime-type type="application/x-yaml">
+  <mime-type type="application/yaml">
     <comment>YAML document</comment>
     <acronym>YAML</acronym>
     <expanded-acronym>YAML Ain't Markup Language</expanded-acronym>
@@ -582,6 +582,7 @@ command to generate the output files.
     </magic>
     <glob pattern="*.yaml"/>
     <glob pattern="*.yml"/>
+    <alias type="application/x-yaml"/>
     <alias type="text/yaml"/>
     <alias type="text/x-yaml"/>
   </mime-type>
@@ -2074,7 +2075,7 @@ command to generate the output files.
   </mime-type>
   <mime-type type="text/x-kaitai-struct">
     <comment>Kaitai Struct definition file</comment>
-    <sub-class-of type="application/x-yaml"/>
+    <sub-class-of type="application/yaml"/>
     <glob pattern="*.ksy"/>
   </mime-type>
   <mime-type type="text/x-qml">

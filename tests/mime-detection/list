@@ -361,7 +361,7 @@ html4.css text/css ox
 html5.css text/css ox
 # Copied from http://www.w3.org/TR/html5/offline.html#manifests
 test.manifest text/cache-manifest
-test.yaml application/x-yaml
+test.yaml application/yaml
 # Copied from https://toml.io/en/
 test.toml application/toml ox
 # hand-made
