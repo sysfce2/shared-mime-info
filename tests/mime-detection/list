@@ -818,6 +818,8 @@ ls application/x-executable x
 # ELF shared library
 libldap-2.4.so.2 application/x-sharedlib oxo
 boardingpass.pkpass application/vnd.apple.pkpass
+# Generated with `cd /tmp && x86_64-w64-mingw32-clang -shared -fuse-ld=lld -Wl,--pdb=empty.pdb -x c /dev/null`
+empty.pdb application/x-ms-pdb
 
 hello.xdgapp application/vnd.flatpak
 hello.flatpak application/vnd.flatpak
