@@ -182,7 +182,7 @@ sample.pptx application/vnd.openxmlformats-officedocument.presentationml.present
 sample.ppsx application/vnd.openxmlformats-officedocument.presentationml.slideshow oxo
 # Copied from http://bugs.freedesktop.org/show_bug.cgi?id=20185
 pocket-word.psw application/x-pocket-word
-aportis.pdb application/x-aportisdoc
+aportis.pdb application/x-aportisdoc x
 # Copied from https://artcontext.net/art/01/mime/docs/show.php?type=application%2Fandrew-inset&js=
 internet.ez application/andrew-inset ox
 # Copied from http://extensions.services.openoffice.org/project/anaphraseus
