@@ -388,6 +388,8 @@ todo.txt text/x-todo-txt
 # From https://github.com/OpenVPN/openvpn/blob/master/sample/sample-plugins/keying-material-exporter-demo/client.ovpn
 openvpn.ovpn application/x-openvpn-profile ox
 openvpn.openvpn application/x-openvpn-profile ox
+# From https://github.com/OpenPrinting/cups-filters/blob/master/ppdfiles/pxlcolor.ppd
+pxlcolor.ppd application/vnd.cups-ppd
 
 # http://www.apps.ietf.org/rfc/rfc4716.html#sec-3.6
 ssh-public-key.txt text/plain
