@@ -49,12 +49,7 @@ endif
 ###############################################################################
 # Dependencies
 
-check_functions = [
-    'fdatasync',
-]
-foreach function : check_functions
-    config.set('HAVE_'+function.to_upper(), cc.has_function(function))
-endforeach
+config.set('HAVE_FDATASYNC', cc.has_function('fdatasync', prefix: '#include <unistd.h>'))
 
 
 if get_option('build-translations')
