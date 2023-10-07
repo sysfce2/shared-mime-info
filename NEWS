@@ -1,4 +1,4 @@
-shared-mime-info 2.3 (2022-10-07)
+shared-mime-info 2.3 (2023-10-07)
 
 * Make update-mime-database compatible with MSVC (by porting it to C++)
 * Remove "##" magic for matlab files
