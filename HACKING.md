@@ -69,6 +69,7 @@ Releasing
 - Commit and push to shared-mime-info gitlab
 - Update version number in `meson.build`
 - Add changelog to `NEWS`
+     git log --pretty=format:'* %s' <prevtag>..
 - Commit, make a merge request, wait for CI to ensure `meson dist` works, then merge it.
 - Tag and push the tag
 - Go to https://gitlab.freedesktop.org/xdg/shared-mime-info/-/releases and click "New release"
