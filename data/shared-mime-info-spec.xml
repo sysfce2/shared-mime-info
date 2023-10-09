@@ -359,7 +359,7 @@ If <userinput>localName</userinput> is present but empty then the document eleme
 any name, but the namespace must still match.
 				</para><para>
 If <userinput>namespaceURI</userinput> is present but empty then the match is done entirely on
-the document element’s local name and any namespace URI present in the document is ignored.
+the document element's local name and any namespace URI present in the document is ignored.
 				</para><para>
 Both attributes must be specified, and at least one of them must be non-empty.
 				</para></listitem>
