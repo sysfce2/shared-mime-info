@@ -834,6 +834,8 @@ boardingpass.pkpass application/vnd.apple.pkpass
 # Generated with `cd /tmp && x86_64-w64-mingw32-clang -shared -fuse-ld=lld -Wl,--pdb=empty.pdb -x c /dev/null`
 empty.pdb application/x-ms-pdb x
 C.lnk application/x-ms-shortcut
+# WASM module https://rustwasm.github.io/wasm-bindgen/exbuild/add/53356255c2705a766855.module.wasm
+add.wasm application/wasm
 
 hello.xdgapp application/vnd.flatpak
 hello.flatpak application/vnd.flatpak
