@@ -306,6 +306,8 @@ bug-30656-xchat.conf text/plain x
 helloworld.java text/x-java ox
 helloworld.groovy text/x-groovy ox
 helloworld.vbs text/vbscript ox
+# Created with `srcenc.exe helloworld.vbs helloworld.vbe`
+helloworld.vbe text/vbscript.encode ox
 build.gradle text/x-gradle ox
 ico.ksy text/x-kaitai-struct ox
 # Copied from http://asurvey.net/ccsfagent/media/survey.js
