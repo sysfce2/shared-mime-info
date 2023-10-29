@@ -827,7 +827,7 @@ ls application/x-executable x
 libldap-2.4.so.2 application/x-sharedlib oxo
 boardingpass.pkpass application/vnd.apple.pkpass
 # Generated with `cd /tmp && x86_64-w64-mingw32-clang -shared -fuse-ld=lld -Wl,--pdb=empty.pdb -x c /dev/null`
-empty.pdb application/x-ms-pdb
+empty.pdb application/x-ms-pdb x
 C.lnk application/x-ms-shortcut
 
 hello.xdgapp application/vnd.flatpak
@@ -967,6 +967,8 @@ rgba.qoi image/qoi
 data.mdb application/x-lmdb x
 # MS Access DB, copied from Qt5's qtbase/tests/auto/sql/kernel/qsqldatabase/testdata/qtest.mdb (LGPL)
 msaccess.mdb application/vnd.ms-access
+
+1EO8.pdb chemical/x-pdb
 
 # Org-mode file
 test.org text/org ox
