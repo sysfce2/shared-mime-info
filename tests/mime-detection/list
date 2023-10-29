@@ -310,6 +310,8 @@ build.gradle text/x-gradle ox
 ico.ksy text/x-kaitai-struct ox
 # Copied from http://asurvey.net/ccsfagent/media/survey.js
 survey.js text/javascript ox
+# Created with `srcenc.exe survey.js survey.exe`
+survey.jse text/jscript.encode
 # Copied from gecko/accessible/src/jsat/Utils.jsm in Boot2Gecko
 Utils.jsm text/javascript ox
 esm.mjs text/javascript ox
