@@ -2855,7 +2855,7 @@ command to generate the output files.
   </mime-type>
   <mime-type type="text/x-groovy">
     <comment>Groovy source code</comment>
-    <sub-class-of type="text/x-csrc"/>
+    <sub-class-of type="text/plain"/>
     <generic-icon name="text-x-script"/>
     <glob pattern="*.groovy"/>
     <glob pattern="*.gvy"/>
@@ -6860,12 +6860,12 @@ command to generate the output files.
   </mime-type>
   <mime-type type="text/x-csharp">
     <comment>C# source code</comment>
-    <sub-class-of type="text/x-csrc"/>
+    <sub-class-of type="text/plain"/>
     <glob pattern="*.cs"/>
   </mime-type>
   <mime-type type="text/x-vala">
     <comment>Vala source code</comment>
-    <sub-class-of type="text/x-csrc"/>
+    <sub-class-of type="text/plain"/>
     <glob pattern="*.vala"/>
     <glob pattern="*.vapi"/>
   </mime-type>
@@ -6892,7 +6892,7 @@ command to generate the output files.
   </mime-type>
   <mime-type type="text/x-dsrc">
     <comment>D source code</comment>
-    <sub-class-of type="text/x-csrc"/>
+    <sub-class-of type="text/plain"/>
     <glob pattern="*.d"/>
     <glob pattern="*.di"/>
   </mime-type>
@@ -7058,7 +7058,7 @@ command to generate the output files.
   </mime-type>
   <mime-type type="text/x-java">
     <comment>Java source code</comment>
-    <sub-class-of type="text/x-csrc"/>
+    <sub-class-of type="text/plain"/>
     <glob pattern="*.java"/>
   </mime-type>
   <mime-type type="text/x-ldif">
