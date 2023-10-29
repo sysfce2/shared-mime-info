@@ -2709,9 +2709,17 @@ command to generate the output files.
     <comment>JSON document</comment>
     <acronym>JSON</acronym>
     <expanded-acronym>JavaScript Object Notation</expanded-acronym>
-    <sub-class-of type="text/javascript"/>
+    <sub-class-of type="application/json5"/>
     <generic-icon name="text-x-script"/>
     <glob pattern="*.json"/>
+  </mime-type>
+  <mime-type type="application/json5">
+    <comment>JSON5 document</comment>
+    <acronym>JSON5</acronym>
+    <expanded-acronym>JavaScript Object Notation 5</expanded-acronym>
+    <sub-class-of type="text/javascript"/>
+    <generic-icon name="text-x-script"/>
+    <glob pattern="*.json5"/>
   </mime-type>
   <mime-type type="application/jrd+json">
     <comment>JRD document</comment>

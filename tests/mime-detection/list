@@ -321,6 +321,8 @@ javascript-without-extension text/javascript xoo
 # The following two copied from RFC 4627.
 json_object.json application/json ox
 json_array.json application/json ox
+# Copy of json_array.json with comments and trailing commas
+json_array.json5 application/json5 ox
 # Copied from RFC 7033
 webfinger.jrd application/jrd+json ox
 # Copied from RFC 6902
