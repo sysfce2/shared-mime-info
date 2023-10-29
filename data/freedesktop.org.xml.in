@@ -7080,6 +7080,12 @@ command to generate the output files.
     </magic>
     <alias type="zz-application/zz-winassoc-uu"/>
   </mime-type>
+  <mime-type type="text/x-basic">
+    <comment>BASIC program</comment>
+    <sub-class-of type="text/plain"/>
+    <generic-icon name="text-x-script"/>
+    <glob pattern="*.bas"/>
+  </mime-type>
   <mime-type type="text/vbscript">
     <comment>VBScript program</comment>
     <alias type="text/vbs"/>
