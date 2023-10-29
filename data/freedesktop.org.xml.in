@@ -6789,7 +6789,7 @@ command to generate the output files.
   </mime-type>
   <mime-type type="text/x-c++src">
     <comment>C++ source code</comment>
-    <sub-class-of type="text/x-csrc"/>
+    <sub-class-of type="text/x-objc++src"/>
     <glob pattern="*.cpp"/>
     <glob pattern="*.cxx"/>
     <glob pattern="*.cc"/>
@@ -6848,7 +6848,8 @@ command to generate the output files.
   </mime-type>
   <mime-type type="text/x-csrc">
     <comment>C source code</comment>
-    <sub-class-of type="text/plain"/>
+    <sub-class-of type="text/x-c++src"/>
+    <sub-class-of type="text/x-objcsrc"/>
     <alias type="text/x-c"/>
     <glob pattern="*.c" case-sensitive="true"/>
     <magic priority="30">
@@ -7145,7 +7146,7 @@ command to generate the output files.
   </mime-type>
   <mime-type type="text/x-objcsrc">
     <comment>Objective-C source code</comment>
-    <sub-class-of type="text/x-csrc"/>
+    <sub-class-of type="text/x-objc++src"/>
     <magic priority="30">
       <match type="string" value="#import" offset="0"/>
     </magic>
@@ -7153,8 +7154,7 @@ command to generate the output files.
   </mime-type>
   <mime-type type="text/x-objc++src">
     <comment>Objective-C++ source code</comment>
-    <sub-class-of type="text/x-c++src"/>
-    <sub-class-of type="text/x-objcsrc"/>
+    <sub-class-of type="text/plain"/>
     <glob pattern="*.mm"/>
   </mime-type>
   <mime-type type="text/x-ocaml">
