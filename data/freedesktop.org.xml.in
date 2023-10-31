@@ -3617,6 +3617,39 @@ command to generate the output files.
     <generic-icon name="package-x-generic"/>
     <glob pattern="*.msi"/>
   </mime-type>
+  <mime-type type="application/appx">
+    <comment>Windows app store package</comment>
+    <sub-class-of type="application/zip"/>
+    <generic-icon name="package-x-generic"/>
+    <glob pattern="*.appx"/>
+  </mime-type>
+  <mime-type type="application/msix">
+    <comment>Windows app store package</comment>
+    <sub-class-of type="application/zip"/>
+    <generic-icon name="package-x-generic"/>
+    <glob pattern="*.msix"/>
+  </mime-type>
+  <mime-type type="application/appxbundle">
+    <comment>Windows app store bundle</comment>
+    <sub-class-of type="application/zip"/>
+    <generic-icon name="package-x-generic"/>
+    <glob pattern="*.appxbundle"/>
+  </mime-type>
+  <mime-type type="application/msixbundle">
+    <comment>Windows app store bundle</comment>
+    <sub-class-of type="application/zip"/>
+    <generic-icon name="package-x-generic"/>
+    <glob pattern="*.msixbundle"/>
+  </mime-type>
+  <mime-type type="application/appinstaller">
+    <comment>Windows app store installer</comment>
+    <sub-class-of type="application/xml"/>
+    <generic-icon name="package-x-generic"/>
+    <magic>
+      <match type="string" value="&lt;AppInstaller" offset="0:256"/>
+    </magic>
+    <glob pattern="*.appinstaller"/>
+  </mime-type>
   <mime-type type="application/x-oleo">
     <comment>GNU Oleo spreadsheet</comment>
     <generic-icon name="x-office-spreadsheet"/>

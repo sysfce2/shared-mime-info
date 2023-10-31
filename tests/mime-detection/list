@@ -503,6 +503,12 @@ test.jar application/java-archive ox
 hello.pack application/x-java-pack200
 # Copied from http://www.apache.org/dist/httpd/binaries/win32/apache_2.2.9-win32-x86-no_ssl-r2.msi
 test.msi application/x-msi ox
+# Created by building the default blank Universal Windows C++ app in Visual Studio 2022
+App1_1.0.0.0_x64.appx application/appx ox
+App1_1.0.0.0_x64.appxbundle application/appxbundle ox
+App1_1.0.0.0_x64.msix application/msix ox
+App1_1.0.0.0_x64.msixbundle application/msixbundle ox
+App1_x64.appinstaller application/appinstaller
 # Created using 7z
 archive.7z application/x-7z-compressed
 archive2.7z.001 application/x-7z-compressed
