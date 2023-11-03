@@ -74,6 +74,7 @@ const char *media_types[] = {
 	"x-epoc",
 	"x-scheme-handler",
 	"font",
+	"chemical",
 };
 
 /* Represents a MIME type */
