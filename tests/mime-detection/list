@@ -488,6 +488,8 @@ test.pgn application/vnd.chess-pgn
 # From KDE kfilemetadata test suite
 test_apple_systemprofiler.spx application/x-apple-systemprofiler+xml x
 shared-mime-info.its application/its+xml
+# From https://www.w3.org/TR/NOTE-HTMLComponents#oncontentchange
+oncontentchange.htc text/x-component ox
 
 # Archives
 # Copied from http://bugs.freedesktop.org/show_bug.cgi?id=14909
