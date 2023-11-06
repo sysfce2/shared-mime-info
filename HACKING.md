@@ -35,11 +35,13 @@ more test files to be added to the test suite.
 Test suite
 ----------
 
-You need to have xdgmime [1] checked out and compiled. In the shared-mime-info
-git repository, getting xdgmime is taken care of by using a git submodule; run
-`git submodule update --init` after cloning the shared-mime-info repo. If
-you wish to keep the submodule automatically up to date on pull, `git config
-submodule.recurse true` in the shared-mime-info dir helps with that.
+You need to have xdgmime [1] checked out and compiled before you configure
+and build shared-mime-info. In the shared-mime-info git repository, getting
+xdgmime is taken care of by using a git submodule; run `git submodule update
+--init` after cloning the shared-mime-info repo. If you wish to keep the
+submodule automatically up to date on pull, `git config submodule.recurse
+true` in the shared-mime-info dir helps with that. To build xdgmime, `cd
+xdgmime/src && make` (ignore the Meson build system).
 
 By default, the build system will expect the xdgmime directory to be in the
 shared-mime-info directory. `./xdgmime/src/test-mime-data` is run against
