@@ -517,9 +517,9 @@ good-1-delta-lzma2.tiff.xz application/x-xz
 sample.png.lzma application/x-lzma ox
 spinboxes-0.1.1-Linux.tar.xz application/x-xz-compressed-tar ox
 # Created using bzip Version 0.21
-test.bz application/x-bzip
+test.bz application/x-bzip1
 # Created using GNU tar 1.34 and bzip Version 0.21
-test.tar.bz application/x-bzip-compressed-tar ox
+test.tar.bz application/x-bzip1-compressed-tar ox
 # Created using bzip2 Version 1.0.8
 test.bz2 application/x-bzip2
 # Created using GNU tar 1.35 and bzip2 Version 1.0.8
