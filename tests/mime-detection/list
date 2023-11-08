@@ -838,6 +838,12 @@ ls application/x-executable x
 # ELF shared library
 libldap-2.4.so.2 application/x-sharedlib oxo
 boardingpass.pkpass application/vnd.apple.pkpass
+# DOS executable
+helloworld-dos.exe application/x-dosexec x
+# 16-bit Windows executable
+helloworld-win16.exe application/x-ms-ne-executable x
+# 32-bit Windows executable
+helloworld-win32.exe application/vnd.microsoft.portable-executable x
 # Generated with `cd /tmp && x86_64-w64-mingw32-clang -shared -fuse-ld=lld -Wl,--pdb=empty.pdb -x c /dev/null`
 empty.pdb application/x-ms-pdb x
 C.lnk application/x-ms-shortcut

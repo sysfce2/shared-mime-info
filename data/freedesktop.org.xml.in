@@ -3278,13 +3278,70 @@ command to generate the output files.
     </magic>
     <alias type="application/x-netscape-bookmarks"/>
   </mime-type>
-  <mime-type type="application/x-ms-dos-executable">
-    <comment>DOS/Windows executable</comment>
+  <mime-type type="application/x-msdownload">
+    <comment>Windows or DOS program</comment>
+    <acronym>DOS</acronym>
+    <expanded-acronym>Disk Operating System</expanded-acronym>
+    <sub-class-of type="application/x-executable"/>
     <generic-icon name="application-x-executable"/>
     <magic>
       <match type="string" value="MZ" offset="0"/>
     </magic>
     <glob pattern="*.exe"/>
+    <glob pattern="*.dll"/>
+    <glob pattern="*.cpl"/>
+    <glob pattern="*.drv"/>
+    <glob pattern="*.scr"/>
+    <alias type="application/x-ms-dos-executable"/>
+  </mime-type>
+  <mime-type type="application/x-dosexec">
+    <comment>DOS executable</comment>
+    <acronym>DOS</acronym>
+    <expanded-acronym>Disk Operating System</expanded-acronym>
+    <sub-class-of type="application/x-msdownload"/>
+    <generic-icon name="application-x-executable"/>
+    <magic priority="60">
+      <match type="string" value="MZ" offset="0">
+        <match type="little16" mask="0xffc0" value="0" offset="24"/>
+      </match>
+    </magic>
+    <glob pattern="*.exe" weight="30"/>
+  </mime-type>
+  <mime-type type="application/x-ms-ne-executable">
+    <comment>16-bit Windows program</comment>
+    <sub-class-of type="application/x-msdownload"/>
+    <generic-icon name="application-x-executable"/>
+    <magic priority="70">
+      <match type="string" value="MZ" offset="0">
+        <match type="string" value="NE" offset="64:256"/>
+      </match>
+    </magic>
+    <glob pattern="*.exe" weight="20"/>
+    <glob pattern="*.dll" weight="20"/>
+    <glob pattern="*.cpl" weight="20"/>
+    <glob pattern="*.drv" weight="20"/>
+    <glob pattern="*.scr" weight="20"/>
+  </mime-type>
+  <mime-type type="application/vnd.microsoft.portable-executable">
+    <comment>Windows or EFI program</comment>
+    <acronym>EFI</acronym>
+    <expanded-acronym>Extensible Firmware Interface</expanded-acronym>
+    <sub-class-of type="application/x-msdownload"/>
+    <generic-icon name="application-x-executable"/>
+    <magic priority="80">
+      <match type="string" value="MZ" offset="0">
+        <match type="string" value="PE\0\0" offset="64:256"/>
+      </match>
+    </magic>
+    <glob pattern="*.exe" weight="40"/>
+    <glob pattern="*.dll" weight="40"/>
+    <glob pattern="*.cpl" weight="40"/>
+    <glob pattern="*.drv" weight="40"/>
+    <glob pattern="*.scr" weight="40"/>
+    <glob pattern="*.efi"/>
+    <glob pattern="*.ocx"/>
+    <glob pattern="*.sys"/>
+    <glob pattern="*.lib"/>
   </mime-type>
   <mime-type type="application/x-ms-pdb">
     <comment>Windows program database</comment>
