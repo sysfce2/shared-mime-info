@@ -461,6 +461,8 @@ test.csvs text/csv-schema ox
 test.coffee application/vnd.coffeescript ox
 # Copied from https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md#applying-security-schemes
 test.raml application/raml+yaml
+# Created with `echo 'Hello World!' > helloworld.txt && binhex -u helloworld.txt > helloworld.hqx`
+helloworld.hqx application/mac-binhex40
 
 # xml subtypes
 ../../data/shared-mime-info-spec.xml application/x-docbook+xml xox
