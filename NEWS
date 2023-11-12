@@ -1,3 +1,38 @@
+shared-mime-info 2.4 (2023-11-12)
+
+* Restore mimetype name for *.bz2 and *.tar.bz2
+* Improve detection of application/mac-binhex40
+* Add application/x-msdownload and subtypes
+* Add Windows app store types
+* Give Windows Installer packages the package icon
+* Lower priority for text/x-mpsub's magic, so it doesn't match pcb-drillFile.drl
+* Add application/x-powershell
+* Add application/wasm
+* Change comment of text/x-mpsub
+* Change comment of text/x-mpl2
+* Add text/x-component
+* Give higher priority to the more specific image/apng magic
+* Recognize *.jfif as image/jpeg
+* Add application/its+xml
+* Add text/x-vb
+* Add text/x-basic
+* Add new group "chemical" in update-mime-database
+* Add mimetype for Protein Data Bank (pdb) files
+* Remove too generic magic from application/x-pak
+* Add application/json5
+* Add text/vbscript.encode
+* Add text/jscript.encode
+* Add text/jscript as synonym of text/javascript
+* Fix backwards relationship between text/javascript and application/ecmascript
+* Add application/vnd.cups-ppd
+* Add application/x-ms-shortcut
+* Give application/x-mswinurl the link icon
+
+Build:
+* Fix missing sentinel warning with clang
+* Fix false positive fdatasync detection on darwin
+* Fix string literal concatenation
+
 shared-mime-info 2.3 (2023-10-07)
 
 * Make update-mime-database compatible with MSVC (by porting it to C++)
