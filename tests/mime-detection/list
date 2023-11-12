@@ -104,6 +104,7 @@ test-really-html-not-xhtml.html text/html ox
 test-really-html-not-perl.html text/html
 # Copied from https://gitlab.freedesktop.org/xdg/shared-mime-info/issues/120
 test.html text/html
+nomaximize.hta application/hta
 # Copied from http://cvs.fedoraproject.org/viewvc/comps/comps-f11.xml.in?revision=1.306
 test.xml.in application/xml x
 # Copied from http://bugs.freedesktop.org/show_bug.cgi?id=25581
