@@ -1755,6 +1755,13 @@ command to generate the output files.
     <alias type="application/x-raw-disk-image"/>
     <glob pattern="*.raw-disk-image"/>
     <glob pattern="*.img"/>
+    <!-- The magic GPT partition table header is at sector 1, which might a different byte offsets, depending on the sector size. Let's cover the 4 most relevant sectors sizes -->
+    <magic>
+      <match type="string" value="EFI PART" offset="512"/>
+      <match type="string" value="EFI PART" offset="1024"/>
+      <match type="string" value="EFI PART" offset="2048"/>
+      <match type="string" value="EFI PART" offset="4096"/>
+    </magic>
   </mime-type>
   <mime-type type="application/x-raw-floppy-disk-image">
     <comment>Floppy disk image</comment>

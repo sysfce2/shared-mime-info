@@ -666,6 +666,7 @@ disk.img application/vnd.efi.img oxo
 disk.img.xz application/x-raw-disk-image-xz-compressed oxo
 disk.raw-disk-image application/vnd.efi.img oxo
 disk.raw-disk-image.xz application/x-raw-disk-image-xz-compressed oxo
+disk.gpt application/vnd.efi.img xoo
 # Disk 1 of the Agony Amiga game truncated to 1Ko
 adf-test.adf application/x-amiga-disk-format
 # AppImage
