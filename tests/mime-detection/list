@@ -162,6 +162,35 @@ ooo-test.fodg application/vnd.oasis.opendocument.graphics-flat-xml ox
 ooo-test.fodp application/vnd.oasis.opendocument.presentation-flat-xml ox
 ooo-test.fods application/vnd.oasis.opendocument.spreadsheet-flat-xml ox
 ooo-test.fodt application/vnd.oasis.opendocument.text-flat-xml ox
+# Created with StarOffice 3.1
+so3.sdw application/vnd.stardivision.writer
+so3.sdc application/vnd.stardivision.calc
+so3.sdd application/vnd.stardivision.impress
+so3.sds application/vnd.stardivision.chart
+# Created with StarOffice 4.0
+so4.sdw application/vnd.stardivision.writer
+so4.sdc application/vnd.stardivision.calc
+so4.sdd application/vnd.stardivision.impress
+so4.sds application/vnd.stardivision.chart
+so4.smf application/vnd.stardivision.math
+# Created with StarOffice 5.2
+so5.sdw application/vnd.stardivision.writer
+so5.sdc application/vnd.stardivision.calc
+so5.sdd application/vnd.stardivision.impress
+so5.sda application/vnd.stardivision.draw
+so5.sds application/vnd.stardivision.chart
+so5.smf application/vnd.stardivision.math
+# Created with LibreOffice 7.6
+lo7.doc application/msword
+lo7.xls application/vnd.ms-excel
+lo7.ppt application/vnd.ms-powerpoint
+# Created with WordPerfect 9
+regular.wpd application/vnd.wordperfect
+compound.wpd application/vnd.wordperfect
+# Created with Quattro Pro 6
+quattro6.wb2 application/x-quattropro ox
+# Created with Quattro Pro 9
+quattro9.qpw application/x-quattropro
 # Copied from https://bugs.freedesktop.org/show_bug.cgi?id=20604
 foo.doc application/msword
 # Copied from http://bugzilla.abisource.com/show_bug.cgi?id=6435
@@ -172,7 +201,7 @@ ocf10-20060911.epub application/epub+zip
 # Copied from https://standardebooks.org/ebooks/elizabeth-barrett-browning/sonnets-from-the-portuguese
 elizabeth-barrett-browning_sonnets-from-the-portuguese.azw3 application/vnd.amazon.mobi8-ebook ox
 # Copied from http://libwps.svn.sourceforge.net/viewvc/libwps/trunk/reference/
-test.wps application/vnd.ms-works ox
+test.wps application/vnd.ms-works
 # Copied from https://bugs.freedesktop.org/show_bug.cgi?id=45922
 test.xlr application/vnd.ms-works ox
 # Copied from http://openxmldeveloper.org/articles/OpenXMLsamples.aspx
@@ -203,7 +232,7 @@ white_640x480.kra application/x-krita
 test.mobi application/x-mobipocket-ebook
 test.lwp application/vnd.lotus-wordpro
 # Copied from https://bugs.freedesktop.org/show_bug.cgi?id=64946
-TS010082249.pub application/vnd.ms-publisher ox
+TS010082249.pub application/vnd.ms-publisher
 test.key application/vnd.apple.keynote
 # Created with Numbers 3.5
 test.numbers application/vnd.apple.numbers ox
@@ -260,7 +289,7 @@ live-streaming.m3u application/vnd.apple.mpegurl x
 # Copied from http://qthttp.apple.com.edgesuite.net/1006ad9g4hjk/all_w.m3u8
 all_w.m3u8 application/vnd.apple.mpegurl x
 # Copied from http://bugs.freedesktop.org/show_bug.cgi?id=42922
-test.vsd application/vnd.visio ox
+test.vsd application/vnd.visio
 # Copied from https://bugs.freedesktop.org/show_bug.cgi?id=40800
 test.dts audio/vnd.dts
 test.dtshd audio/vnd.dts.hd
@@ -505,7 +534,7 @@ test.jar application/java-archive ox
 # Copied from http://bugs.freedesktop.org/show_bug.cgi?id=12620
 hello.pack application/x-java-pack200
 # Copied from http://www.apache.org/dist/httpd/binaries/win32/apache_2.2.9-win32-x86-no_ssl-r2.msi
-test.msi application/x-msi ox
+test.msi application/x-msi
 # Created by building the default blank Universal Windows C++ app in Visual Studio 2022
 App1_1.0.0.0_x64.appx application/appx ox
 App1_1.0.0.0_x64.appxbundle application/appxbundle ox
