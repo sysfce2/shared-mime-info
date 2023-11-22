@@ -535,6 +535,8 @@ test.jar application/java-archive ox
 hello.pack application/x-java-pack200
 # Copied from http://www.apache.org/dist/httpd/binaries/win32/apache_2.2.9-win32-x86-no_ssl-r2.msi
 test.msi application/x-msi
+# Created by the Wine test suite: https://gitlab.winehq.org/wine/wine/-/blob/7c45c7c5ebb59237d568a4e5b38626422e670b63/dlls/msi/tests/patch.c#L695
+winetest-patch.msp application/microsoftpatch
 # Created by building the default blank Universal Windows C++ app in Visual Studio 2022
 App1_1.0.0.0_x64.appx application/appx ox
 App1_1.0.0.0_x64.appxbundle application/appxbundle ox
