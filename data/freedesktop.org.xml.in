@@ -3753,6 +3753,7 @@ command to generate the output files.
   <mime-type type="application/vnd.ms-publisher">
     <comment>Microsoft Publisher document</comment>
     <sub-class-of type="application/x-ole-storage"/>
+    <generic-icon name="x-office-document"/>
     <magic priority="60">
       <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
         <match type="string" value="\x01\x12\x02\x00\x00\x00\x00\x00\x00\xc0\x00\x00\x00\x00\x00\x46" offset="592:8192"/>
