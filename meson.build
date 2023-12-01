@@ -11,6 +11,7 @@ config = configuration_data()
 i18n = import('i18n')
 
 cc = meson.get_compiler('c')
+cxx = meson.get_compiler('cpp')
 
 ###############################################################################
 # Project configuration
@@ -44,6 +45,19 @@ if not xdgmime_found
 *** xdgmime not compiled, test suite cannot run. Check HACKING for info ***
 ***************************************************************************
     ''')
+endif
+
+###############################################################################
+# Check if GCC needs -lstdc++fs (before 9.1)
+
+if not cxx.links('''
+        #include <filesystem>
+        int main() {
+            return std::filesystem::is_directory(
+                std::filesystem::status("/tmp")) ? 0 : 1;
+        }
+        ''', name: 'std++fs-check')
+    add_project_link_arguments('-lstdc++fs', language : 'cpp')
 endif
 
 ###############################################################################
