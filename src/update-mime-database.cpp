@@ -244,7 +244,7 @@ static Type *get_type(const char *name, GError **error)
 	xmlNs *ns;
 	const char *slash;
 	Type *type;
-	int i;
+	size_t i;
 
 	slash = strchr(name, '/');
 	if (!slash || strchr(slash + 1, '/'))
@@ -1957,7 +1957,7 @@ static void write_tree_magic(FILE *stream, TreeMagic *magic)
  */
 static void delete_old_types(const gchar *mime_dir)
 {
-	int i;
+	size_t i;
 
 	for (i = 0; i < G_N_ELEMENTS(media_types); i++)
 	{
@@ -2010,7 +2010,7 @@ static void add_ns(gpointer key, gpointer value, gpointer data)
 static void write_namespaces(FILE *stream)
 {
 	GPtrArray *lines;
-	int i;
+	size_t i;
 	
 	lines = g_ptr_array_new();
 
@@ -2069,7 +2069,7 @@ static void add_alias(gpointer key, gpointer value, gpointer data)
 static void write_aliases(FILE *stream)
 {
 	GPtrArray *lines;
-	int i;
+	size_t i;
 	
 	lines = g_ptr_array_new();
 
@@ -2100,7 +2100,7 @@ static void add_type(gpointer key, gpointer value, gpointer data)
 static void write_types(FILE *stream)
 {
 	GPtrArray *lines;
-	int i;
+	size_t i;
 	
 	lines = g_ptr_array_new();
 
@@ -3202,7 +3202,7 @@ write_types_cache (FILE       *cache,
                    guint      *offset)
 {
 	GPtrArray *lines;
-	int i;
+	size_t i;
 	char *mimetype;
 	guint mime_offset;
 	
@@ -3782,7 +3782,7 @@ int main(int argc, char **argv)
 	{
 		FILE *stream;
 		char *magic_path;
-		int i;
+		size_t i;
 		magic_path = g_strconcat(mime_dir, "/magic.new", nullptr);
 		stream = fopen_gerror(magic_path, error);
 		if (!stream)
@@ -3903,7 +3903,7 @@ int main(int argc, char **argv)
 	{
 		FILE *stream;
 		char *path;
-		int i;
+		size_t i;
 		path = g_strconcat(mime_dir, "/treemagic.new", nullptr);
 		stream = fopen_gerror(path, error);
 		if (!stream)
