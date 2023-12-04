@@ -26,26 +26,16 @@ xmllint = find_program('xmllint')
 xmlto   = find_program('xmlto', required: false)
 
 ###############################################################################
-# Find xdgmime
+# Find xdgmime. It needs to be a native dependency (i.e. compiled for the build
+# system rather than the host system) so we can run its programs as part of the
+# shared-mime-info build.
 
-xdgmime = get_option('xdgmime-path') / 'src'
+subproject('xdgmime')
+xdgmime_dep = dependency('xdgmime', native: true)
 
-xdgmime_print_mime_data = find_program(xdgmime/'print-mime-data', required: false)
-xdgmime_test_mime_data  = find_program(xdgmime/'test-mime-data', required: false)
-xdgmime_test_mime       = find_program(xdgmime/'test-mime', required: false)
-xdgmime_found = (
-    xdgmime_print_mime_data.found() and
-    xdgmime_test_mime_data.found()  and
-    xdgmime_test_mime.found()
-)
-
-if not xdgmime_found
-    warning('''
-***************************************************************************
-*** xdgmime not compiled, test suite cannot run. Check HACKING for info ***
-***************************************************************************
-    ''')
-endif
+xdgmime_print_mime_data = find_program('print-mime-data')
+xdgmime_test_mime_data  = find_program('test-mime-data')
+xdgmime_test_mime       = find_program('test-mime')
 
 ###############################################################################
 # Check if GCC needs -lstdc++fs (before 9.1)

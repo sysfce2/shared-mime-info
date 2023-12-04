@@ -70,7 +70,7 @@ variables:
     FDO_DISTRIBUTION_TAG: "2022-08-15.0"
     BUILD_OS: fedora
     FDO_DISTRIBUTION_VERSION: 38
-    FDO_DISTRIBUTION_PACKAGES: "gcc gcc-c++ glibc-devel make libxml2-devel glib2-devel gettext git xmlto findutils gettext-devel meson"
+    FDO_DISTRIBUTION_PACKAGES: "gcc gcc-c++ glibc-devel libxml2-devel glib2-devel gettext git xmlto findutils gettext-devel meson"
   
 .fedora-x86_64:
   extends:
@@ -100,9 +100,6 @@ fedora-x86_64-container_prep:
 .do-build:
   stage: "Build and test"
   script:
-    # Compile xdgmime
-    - make -C xdgmime
-
     # Compile and test shared-mime-info
     - meson setup _build
     - meson compile -C _build

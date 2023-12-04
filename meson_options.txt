@@ -14,7 +14,3 @@ option('build-translations', type: 'boolean', value: true,
 option('build-tests', type: 'boolean', value: true,
     description: 'Build the test suite.  If not set then there will be no \'test\' build target.',
 )
-
-option('xdgmime-path', type: 'string', value: './xdgmime',
-    description: 'Path to the xdgmime executable',
-)

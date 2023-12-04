@@ -35,20 +35,21 @@ more test files to be added to the test suite.
 Test suite
 ----------
 
-You need to have xdgmime [1] checked out and compiled before you configure
-and build shared-mime-info. In the shared-mime-info git repository, getting
-xdgmime is taken care of by using a git submodule; run `git submodule update
---init` after cloning the shared-mime-info repo. If you wish to keep the
-submodule automatically up to date on pull, `git config submodule.recurse
-true` in the shared-mime-info dir helps with that. To build xdgmime, `cd
-xdgmime/src && make` (ignore the Meson build system).
+The shared-mime-info tests depend on xdgmime [1]. This is taken care of as a
+git submodule and as a meson subproject. Run `meson subprojects update` or
+`git submodule update --init` after cloning the shared-mime-info repo. If you
+wish to keep the submodule automatically up to date on pull,
+`git config submodule.recurse true` in the shared-mime-info dir helps with that.
 
-By default, the build system will expect the xdgmime directory to be in the
-shared-mime-info directory. `./xdgmime/src/test-mime-data` is run against
-`tests/mime-detection/list`. An alternate path to xdgmime can be passed by
-using the `xdgmime-path` meson option such as `-Dxdgmime-path=/path/to/xdgmime`.
+xdgmime will be built automatically by the meson build system for
+shared-mime-info.
 
-The format of the file is:
+Meson’s subprojects system[2] requires the xdgmime directory to be in
+`subprojects/xdgmime`. An alternate path to xdgmime can be configured by
+installing a pkg-config file for xdgmime which points to the desired location.
+
+As part of the tests, `./xdgmime/src/test-mime-data` is run against
+`tests/mime-detection/list`. The format of the file is:
 `<testcase filename> <expected mime-type> <expected failures>`
 
 The expected failures is whether matching the file with the mime-type would
@@ -62,6 +63,7 @@ test files in the `staging-tests/` sub-directory.
 
 [1]: Repository details at:
 https://gitlab.freedesktop.org/xdg/xdgmime
+[2]: https://mesonbuild.com/Subprojects.html
 
 Releasing
 ---------
