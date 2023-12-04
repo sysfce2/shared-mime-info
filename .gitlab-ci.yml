@@ -104,10 +104,10 @@ fedora-x86_64-container_prep:
     - make -C xdgmime
 
     # Compile and test shared-mime-info
-    - meson _build
-    - ninja -C _build
-    - ninja -C _build test
-    - ninja -C _build dist
+    - meson setup _build
+    - meson compile -C _build
+    - meson test -C _build
+    - meson dist -C _build
   artifacts:
     when: always
     paths:
