@@ -5185,6 +5185,13 @@ command to generate the output files.
     <alias type="image/heic-sequence"/>
     <alias type="image/heif-sequence"/>
   </mime-type>
+  <mime-type type="image/hej2k">
+    <comment>JPEG 2000 image encapsulated in HEIF</comment>
+    <magic>
+      <match type="string" value="ftypj2ki" offset="4"/>
+    </magic>
+    <glob pattern="*.hej2"/>
+  </mime-type>
   <mime-type type="image/ief">
     <comment>IEF image</comment>
     <glob pattern="*.ief"/>
