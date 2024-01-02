@@ -575,6 +575,10 @@ test.lz application/x-lzip
 test.tar.lz application/x-lzip-compressed-tar ox
 # Created using lzop 1.02rc1, lzo 2.03
 test.lzo application/x-lzop
+# Created using rzip 2.1
+test.rz application/x-rzip
+# Created using GNU tar 1.35 and rzip 2.1
+test.tar.rz application/x-rzip-compressed-tar ox
 # Created using lrzip 0.45
 archive.lrz application/x-lrzip
 # Created using lz4 r110
