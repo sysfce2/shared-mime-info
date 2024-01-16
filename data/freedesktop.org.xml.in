@@ -6251,6 +6251,7 @@ command to generate the output files.
       <match type="string" value="mtllib " offset="0:256"/>
     </magic>
     <glob pattern="*.obj"/>
+    <alias type="application/prs.wavefront-obj"/>
   </mime-type>
   <mime-type type="model/mtl">
     <comment>OBJ 3D model material library</comment>
