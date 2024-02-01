@@ -104,7 +104,7 @@ fedora-x86_64-container_prep:
     - meson setup _build
     - meson compile -C _build
     - meson test -C _build --no-suite xdgmime
-    - meson dist -C _build
+    - meson dist -C _build --no-tests
   artifacts:
     when: always
     paths:
