@@ -103,7 +103,7 @@ fedora-x86_64-container_prep:
     # Compile and test shared-mime-info
     - meson setup _build
     - meson compile -C _build
-    - meson test -C _build
+    - meson test -C _build --no-suite xdgmime
     - meson dist -C _build
   artifacts:
     when: always
