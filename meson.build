@@ -26,18 +26,6 @@ xmllint = find_program('xmllint')
 xmlto   = find_program('xmlto', required: false)
 
 ###############################################################################
-# Find xdgmime. It needs to be a native dependency (i.e. compiled for the build
-# system rather than the host system) so we can run its programs as part of the
-# shared-mime-info build.
-
-subproject('xdgmime')
-xdgmime_dep = dependency('xdgmime', native: true)
-
-xdgmime_print_mime_data = find_program('print-mime-data')
-xdgmime_test_mime_data  = find_program('test-mime-data')
-xdgmime_test_mime       = find_program('test-mime')
-
-###############################################################################
 # Check if GCC needs -lstdc++fs (before 9.1)
 
 if not cxx.links('''
@@ -67,7 +55,24 @@ if get_option('build-tools')
     gio = dependency('gio-2.0', required: false)
     subdir('src')
 endif
-if get_option('build-tests')
+
+build_tests = get_option('build-tests')
+if meson.is_cross_build()
+    # It's currently impossible to use a native subproject when cross-compiling.
+    warning('Cannot cross-compile tests due to https://github.com/mesonbuild/meson/issues/11121')
+    build_tests = false
+endif
+
+if build_tests
+    # Find xdgmime. It needs to be a native dependency (i.e. compiled for the
+    # build system rather than the host system) so we can run its programs as
+    # part of the shared-mime-info build.
+    subproject('xdgmime')
+    xdgmime_dep = dependency('xdgmime', native: true)
+
+    xdgmime_print_mime_data = find_program('print-mime-data')
+    xdgmime_test_mime_data  = find_program('test-mime-data')
+    xdgmime_test_mime       = find_program('test-mime')
     subdir('tests')
 endif
 
