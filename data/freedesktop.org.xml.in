@@ -951,92 +951,188 @@ command to generate the output files.
     <glob pattern="winmail.dat"/>
     <alias type="application/ms-tnef"/>
   </mime-type>
-  <mime-type type="application/vnd.stardivision.calc">
-    <comment>StarCalc spreadsheet</comment>
+  <mime-type type="application/x-starcalc">
+    <comment>StarCalc 3-4 spreadsheet</comment>
     <sub-class-of type="application/x-ole-storage"/>
     <generic-icon name="x-office-spreadsheet"/>
     <magic priority="60">
       <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
         <match type="string" value="\x41\xd4\x61\x63\x35\x42\xd0\x11\x89\xcb\x00\x80\x29\xe4\xb0\xb1" offset="592:8192"/>
-        <match type="string" value="\x61\xb8\xa5\xc6\xd6\x85\xd1\x11\x89\xcb\x00\x80\x29\xe4\xb0\xb1" offset="592:8192"/>
         <match type="string" value="\xa0\x3f\x54\x3f\xa6\xb6\x1b\x10\x99\x61\x04\x02\x1c\x00\x70\x02" offset="592:8192"/>
+      </match>
+    </magic>
+    <glob pattern="*.sdc" weight="40"/>
+  </mime-type>
+  <mime-type type="application/x-starchart">
+    <comment>StarChart 3-4 chart</comment>
+    <sub-class-of type="application/x-ole-storage"/>
+    <generic-icon name="x-office-spreadsheet"/>
+    <magic priority="60">
+      <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
+        <match type="string" value="\xe0\x99\x9c\xfb\x6d\x2c\x1c\x10\x8e\x2c\x00\x00\x1b\x4c\xc7\x11" offset="592:8192"/>
+        <match type="string" value="\xe0\xb7\xb3\x02\x25\x42\xd0\x11\x89\xca\x00\x80\x29\xe4\xb0\xb1" offset="592:8192"/>
+      </match>
+    </magic>
+    <glob pattern="*.sds" weight="40"/>
+  </mime-type>
+  <mime-type type="application/x-stardraw">
+    <comment>StarDraw 4 drawing</comment>
+    <sub-class-of type="application/x-ole-storage"/>
+    <generic-icon name="image-x-generic"/>
+    <magic priority="60">
+      <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
+        <match type="string" value="\xe0\xaa\x10\xaf\x6d\xb3\x1b\x10\x99\x61\x04\x02\x1c\x00\x70\x02" offset="592:8192"/>
+      </match>
+    </magic>
+    <glob pattern="*.sda" weight="40"/>
+  </mime-type>
+  <mime-type type="application/x-starimpress">
+    <comment>StarImpress 3-4 presentation</comment>
+    <sub-class-of type="application/x-ole-storage"/>
+    <generic-icon name="x-office-presentation"/>
+    <magic priority="70">
+      <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
+        <match type="string" value="\xc0\x3c\x2d\x01\x16\x42\xd0\x11\x89\xcb\x00\x80\x29\xe4\xb0\xb1" offset="592:8192"/>
+        <match type="string" value="\xe0\xaa\x10\xaf\x6d\xb3\x1b\x10\x99\x61\x04\x02\x1c\x00\x70\x02" offset="592:8192"/>
+      </match>
+    </magic>
+    <glob pattern="*.sdd" weight="40"/>
+    <glob pattern="*.sdp" weight="40"/>
+  </mime-type>
+  <mime-type type="application/x-starmail">
+    <comment>StarMail 4 email</comment>
+    <generic-icon name="emblem-mail"/>
+    <magic>
+      <match type="string" value="ANCH" offset="0"/>
+    </magic>
+    <glob pattern="*.smd" weight="10"/>
+  </mime-type>
+  <mime-type type="application/x-starmath">
+    <comment>StarMath 3-4 formula</comment>
+    <sub-class-of type="application/x-ole-storage"/>
+    <generic-icon name="x-office-document"/>
+    <magic priority="60">
+      <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
+        <match type="string" value="\x60\x04\x59\xd4\xfd\x35\x1c\x10\xb1\x2a\x04\x02\x1c\x00\x70\x02" offset="592:8192"/>
+        <match type="string" value="\xe1\xb7\xb3\x02\x25\x42\xd0\x11\x89\xca\x00\x80\x29\xe4\xb0\xb1" offset="592:8192"/>
+      </match>
+    </magic>
+    <glob pattern="*.smf" weight="40"/>
+  </mime-type>
+  <mime-type type="application/x-starwriter">
+    <comment>StarWriter 3-4 document</comment>
+    <sub-class-of type="application/x-ole-storage"/>
+    <generic-icon name="x-office-document"/>
+    <glob pattern="*.sdw" weight="40"/>
+    <glob pattern="*.vor" weight="40"/>
+    <magic priority="90">
+      <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
+        <match type="string" value="\x40\x7e\x5c\xdc\x5c\xb3\x1b\x10\x99\x61\x04\x02\x1c\x00\x70\x02" offset="592:8192"/>
+        <match type="string" value="\xb0\xe9\x04\x8b\x0e\x42\xd0\x11\xa4\x5e\x00\xa0\x24\x9d\x57\xb1" offset="592:8192"/>
+      </match>
+    </magic>
+  </mime-type>
+  <mime-type type="application/x-starwriter-global">
+    <comment>StarWriter 4 master document</comment>
+    <sub-class-of type="application/x-ole-storage"/>
+    <generic-icon name="x-office-document"/>
+    <glob pattern="*.sgl" weight="40"/>
+    <magic priority="90">
+      <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
+        <match type="string" value="\x70\xc9\x0a\x34\x0d\xe3\xd0\x11\xa5\x3f\x00\xa0\x24\x9d\x57\xb1" offset="592:8192"/>
+      </match>
+    </magic>
+  </mime-type>
+  <mime-type type="application/vnd.stardivision.calc">
+    <comment>StarCalc 5 spreadsheet</comment>
+    <sub-class-of type="application/x-ole-storage"/>
+    <generic-icon name="x-office-spreadsheet"/>
+    <magic priority="60">
+      <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
+        <match type="string" value="\x61\xb8\xa5\xc6\xd6\x85\xd1\x11\x89\xcb\x00\x80\x29\xe4\xb0\xb1" offset="592:8192"/>
       </match>
     </magic>
     <glob pattern="*.sdc"/>
   </mime-type>
   <mime-type type="application/vnd.stardivision.chart">
-    <comment>StarChart chart</comment>
+    <comment>StarChart 5 chart</comment>
     <sub-class-of type="application/x-ole-storage"/>
     <generic-icon name="x-office-spreadsheet"/>
     <magic priority="60">
       <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
         <match type="string" value="\x21\x43\x88\xbf\xdd\x85\xd1\x11\x89\xd0\x00\x80\x29\xe4\xb0\xb1" offset="592:8192"/>
-        <match type="string" value="\xe0\x99\x9c\xfb\x6d\x2c\x1c\x10\x8e\x2c\x00\x00\x1b\x4c\xc7\x11" offset="592:8192"/>
-        <match type="string" value="\xe0\xb7\xb3\x02\x25\x42\xd0\x11\x89\xca\x00\x80\x29\xe4\xb0\xb1" offset="592:8192"/>
       </match>
     </magic>
     <glob pattern="*.sds"/>
   </mime-type>
   <mime-type type="application/vnd.stardivision.draw">
-    <comment>StarDraw drawing</comment>
+    <comment>StarDraw 5 drawing</comment>
     <sub-class-of type="application/x-ole-storage"/>
     <generic-icon name="image-x-generic"/>
     <magic priority="60">
       <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
         <match type="string" value="\xa0\x05\x89\x2e\xbd\x85\xd1\x11\x89\xd0\x00\x80\x29\xe4\xb0\xb1" offset="592:8192"/>
-        <match type="string" value="\xe0\xaa\x10\xaf\x6d\xb3\x1b\x10\x99\x61\x04\x02\x1c\x00\x70\x02" offset="592:8192"/>
       </match>
     </magic>
     <glob pattern="*.sda"/>
   </mime-type>
   <mime-type type="application/vnd.stardivision.impress">
-    <comment>StarImpress presentation</comment>
+    <comment>StarImpress 5 presentation</comment>
     <sub-class-of type="application/x-ole-storage"/>
     <generic-icon name="x-office-presentation"/>
     <magic priority="70">
       <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
         <match type="string" value="\x21\x72\x5c\x56\xbc\x85\xd1\x11\x89\xd0\x00\x80\x29\xe4\xb0\xb1" offset="592:8192"/>
-        <match type="string" value="\xc0\x3c\x2d\x01\x16\x42\xd0\x11\x89\xcb\x00\x80\x29\xe4\xb0\xb1" offset="592:8192"/>
-        <match type="string" value="\xe0\xaa\x10\xaf\x6d\xb3\x1b\x10\x99\x61\x04\x02\x1c\x00\x70\x02" offset="592:8192"/>
       </match>
     </magic>
     <glob pattern="*.sdd"/>
     <glob pattern="*.sdp"/>
   </mime-type>
   <mime-type type="application/vnd.stardivision.mail">
-    <comment>StarMail email</comment>
+    <comment>StarMail 5 email</comment>
+    <sub-class-of type="application/x-ole-storage"/>
     <generic-icon name="emblem-mail"/>
-    <glob pattern="*.smd" weight="10"/>
+    <magic priority="60">
+      <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
+        <match type="string" value="\xe0\xc4\x4c\xc2\xdf\x73\x1b\x10\x80\x4c\xfd\xfd\xfd\xfd\xfd\xfd" offset="592:8192"/>
+      </match>
+    </magic>
+    <glob pattern="*.sdm"/>
   </mime-type>
   <mime-type type="application/vnd.stardivision.math">
-    <comment>StarMath formula</comment>
+    <comment>StarMath 5 formula</comment>
     <sub-class-of type="application/x-ole-storage"/>
     <generic-icon name="x-office-document"/>
     <magic priority="60">
       <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
         <match type="string" value="\x40\xe6\xb5\xff\xde\x85\xd1\x11\x89\xd0\x00\x80\x29\xe4\xb0\xb1" offset="592:8192"/>
-        <match type="string" value="\x60\x04\x59\xd4\xfd\x35\x1c\x10\xb1\x2a\x04\x02\x1c\x00\x70\x02" offset="592:8192"/>
-        <match type="string" value="\xe1\xb7\xb3\x02\x25\x42\xd0\x11\x89\xca\x00\x80\x29\xe4\xb0\xb1" offset="592:8192"/>
       </match>
     </magic>
     <glob pattern="*.smf"/>
   </mime-type>
   <mime-type type="application/vnd.stardivision.writer">
-    <comment>StarWriter document</comment>
+    <comment>StarWriter 5 document</comment>
     <sub-class-of type="application/x-ole-storage"/>
     <generic-icon name="x-office-document"/>
     <glob pattern="*.sdw"/>
     <glob pattern="*.vor"/>
-    <glob pattern="*.sgl"/>
     <magic priority="90">
       <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
-        <match type="string" value="\x40\x7e\x5c\xdc\x5c\xb3\x1b\x10\x99\x61\x04\x02\x1c\x00\x70\x02" offset="592:8192"/>
-        <match type="string" value="\xb0\xe9\x04\x8b\x0e\x42\xd0\x11\xa4\x5e\x00\xa0\x24\x9d\x57\xb1" offset="592:8192"/>
         <match type="string" value="\xd1\xf9\x0c\xc2\xae\x85\xd1\x11\xaa\xb4\x00\x06\x09\x7d\x56\x1a" offset="592:8192"/>
       </match>
       <match type="string" value="StarWriter" offset="2089" />
     </magic>
-    <alias type="application/vnd.stardivision.writer-global"/>
+  </mime-type>
+  <mime-type type="application/vnd.stardivision.writer-global">
+    <comment>StarWriter 5 master document</comment>
+    <sub-class-of type="application/x-ole-storage"/>
+    <generic-icon name="x-office-document"/>
+    <glob pattern="*.sgl"/>
+    <magic priority="90">
+      <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
+        <match type="string" value="\xd3\xf9\x0c\xc2\xae\x85\xd1\x11\xaa\xb4\x00\x60\x97\xda\x56\x1a" offset="592:8192"/>
+      </match>
+    </magic>
   </mime-type>
   <mime-type type="application/vnd.sun.xml.calc">
     <comment>LibreOffice Calc spreadsheet</comment>

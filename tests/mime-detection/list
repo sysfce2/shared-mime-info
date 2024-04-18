@@ -162,24 +162,30 @@ ooo-test.fodg application/vnd.oasis.opendocument.graphics-flat-xml ox
 ooo-test.fodp application/vnd.oasis.opendocument.presentation-flat-xml ox
 ooo-test.fods application/vnd.oasis.opendocument.spreadsheet-flat-xml ox
 ooo-test.fodt application/vnd.oasis.opendocument.text-flat-xml ox
+# Created with StarOffice 3.0
+so3.smf application/x-starmath x
 # Created with StarOffice 3.1
-so3.sdw application/vnd.stardivision.writer
-so3.sdc application/vnd.stardivision.calc
-so3.sdd application/vnd.stardivision.impress
-so3.sds application/vnd.stardivision.chart
+so3.sdw application/x-starwriter x
+so3.sdc application/x-starcalc x
+so3.sdd application/x-starimpress x
+so3.sds application/x-starchart x
 # Created with StarOffice 4.0
-so4.sdw application/vnd.stardivision.writer
-so4.sdc application/vnd.stardivision.calc
-so4.sdd application/vnd.stardivision.impress
-so4.sds application/vnd.stardivision.chart
-so4.smf application/vnd.stardivision.math
+so4.sdw application/x-starwriter x
+so4.sgl application/x-starwriter-global x
+so4.sdc application/x-starcalc x
+so4.sdd application/x-starimpress x
+so4.sds application/x-starchart x
+so4.smf application/x-starmath x
+so4.smd application/x-starmail x
 # Created with StarOffice 5.2
 so5.sdw application/vnd.stardivision.writer
+so5.sgl application/vnd.stardivision.writer-global
 so5.sdc application/vnd.stardivision.calc
 so5.sdd application/vnd.stardivision.impress
 so5.sda application/vnd.stardivision.draw
 so5.sds application/vnd.stardivision.chart
 so5.smf application/vnd.stardivision.math
+so5.sdm application/vnd.stardivision.mail
 # Created with LibreOffice 7.6
 lo7.doc application/msword
 lo7.xls application/vnd.ms-excel
