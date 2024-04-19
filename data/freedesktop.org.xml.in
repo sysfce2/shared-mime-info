@@ -6714,9 +6714,10 @@ command to generate the output files.
     <glob pattern="*.sgml"/>
     <glob pattern="*.sgm"/>
   </mime-type>
-  <mime-type type="text/spreadsheet">
+  <mime-type type="application/x-sylk">
     <comment>Spreadsheet interchange document</comment>
     <sub-class-of type="text/plain"/>
+    <alias type="text/spreadsheet"/>
     <magic>
       <match type="string" value="ID;" offset="0"/>
     </magic>
