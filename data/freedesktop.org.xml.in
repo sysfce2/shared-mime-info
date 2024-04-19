@@ -5770,6 +5770,14 @@ command to generate the output files.
     <sub-class-of type="image/tiff"/>
     <glob pattern="*.arw"/>
   </mime-type>
+  <mime-type type="application/x-sony-bbeb">
+    <comment>BroadBand eBook</comment>
+    <generic-icon name="x-office-document"/>
+    <magic>
+      <match type="string" value="L\0R\0F\0\0\0" offset="0"/>
+    </magic>
+    <glob pattern="*.lrf"/>
+  </mime-type>
   <mime-type type="image/png">
     <comment>PNG image</comment>
     <acronym>PNG</acronym>
