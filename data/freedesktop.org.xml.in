@@ -7089,6 +7089,7 @@ command to generate the output files.
     <acronym>LDIF</acronym>
     <expanded-acronym>LDAP Data Interchange Format</expanded-acronym>
     <sub-class-of type="text/plain"/>
+    <generic-icon name="x-office-address-book"/>
     <magic>
       <match type="string" value="dn: cn=" offset="0"/>
       <match type="string" value="dn: mail=" offset="0"/>
