@@ -182,6 +182,7 @@ so5.sdw application/vnd.stardivision.writer
 so5.sgl application/vnd.stardivision.writer-global
 so5.sdc application/vnd.stardivision.calc
 so5.sdd application/vnd.stardivision.impress
+so5.sdp application/vnd.stardivision.impress-packed x
 so5.sda application/vnd.stardivision.draw
 so5.sds application/vnd.stardivision.chart
 so5.smf application/vnd.stardivision.math
@@ -254,7 +255,7 @@ test.xps application/vnd.ms-xpsdocument ox
 
 # Playlist, subtitle and audio formats
 stream.nsc application/x-netshow-channel
-stream.sdp application/sdp x
+stream.sdp application/sdp
 playlist.asx audio/x-ms-asx
 feed.rss application/rss+xml
 feed2 application/rss+xml x

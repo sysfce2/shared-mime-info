@@ -997,7 +997,6 @@ command to generate the output files.
       </match>
     </magic>
     <glob pattern="*.sdd" weight="40"/>
-    <glob pattern="*.sdp" weight="40"/>
   </mime-type>
   <mime-type type="application/x-starmail">
     <comment>StarMail 4 email</comment>
@@ -1086,7 +1085,14 @@ command to generate the output files.
       </match>
     </magic>
     <glob pattern="*.sdd"/>
-    <glob pattern="*.sdp"/>
+  </mime-type>
+  <mime-type type="application/vnd.stardivision.impress-packed">
+    <comment>StarImpress packed presentation</comment>
+    <generic-icon name="x-office-presentation"/>
+    <magic>
+      <match type="string" value="PIZS" offset="0"/>
+    </magic>
+    <glob pattern="*.sdp" weight="10"/>
   </mime-type>
   <mime-type type="application/vnd.stardivision.mail">
     <comment>StarMail 5 email</comment>
