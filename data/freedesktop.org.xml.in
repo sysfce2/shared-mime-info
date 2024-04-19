@@ -1549,6 +1549,16 @@ command to generate the output files.
     <generic-icon name="x-office-document"/>
     <glob pattern="*.oxt" />
   </mime-type>
+  <mime-type type="application/vnd.apache.parquet">
+    <comment>Apache Parquet file</comment>
+    <alias type="application/x-parquet"/>
+    <generic-icon name="x-office-spreadsheet"/>
+    <magic>
+      <match type="string" value="PAR1" offset="0"/>
+      <match type="string" value="PARE" offset="0"/>
+    </magic>
+    <glob pattern="*.parquet"/>
+  </mime-type>
   <mime-type type="application/vnd.android.package-archive">
     <comment>Android package</comment>
     <sub-class-of type="application/java-archive"/>
