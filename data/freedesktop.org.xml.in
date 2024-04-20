@@ -3906,6 +3906,20 @@ command to generate the output files.
     </magic>
     <glob pattern="*.pub"/>
   </mime-type>
+  <mime-type type="application/vnd.quark.quarkxpress">
+    <comment>QuarkXPress document</comment>
+    <generic-icon name="x-office-document"/>
+    <magic>
+      <match type="string" value="XPR3" offset="4"/>
+    </magic>
+    <glob pattern="*.qwd"/>
+    <glob pattern="*.qwt"/>
+    <glob pattern="*.qxb"/>
+    <glob pattern="*.qxd"/>
+    <glob pattern="*.qxl"/>
+    <glob pattern="*.qxp"/>
+    <glob pattern="*.qxt"/>
+  </mime-type>
   <mime-type type="application/x-msi">
     <comment>Windows Installer package</comment>
     <sub-class-of type="application/x-ole-storage"/>
