@@ -1837,7 +1837,6 @@ command to generate the output files.
     <comment>Blender scene</comment>
     <generic-icon name="image-x-generic"/>
     <glob pattern="*.blend"/>
-    <glob pattern="*.BLEND"/>
     <glob pattern="*.blender"/>
     <magic>
       <match type="string" value="BLENDER" offset="0"/>
