@@ -193,6 +193,7 @@ lo7.xls application/vnd.ms-excel
 lo7.ppt application/vnd.ms-powerpoint
 # Created with LibreOffice 24.2
 lo24.odm application/vnd.oasis.opendocument.text-master
+lo24.otm application/vnd.oasis.opendocument.text-master-template
 # Created with WordPerfect 9
 regular.wpd application/vnd.wordperfect
 compound.wpd application/vnd.wordperfect
