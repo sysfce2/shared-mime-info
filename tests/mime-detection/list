@@ -191,6 +191,8 @@ so5.sdm application/vnd.stardivision.mail
 lo7.doc application/msword
 lo7.xls application/vnd.ms-excel
 lo7.ppt application/vnd.ms-powerpoint
+# Created with LibreOffice 24.2
+lo24.odm application/vnd.oasis.opendocument.text-master
 # Created with WordPerfect 9
 regular.wpd application/vnd.wordperfect
 compound.wpd application/vnd.wordperfect
