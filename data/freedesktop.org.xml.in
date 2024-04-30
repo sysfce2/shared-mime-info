@@ -6066,13 +6066,16 @@ command to generate the output files.
     <alias type="image/x-fits"/>
     <alias type="image/fits"/>
   </mime-type>
-  <mime-type type="image/x-fpx">
-    <comment>FPX image</comment>
-    <acronym>FPX</acronym>
-    <expanded-acronym>FlashPiX</expanded-acronym>
-    <magic>
-      <match type="big32" value="0x46506978" offset="0"/>
+  <mime-type type="image/vnd.fpx">
+    <comment>FlashPix image</comment>
+    <sub-class-of type="application/x-ole-storage"/>
+    <magic priority="60">
+      <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
+        <match type="string" value="\x00\x67\x61\x56\x54\xc1\xce\x11\x85\x53\x00\xaa\x00\xa1\xf9\x5b" offset="592:8192"/>
+      </match>
     </magic>
+    <glob pattern="*.fpx"/>
+    <alias type="image/x-fpx"/>
   </mime-type>
   <mime-type type="image/x-gzeps">
     <comment>EPS image (gzip-compressed)</comment>

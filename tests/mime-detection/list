@@ -140,6 +140,8 @@ test-with-container.jxl image/jxl
 test-without-container.jxl image/jxl
 # Copied from https://commons.wikimedia.org/wiki/File:Animated_PNG_example_bouncing_beach_ball.png
 Animated_PNG_example_bouncing_beach_ball.png image/apng x
+# Copied from https://github.com/ImageMagick/ImageMagick6/raw/main/PerlMagick/t/fpx/input_256.fpx
+input_256.fpx image/vnd.fpx
 
 # Documents
 ooo-6.0.doc application/msword
