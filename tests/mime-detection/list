@@ -10,7 +10,7 @@
 
 # Images
 test.bmp image/bmp
-test.cel image/x-cel xxx
+test.cel image/x-kiss-cel
 test.dcm application/dicom
 test.eps image/x-eps
 # https://bugs.freedesktop.org/show_bug.cgi?id=55264
