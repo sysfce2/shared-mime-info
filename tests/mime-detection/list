@@ -950,6 +950,8 @@ cplusplusfile.C text/x-c++src oxo
 cfile.c text/x-csrc oxo
 no-extension-c-comment text/x-csrc x
 test-gettext.c text/x-csrc
+helloworld.c text/x-csrc
+helloworld.s text/x-asm
 
 # Common Lisp source code
 common-lisp.asd text/x-common-lisp oxo
