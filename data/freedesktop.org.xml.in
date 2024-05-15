@@ -6947,7 +6947,7 @@ command to generate the output files.
     <comment>OOC source code</comment>
     <acronym>OOC</acronym>
     <expanded-acronym>Out Of Class</expanded-acronym>
-    <sub-class-of type="text/x-csrc"/>
+    <sub-class-of type="text/plain"/>
     <glob pattern="*.ooc"/>
   </mime-type>
   <mime-type type="text/x-dcl">
