@@ -876,6 +876,9 @@ test.h5 application/x-hdf
 # From http://wiki.wireshark.org/SampleCaptures (ancp.pcap.gz, dns.cap)
 ancp.pcap application/vnd.tcpdump.pcap
 dns.cap application/vnd.tcpdump.pcap
+# From https://github.com/hadrielk/pcapng-test-generator
+test001.pcapng application/x-pcapng
+test001_be.pcapng application/x-pcapng
 # Created using Shalom Help Maker
 test.hlp application/winhlp
 # Case-insensitive glob

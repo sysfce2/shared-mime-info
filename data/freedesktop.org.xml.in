@@ -1612,6 +1612,19 @@ command to generate the output files.
     <alias type="application/x-pcap"/>
     <alias type="application/pcap"/>
   </mime-type>
+  <mime-type type="application/x-pcapng">
+    <comment>PCAPNG packet capture</comment>
+    <acronym>PCAPNG</acronym>
+    <expanded-acronym>PCAP Next Generation</expanded-acronym>
+    <magic>
+      <match type="host32" value="0x0a0d0d0a" offset="0">
+	<match type="host32" value="0x1a2b3c4d" offset="8"/>
+	<match type="host32" value="0x4d3c2b1a" offset="8"/>
+      </match>
+    </magic>
+    <glob pattern="*.pcapng"/>
+    <glob pattern="*.ntar"/>
+  </mime-type>
   <mime-type type="application/vnd.wordperfect">
     <comment>WordPerfect document</comment>
     <alias type="application/x-wordperfect"/>
