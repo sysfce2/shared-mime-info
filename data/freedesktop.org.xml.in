@@ -7232,6 +7232,11 @@ command to generate the output files.
     <glob pattern="*.mup"/>
     <glob pattern="*.not"/>
   </mime-type>
+  <mime-type type="text/x-nix">
+    <comment>Nix source code</comment>
+    <sub-class-of type="text/plain"/>
+    <glob pattern="*.nix"/>
+  </mime-type>
   <mime-type type="text/x-objcsrc">
     <comment>Objective-C source code</comment>
     <sub-class-of type="text/x-objc++src"/>
