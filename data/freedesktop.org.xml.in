@@ -6621,6 +6621,8 @@ command to generate the output files.
     </magic>
     <glob pattern="*.vcs"/>
     <glob pattern="*.ics"/>
+    <glob pattern="*.ifb"/>
+    <glob pattern="*.icalendar"/>
   </mime-type>
   <mime-type type="text/css">
     <comment>CSS stylesheet</comment>
