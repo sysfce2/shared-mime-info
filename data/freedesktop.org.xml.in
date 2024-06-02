@@ -5853,8 +5853,6 @@ command to generate the output files.
     <sub-class-of type="application/xml"/>
     <magic priority="80">
       <match type="string" value="&lt;!DOCTYPE svg" offset="0:256"/>
-    </magic>
-    <magic priority="80">
       <match type="string" value="&lt;!-- Created with Inkscape" offset="0"/>
       <match type="string" value="&lt;svg" offset="0"/>
     </magic>
@@ -7286,14 +7284,8 @@ command to generate the output files.
     </magic>
     <magic>
       <match type="string" value="function" offset="0"/>
-    </magic>
-    <magic>
       <match type="string" value="class" offset="0"/>
-    </magic>
-    <magic>
       <match type="string" value="model" offset="0"/>
-    </magic>
-    <magic>
       <match type="string" value="record" offset="0"/>
     </magic>
     <glob pattern="*.mo"/>
