@@ -8501,7 +8501,6 @@ command to generate the output files.
   <mime-type type="application/vnd.appimage">
     <comment>AppImage application bundle</comment>
     <sub-class-of type="application/x-executable"/>
-    <sub-class-of type="application/vnd.squashfs"/>
     <generic-icon name="application-x-executable"/>
     <magic>
       <match value="ELF" type="string" offset="1" >
