@@ -623,6 +623,8 @@ test.zipx application/zip
 # From /usr/lib64/vlc/libcompat.a
 libcompat.a application/x-archive
 libcompat.ar application/x-archive
+# Created with Visual Studio 2022
+StaticLib1.lib application/x-archive
 # Created by hand
 foo-0.1-1.fc18.src.rpm application/x-source-rpm ox
 # Created using sharutils 4.11.1
