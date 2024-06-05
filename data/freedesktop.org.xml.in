@@ -2472,7 +2472,6 @@ command to generate the output files.
       <match type="string" value="\177ELF" offset="0">
         <match type="byte" value="2" offset="5"/>
       </match>
-      <match type="string" value="MZ" offset="0"/>
       <match type="little16" value="0x521c" offset="0"/>
       <match type="host16" value="0420" offset="0"/>
       <match type="host16" value="0421" offset="0"/>
