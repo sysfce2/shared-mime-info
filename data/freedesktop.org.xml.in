@@ -3738,7 +3738,6 @@ command to generate the output files.
   </mime-type>
   <mime-type type="application/x-object">
     <comment>Object code</comment>
-    <generic-icon name="x-office-document"/>
     <magic>
       <match type="string" value="\177ELF" offset="0">
         <match type="byte" value="1" offset="5">
