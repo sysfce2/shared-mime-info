@@ -1629,6 +1629,7 @@ command to generate the output files.
       </match>
     </magic>
     <glob pattern="*.pcapng"/>
+    <glob pattern="*.scap"/>
     <glob pattern="*.ntar"/>
   </mime-type>
   <mime-type type="application/vnd.wordperfect">
