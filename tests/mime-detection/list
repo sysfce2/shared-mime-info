@@ -435,7 +435,7 @@ bibtex.bib text/x-bibtex
 import-objc.m text/x-objcsrc ox
 comment-objc.m text/x-objcsrc ox
 import-objc++.mm text/x-objc++src
-include-objc++.mm text/x-objc++src
+include-objc++.mm text/x-objc++src ox
 simple-troff.tr text/troff
 simple-troff.mm text/x-troff-mm xx
 # Copied from LLVM project test suite
@@ -507,7 +507,7 @@ test.twig text/x-twig ox
 # Crystal
 test.cr text/x-crystal ox
 test.jl text/julia ox
-test.rs text/rust ox
+test.rs text/rust
 # Copied from http://digital-preservation.github.io/csv-schema/csv-schema-1.0.html#basics
 test.csvs text/csv-schema ox
 # Copied from http://coffeescript.org/#overview
@@ -1042,7 +1042,7 @@ test.gdshader application/x-godot-shader ox
 test.gd application/x-gdscript ox
 
 # Kotlin source code
-test.kt text/x-kotlin ox
+test.kt text/x-kotlin
 
 # Device Tree Source
 devicetree1.dts text/x-devicetree-source xoo
