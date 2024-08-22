@@ -8586,6 +8586,16 @@ command to generate the output files.
     </magic>
     <glob pattern="*.pkpass"/>
   </mime-type>
+  <mime-type type="application/vnd.apple.pkpasses">
+    <comment>Apple Wallet passes bundle</comment>
+    <sub-class-of type="application/zip"/>
+    <magic priority="65">
+      <match type="string" value="PK\003\004" offset="0">
+        <match type="string" value=".pkpass" offset="30:256"/>
+      </match>
+    </magic>
+    <glob pattern="*.pkpasses"/>
+  </mime-type>
 
   <mime-type type="application/x-pagemaker">
     <comment>Adobe PageMaker document</comment>

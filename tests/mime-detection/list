@@ -914,6 +914,7 @@ ls application/x-executable x
 # ELF shared library
 libldap-2.4.so.2 application/x-sharedlib oxo
 boardingpass.pkpass application/vnd.apple.pkpass
+boardingpasses.pkpasses application/vnd.apple.pkpasses
 # AppImage created by following https://appimage-builder.readthedocs.io/en/latest/intro/tutorial.html
 appimage-demo-qt5-latest-x86_64.AppImage application/vnd.appimage
 # DOS executable
