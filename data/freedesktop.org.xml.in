@@ -902,16 +902,14 @@ command to generate the output files.
       <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
         <match type="string" value="\x00\x09\x02\x00\x00\x00\x00\x00\x00\xc0\x46\x00\x00\x00\x00\x00" offset="592:8192"/>
         <match type="string" value="\x06\x09\x02\x00\x00\x00\x00\x00\x00\xc0\x46\x00\x00\x00\x00\x00" offset="592:8192"/>
+        <match type="string" value="\xa\x0\x0\x0MSWordDoc\x0" offset="2080:2140"/>
+        <match type="string" value="\xec\xa5\x00\x00" mask="0xffff00fe" offset="512"/>
+        <match type="string" value="Microsoft Word document data" offset="2112"/>
       </match>
       <match type="string" value="\x31\xbe\x00\x00" offset="0"/>
       <match type="string" value="PO^Q`" offset="0"/>
       <match type="string" value="\376\067\0\043" offset="0"/>
       <match type="string" value="\333\245-\0\0\0" offset="0"/>
-      <match type="string" value="MSWordDoc" offset="2112"/>
-      <match type="string" value="MSWordDoc" offset="2108"/>
-      <match type="string" value="Microsoft Word document data" offset="2112"/>
-      <match type="string" value="bjbj" offset="546"/>
-      <match type="string" value="jbjb" offset="546"/>
     </magic>
     <glob pattern="*.doc"/>
     <alias type="application/vnd.ms-word"/>
