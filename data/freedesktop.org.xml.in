@@ -4377,7 +4377,7 @@ command to generate the output files.
     <comment>Nu shell script</comment>
     <sub-class-of type="application/x-executable"/>
     <sub-class-of type="text/plain"/>
-    <alias type="text/x-nu"/>
+    <alias type="text/x-nushell"/>
     <generic-icon name="text-x-script"/>
     <magic>
       <match type="string" value="/bin/env nu" offset="2:16"/>
