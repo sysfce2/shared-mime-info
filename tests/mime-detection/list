@@ -13,6 +13,10 @@ test.bmp image/bmp
 test.cel image/x-kiss-cel
 test.dcm application/dicom
 test.eps image/x-eps
+testcard_gray.pfm image/x-pfm
+testcard_rgb.pfm image/x-pfm
+testcard_rgb.pxr image/x-pxr
+testcard_gray.sct image/x-sct
 # https://bugs.freedesktop.org/show_bug.cgi?id=55264
 Oriental_tattoo_by_daftpunk22.eps image/x-eps
 GammaChart.exr image/x-exr

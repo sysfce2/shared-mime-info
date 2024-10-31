@@ -71,7 +71,7 @@ see the file named COPYING.
 
 The latest version is available from:
 
-	http://www.freedesktop.org/wiki/Software/shared-mime-info/
+        http://www.freedesktop.org/wiki/Software/shared-mime-info/
 
 To extend this database, users and applications should create additional
 XML files in the 'packages' directory and run the update-mime-database
@@ -1618,8 +1618,8 @@ command to generate the output files.
     <expanded-acronym>PCAP Next Generation</expanded-acronym>
     <magic>
       <match type="host32" value="0x0a0d0d0a" offset="0">
-	<match type="host32" value="0x1a2b3c4d" offset="8"/>
-	<match type="host32" value="0x4d3c2b1a" offset="8"/>
+        <match type="host32" value="0x1a2b3c4d" offset="8"/>
+        <match type="host32" value="0x4d3c2b1a" offset="8"/>
       </match>
     </magic>
     <glob pattern="*.pcapng"/>
@@ -8921,4 +8921,32 @@ command to generate the output files.
     <sub-class-of type="application/xml"/>
     <glob pattern="*.tsx"/>
   </mime-type>
+
+  <mime-type type="image/x-sct">
+    <comment>Scitex CT</comment>
+    <acronym>CT</acronym>
+    <expanded-acronym>Continuous Tone</expanded-acronym>
+    <glob pattern="*.sct"/>
+    <magic>
+      <match type="string" value="CT" offset="80"/>
+    </magic>
+  </mime-type>
+
+  <mime-type type="image/x-pxr">
+    <comment>Pixar raster</comment>
+    <glob pattern="*.pxr"/>
+    <magic>
+      <match type="string" value="\x80\xE8\x00\x00" offset="0"/>
+    </magic>
+  </mime-type>
+
+  <mime-type type="image/x-pfm">
+    <comment>Portable FloatMap</comment>
+    <glob pattern="*.pfm"/>
+    <magic>
+      <match type="string" value="PF\n" offset="0"/>
+      <match type="string" value="Pf\n" offset="0"/>
+    </magic>
+  </mime-type>
+
 </mime-info>
