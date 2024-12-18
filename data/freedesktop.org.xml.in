@@ -7714,10 +7714,11 @@ command to generate the output files.
     <glob pattern="*.texi"/>
     <glob pattern="*.texinfo"/>
   </mime-type>
-  <mime-type type="text/x-typst">
+  <mime-type type="text/vnd.typst">
     <comment>Typst document</comment>
     <sub-class-of type="text/plain"/>
     <glob pattern="*.typ"/>
+    <alias type="text/x-typst"/>
   </mime-type>
   <mime-type type="text/x-troff-me">
     <comment>Troff ME input document</comment>
