@@ -661,6 +661,8 @@ serafettin.rar application/vnd.rar
 extractthis.asar application/x-asar
 # Created using StuffIt Deluxe 7.0
 test.sitx application/x-stuffitx
+# From https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/shared-mime-info-doc-2.4-r1.apk
+shared-mime-info-doc-2.4-r1.apk application/x-alpine-package-keeper-package xxo
 
 # Audio/Video files
 # https://bugs.freedesktop.org/show_bug.cgi?id=20070#c4
