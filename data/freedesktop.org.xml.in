@@ -5590,6 +5590,13 @@ command to generate the output files.
     </magic>
     <glob pattern="*.hej2"/>
   </mime-type>
+  <mime-type type="image/avci">
+    <comment>AVC-encoded image encapsulated in HEIF</comment>
+    <magic>
+      <match type="string" value="ftypavci" offset="4"/>
+    </magic>
+    <glob pattern="*.avci"/>
+  </mime-type>
   <mime-type type="image/ief">
     <comment>IEF image</comment>
     <glob pattern="*.ief"/>
