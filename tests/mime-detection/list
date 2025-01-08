@@ -836,6 +836,8 @@ test.pdf.lz application/x-lzpdf ox
 test.pdf.xz application/x-xzpdf ox
 Makefile text/x-makefile ox
 Makefile.gnu text/x-makefile ox
+Dockerfile text/x-dockerfile
+test.Dockerfile text/x-dockerfile
 googleearth.kml application/vnd.google-earth.kml+xml ox
 # Created using geojson.io
 test.geojson application/geo+json ox

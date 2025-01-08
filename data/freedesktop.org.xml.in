@@ -7011,6 +7011,19 @@ command to generate the output files.
     <alias type="text/x-c"/>
     <glob pattern="*.c" case-sensitive="true"/>
   </mime-type>
+  <mime-type type="text/x-dockerfile">
+    <comment>Docker container build file</comment>
+    <sub-class-of type="text/plain"/>
+    <!-- https://docs.docker.com/build/concepts/dockerfile/#filename -->
+    <glob pattern="Dockerfile"/>
+    <glob pattern="*.Dockerfile"/>
+    <glob pattern="Dockerfile.*"/>
+    <magic>
+      <!-- https://docs.docker.com/reference/dockerfile/#syntax -->
+      <!-- https://docs.docker.com/build/buildkit/frontend/ -->
+      <match type="string" value="# syntax=docker/dockerfile:" offset="0"/>
+    </magic>
+  </mime-type>
   <mime-type type="text/x-asm">
     <comment>Assembly code</comment>
     <sub-class-of type="text/plain"/>
