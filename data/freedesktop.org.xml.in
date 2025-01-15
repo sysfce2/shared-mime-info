@@ -9177,4 +9177,13 @@ command to generate the output files.
     </magic>
   </mime-type>
 
+  <mime-type type="application/x-ns-proxy-autoconfig">
+    <comment>Proxy Auto-Configuration file</comment>
+    <sub-class-of type="text/javascript"/>
+    <glob pattern="*.pac"/>
+    <magic>
+      <match type="string" value="function FindProxyForURL" offset="0:3000" />
+    </magic>
+  </mime-type>
+
 </mime-info>
