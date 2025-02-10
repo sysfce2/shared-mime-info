@@ -519,6 +519,8 @@ test.rs text/rust
 test.csvs text/csv-schema ox
 # Copied from http://coffeescript.org/#overview
 test.coffee application/vnd.coffeescript ox
+# Copied from https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/blob/master/elements/components/shared-mime-info.bst
+test.bst application/buildstream+yaml
 # Copied from https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md#applying-security-schemes
 test.raml application/raml+yaml
 # Created with `echo 'Hello World!' > helloworld.txt && binhex -u helloworld.txt > helloworld.hqx`

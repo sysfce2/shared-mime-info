@@ -381,6 +381,14 @@ command to generate the output files.
       <match type="string" value="DataPlkr" offset="60"/>
     </magic>
   </mime-type>
+  <mime-type type="application/buildstream+yaml">
+    <comment>BuildStream element</comment>
+    <sub-class-of type="application/yaml"/>
+    <glob pattern="*.bst"/>
+    <magic>
+      <match type="string" value="kind:" offset="0:256"/>
+    </magic>
+  </mime-type>
   <mime-type type="application/raml+yaml">
     <comment>RAML document</comment>
     <acronym>RAML</acronym>
