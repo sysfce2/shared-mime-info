@@ -6,18 +6,27 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
+#ifndef _MSC_VER
 #include <unistd.h>
+#include <dirent.h>
+#endif
 #include <stdio.h>
 #include <glib.h>
 #include <glib/gprintf.h>
 #include <glib/gstdio.h>
 #include <errno.h>
-#include <dirent.h>
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <fcntl.h>
+
+#include <algorithm>
+#include <filesystem>
+#include <vector>
+#include <optional>
+
+namespace fs = std::filesystem;
 
 #define XML_NS XML_XML_NAMESPACE
 #define XMLNS_NS "http://www.w3.org/2000/xmlns/"
@@ -65,6 +74,7 @@ const char *media_types[] = {
 	"x-epoc",
 	"x-scheme-handler",
 	"font",
+	"chemical",
 };
 
 /* Represents a MIME type */
@@ -166,7 +176,7 @@ static GHashTable *icon_hash = NULL;
 static GHashTable *generic_icon_hash = NULL;
 
 /* Lists enabled log levels */
-static GLogLevelFlags enabled_log_levels = G_LOG_LEVEL_ERROR | G_LOG_LEVEL_CRITICAL | G_LOG_LEVEL_WARNING;
+static GLogLevelFlags enabled_log_levels = static_cast<GLogLevelFlags>(G_LOG_LEVEL_ERROR | G_LOG_LEVEL_CRITICAL | G_LOG_LEVEL_WARNING);
 
 /* Static prototypes */
 static Magic *magic_new(xmlNode *node, Type *type, GError **error);
@@ -218,9 +228,9 @@ static void free_type(gpointer data)
  */
 static char *my_xmlGetNsProp (xmlNodePtr node, 
 			      const char *name,
-			      const xmlChar *namespace)
+			      const xmlChar *nameSpace)
 {
-	return (char *)xmlGetNsProp (node, (xmlChar *)name, namespace);
+	return (char *)xmlGetNsProp (node, (xmlChar *)name, nameSpace);
 }
 
 /* If we've seen this type before, return the existing object.
@@ -234,7 +244,7 @@ static Type *get_type(const char *name, GError **error)
 	xmlNs *ns;
 	const char *slash;
 	Type *type;
-	int i;
+	size_t i;
 
 	slash = strchr(name, '/');
 	if (!slash || strchr(slash + 1, '/'))
@@ -244,7 +254,7 @@ static Type *get_type(const char *name, GError **error)
 		return NULL;
 	}
 
-	type = g_hash_table_lookup(types, name);
+	type = static_cast<Type *>(g_hash_table_lookup(types, name));
 	if (type)
 		return type;
 
@@ -381,7 +391,7 @@ static void add_namespace(Type *type, const char *namespaceURI,
 	}
 
 	g_hash_table_insert(namespace_hash,
-			g_strconcat(namespaceURI, " ", localName, NULL),
+			g_strconcat(namespaceURI, " ", localName, nullptr),
 			type);
 }
 
@@ -416,7 +426,7 @@ static gboolean process_freedesktop_node(Type *type, xmlNode *field,
 		{
 			Glob *glob;
 			char *pat = case_sensitive ? g_strdup (pattern) : g_ascii_strdown (pattern, -1);
-			GList *list = g_hash_table_lookup (globs_hash, pat);
+			auto list = static_cast<GList *>(g_hash_table_lookup (globs_hash, pat));
 			
 			glob = g_new0 (Glob, 1);
 			glob->pattern = pat;
@@ -440,7 +450,7 @@ static gboolean process_freedesktop_node(Type *type, xmlNode *field,
 	else if (strcmp((char *)field->name, "glob-deleteall") == 0)
 	{
 		Glob *glob;
-		GList *list = g_hash_table_lookup (globs_hash, NOGLOBS);
+		auto list = static_cast<GList *>(g_hash_table_lookup (globs_hash, NOGLOBS));
 
 		glob = g_new0 (Glob, 1);
 		glob->pattern = g_strdup (NOGLOBS);
@@ -511,9 +521,9 @@ static gboolean process_freedesktop_node(Type *type, xmlNode *field,
 		valid = other_type && strchr(other_type, '/');
 		if (valid)
 		{
-			char *typename;
+			char *typeName;
 
-			typename = g_strdup_printf("%s/%s", 
+			typeName = g_strdup_printf("%s/%s", 
 						   type->media,
 						   type->subtype);
 			
@@ -523,13 +533,13 @@ static gboolean process_freedesktop_node(Type *type, xmlNode *field,
 				
 			else
 			{
-				list = g_hash_table_lookup(subclass_hash, typename);
+				list = static_cast<GSList *>(g_hash_table_lookup(subclass_hash, typeName));
 				nlist = g_slist_append (list, g_strdup(other_type));
 				if (list == NULL)
 					g_hash_table_insert(subclass_hash, 
-							    g_strdup(typename), nlist);
+							    g_strdup(typeName), nlist);
 			}
-			g_free(typename);
+			g_free(typeName);
 			xmlFree(other_type);
 
 			copy_to_xml = TRUE; /* Copy through */
@@ -560,22 +570,22 @@ static gboolean process_freedesktop_node(Type *type, xmlNode *field,
 		 strcmp((char *)field->name, "icon") == 0) 
 	{
 		char *icon;
-		char *typename;
+		char *typeName;
 
 		icon = my_xmlGetNsProp(field, "name", NULL);
 
 		if (icon) 
 		{
-			typename = g_strdup_printf("%s/%s",
+			typeName = g_strdup_printf("%s/%s",
 						   type->media,
 						   type->subtype);
 
 			if (strcmp((char *)field->name, "icon") == 0)
 				g_hash_table_insert(icon_hash,
-						    typename, g_strdup (icon));
+						    typeName, g_strdup (icon));
 			else
 				g_hash_table_insert(generic_icon_hash,
-						    typename, g_strdup (icon));
+						    typeName, g_strdup (icon));
 
 			xmlFree (icon);
 
@@ -611,18 +621,18 @@ static gboolean has_lang(xmlNode *node, const char *lang)
 /* We're about to add 'new' to the list of fields to be output for the
  * type. Remove any existing nodes which it replaces.
  */
-static void remove_old(Type *type, xmlNode *new)
+static void remove_old(Type *type, xmlNode *newNode)
 {
 	xmlNode *field, *fields;
 	char *lang;
 
-	if (new->ns == NULL || xmlStrcmp(new->ns->href, FREE_NS) != 0)
+	if (newNode->ns == NULL || xmlStrcmp(newNode->ns->href, FREE_NS) != 0)
 		return;	/* No idea what we're doing -- leave it in! */
 
-	if (strcmp((char *)new->name, "comment") != 0)
+	if (strcmp((char *)newNode->name, "comment") != 0)
 		return;
 
-	lang = my_xmlGetNsProp(new, "lang", XML_NS);
+	lang = my_xmlGetNsProp(newNode, "lang", XML_NS);
 
 	fields = xmlDocGetRootElement(type->output);
 	for (field = fields->xmlChildrenNode; field; field = field->next)
@@ -789,53 +799,35 @@ static gint strcmp2(gconstpointer a, gconstpointer b)
  */
 static void scan_source_dir(const char *path)
 {
-	DIR *dir;
-	struct dirent *ent;
-	char *filename;
-	GPtrArray *files;
-	int i;
-	gboolean have_override = FALSE;
-
-	dir = opendir(path);
-	if (!dir)
-	{
+	if (!fs::is_directory(fs::status(path))) {
 		perror("scan_source_dir");
 		exit(EXIT_FAILURE);
 	}
 
-	files = g_ptr_array_new();
-	while ((ent = readdir(dir)))
-	{
-		int l;
-		l = strlen(ent->d_name);
-		if (l < 4 || strcmp(ent->d_name + l - 4, ".xml") != 0)
-			continue;
-		if (strcmp(ent->d_name, "Override.xml") == 0)
-		{
-			have_override = TRUE;
+	const fs::path dir{path};
+	std::vector<fs::path> files;
+	std::optional<fs::path> file_override;
+	for (auto const& dir_entry : std::filesystem::directory_iterator{dir}) {
+		if (dir_entry.path().extension() != ".xml") {
 			continue;
 		}
-		g_ptr_array_add(files, g_strdup(ent->d_name));
-	}
-	closedir(dir);
 
-	g_ptr_array_sort(files, strcmp2);
+		if (dir_entry.path().filename() == "Override.xml") {
+			file_override = dir_entry.path();
+			continue;
+		}
 
-	if (have_override)
-		g_ptr_array_add(files, g_strdup("Override.xml"));
-
-	for (i = 0; i < files->len; i++)
-	{
-		gchar *leaf = (gchar *) files->pdata[i];
-
-		filename = g_strconcat(path, "/", leaf, NULL);
-		load_source_file(filename);
-		g_free(filename);
+		files.push_back(dir_entry.path());
 	}
 
-	for (i = 0; i < files->len; i++)
-		g_free(files->pdata[i]);
-	g_ptr_array_free(files, TRUE);
+	std::sort(files.begin(), files.end());
+
+	if (file_override)
+		files.push_back(file_override.value());
+
+	for (const auto &file : files) {
+		load_source_file(file.string().c_str());
+	}
 }
 
 static gboolean save_xml_file(xmlDocPtr doc, const gchar *filename, GError **error)
@@ -919,7 +911,7 @@ static void write_out_glob2(GList *globs, FILE *stream)
 
 static void collect_glob2(gpointer key, gpointer value, gpointer data)
 {
-	GList **listp = data;
+	auto listp = static_cast<GList**>(data);
 
 	*listp = g_list_concat (*listp, g_list_copy ((GList *)value));
 }
@@ -1032,16 +1024,16 @@ static void write_out_type(gpointer key, gpointer value, gpointer data)
 	char *lower;
 
 	lower = g_ascii_strdown(type->media, -1);
-	media = g_strconcat(mime_dir, "/", lower, NULL);
+	media = g_strconcat(mime_dir, "/", lower, nullptr);
 	g_free(lower);
 #ifdef _WIN32
-	mkdir(media);
+	fs::create_directory(media);
 #else
 	mkdir(media, 0755);
 #endif
 
 	lower = g_ascii_strdown(type->subtype, -1);
-	filename = g_strconcat(media, "/", lower, ".xml.new", NULL);
+	filename = g_strconcat(media, "/", lower, ".xml.new", nullptr);
 	g_free(lower);
 	g_free(media);
 	media = NULL;
@@ -1489,11 +1481,9 @@ static void match_value_and_mask(Match *match, xmlNode *node, GError **error)
 	}
 	else
 	{
-		match->data = parsed_value->str;
 		match->data_length = parsed_value->len;
+		match->data = g_string_free(parsed_value, FALSE);
 		match->mask = parsed_mask;
-
-		g_string_free(parsed_value, FALSE);
 	}
 
 	if (mask)
@@ -1631,7 +1621,7 @@ static Magic *magic_new(xmlNode *node, Type *type, GError **error)
 			magic_free(magic);
 			magic = NULL;
 			(*error)->message = g_strconcat(
-				_("Error in <match> element: "), old, NULL);
+				_("Error in <match> element: "), old, nullptr);
 			g_free(old);
 		} else if (magic->matches == NULL) {
 			magic_free(magic);
@@ -1852,7 +1842,7 @@ static TreeMagic *tree_magic_new(xmlNode *node, Type *type, GError **error)
 			tree_magic_free(magic);
 			magic = NULL;
 			(*error)->message = g_strconcat(
-				_("Error in <treematch> element: "), old, NULL);
+				_("Error in <treematch> element: "), old, nullptr);
 			g_free(old);
 		}
 	}
@@ -1965,36 +1955,30 @@ static void write_tree_magic(FILE *stream, TreeMagic *magic)
  */
 static void delete_old_types(const gchar *mime_dir)
 {
-	int i;
+	size_t i;
 
 	for (i = 0; i < G_N_ELEMENTS(media_types); i++)
 	{
-		gchar *media_dir;
-		DIR   *dir;
-		struct dirent *ent;
-		
-		media_dir = g_strconcat(mime_dir, "/", media_types[i], NULL);
-		dir = opendir(media_dir);
-		g_free(media_dir);
-		if (!dir)
+		const fs::path media_dir = g_strconcat(mime_dir, "/", media_types[i], nullptr);
+
+		if (!fs::is_directory(fs::status(media_dir)))
 			continue;
 
-		while ((ent = readdir(dir)))
+		std::vector<fs::path> files;
+		std::optional<fs::path> file_override;
+		for (auto const& dir_entry : std::filesystem::directory_iterator{media_dir})
 		{
-			char *type_name;
-			int l;
-			l = strlen(ent->d_name);
-			if (l < 4 || strcmp(ent->d_name + l - 4, ".xml") != 0)
+			if (dir_entry.path().extension() != ".xml")
 				continue;
 
-			type_name = g_strconcat(media_types[i], "/",
-						ent->d_name, NULL);
+			char *type_name = g_strconcat(media_types[i], "/",
+						dir_entry.path().filename().string().c_str(), nullptr);
 			type_name[strlen(type_name) - 4] = '\0';
 			if (!g_hash_table_lookup(types, type_name))
 			{
 				char *path;
 				path = g_strconcat(mime_dir, "/",
-						type_name, ".xml", NULL);
+						type_name, ".xml", nullptr);
 #if 0
 				g_warning("Removing old info for type %s",
 						path);
@@ -2003,9 +1987,7 @@ static void delete_old_types(const gchar *mime_dir)
 				g_free(path);
 			}
 			g_free(type_name);
-		}
-		
-		closedir(dir);
+        }
 	}
 }
 
@@ -2019,14 +2001,14 @@ static void add_ns(gpointer key, gpointer value, gpointer data)
 	Type *type = (Type *) value;
 
 	g_ptr_array_add(lines, g_strconcat(ns, " ", type->media,
-					   "/", type->subtype, "\n", NULL));
+					   "/", type->subtype, "\n", nullptr));
 }
 
 /* Write all the collected namespace rules to 'XMLnamespaces' */
 static void write_namespaces(FILE *stream)
 {
 	GPtrArray *lines;
-	int i;
+	size_t i;
 	
 	lines = g_ptr_array_new();
 
@@ -2048,14 +2030,14 @@ static void write_namespaces(FILE *stream)
 
 static void write_subclass(gpointer key, gpointer value, gpointer data)
 {
-	GSList *list = value;
-	FILE *stream = data;
+	auto list = static_cast<GSList *>(value);
+	auto stream = static_cast<FILE *>(data);
 	GSList *l;
 	char *line;
 
 	for (l = list; l; l = l->next)
 	{
-		line = g_strconcat (key, " ", l->data, "\n", NULL);
+		line = g_strconcat (static_cast<const gchar *>(key), " ", l->data, "\n", nullptr);
 		fwrite(line, 1, strlen(line), stream);
 		g_free (line);
 	}
@@ -2078,14 +2060,14 @@ static void add_alias(gpointer key, gpointer value, gpointer data)
 	
 	g_ptr_array_add(lines, g_strconcat(alias, " ", type->media,
 					   "/", type->subtype, "\n", 
-					   NULL));
+					   nullptr));
 }
 
 /* Write all the collected aliases */
 static void write_aliases(FILE *stream)
 {
 	GPtrArray *lines;
-	int i;
+	size_t i;
 	
 	lines = g_ptr_array_new();
 
@@ -2109,14 +2091,14 @@ static void add_type(gpointer key, gpointer value, gpointer data)
 {
 	GPtrArray *lines = (GPtrArray *) data;
 	
-	g_ptr_array_add(lines, g_strconcat((char *)key, "\n", NULL));
+	g_ptr_array_add(lines, g_strconcat((char *)key, "\n", nullptr));
 }
 
 /* Write all the collected types */
 static void write_types(FILE *stream)
 {
 	GPtrArray *lines;
-	int i;
+	size_t i;
 	
 	lines = g_ptr_array_new();
 
@@ -2144,7 +2126,7 @@ static void write_one_icon(gpointer key, gpointer value, gpointer data)
 	FILE *stream = (FILE *)data;
 	char *line;
 
-	line = g_strconcat (mimetype, ":", iconname, "\n", NULL);
+	line = g_strconcat (mimetype, ":", iconname, "\n", nullptr);
 	fwrite(line, 1, strlen(line), stream);
 	g_free (line);
 }
@@ -2157,6 +2139,7 @@ static void write_icons(GHashTable *icons, FILE *stream)
 /* Issue a warning if 'path' won't be found by applications */
 static void check_in_path_xdg_data(const char *mime_path)
 {
+#ifndef _MSC_VER
 	struct stat path_info, dir_info;
 	const char *env;
 	char **dirs;
@@ -2174,7 +2157,7 @@ static void check_in_path_xdg_data(const char *mime_path)
 
 	env = getenv("XDG_DATA_DIRS");
 	if (!env)
-		env = "/usr/local/share/"PATH_SEPARATOR"/usr/share/";
+		env = "/usr/local/share/" PATH_SEPARATOR "/usr/share/";
 	dirs = g_strsplit(env, PATH_SEPARATOR, 0);
 	g_return_if_fail(dirs != NULL);
 	for (n = 0; dirs[n]; n++)
@@ -2184,9 +2167,9 @@ static void check_in_path_xdg_data(const char *mime_path)
 		dirs[n] = g_strdup(env);
 	else
 		dirs[n] = g_build_filename(g_get_home_dir(), ".local",
-						"share", NULL);
+						"share", nullptr);
 	n++;
-	
+
 	for (i = 0; i < n; i++)
 	{
 		if (stat(dirs[i], &dir_info) == 0 &&
@@ -2213,11 +2196,12 @@ static void check_in_path_xdg_data(const char *mime_path)
 	g_free(dirs);
 out:
 	g_free(path);
+#endif
 }
 
 static void free_string_list(gpointer data)
 {
-  GSList *list = data;
+  auto list = static_cast<GSList *>(data);
 
   g_slist_foreach(list, (GFunc)g_free, NULL);
   g_slist_free(list);
@@ -2235,7 +2219,7 @@ write_data (FILE *cache, const gchar *n, gint len)
   
   l = ALIGN_VALUE (len, 4);
   
-  s = g_malloc0 (l);
+  s = static_cast<gchar *>(g_malloc0(l));
   memcpy (s, n, len);
 
   i = fwrite (s, l, 1, cache);
@@ -2333,7 +2317,7 @@ write_map_entry (gpointer key,
   guint offset, i;
   guint weight;
 
-  values = (* map_data->get_value) (map_data->data, key);
+  values = (* map_data->get_value) (map_data->data, static_cast<gchar *>(key));
   for (i = 0; values[i]; i++)
     {
       if (map_data->weighted && (i % 3 == 2)) 
@@ -2394,7 +2378,7 @@ count_map_entry (gpointer key,
   CountData *count_data = (CountData *)data;
   gchar **values;
 
-  values = (* count_data->get_value) (count_data->data, key);
+  values = (* count_data->get_value) (count_data->data, static_cast<gchar *>(key));
   count_data->count += g_strv_length (values) / (count_data->weighted ? 3 : 2);
   g_strfreev (values);
 }
@@ -3216,7 +3200,7 @@ write_types_cache (FILE       *cache,
                    guint      *offset)
 {
 	GPtrArray *lines;
-	int i;
+	size_t i;
 	char *mimetype;
 	guint mime_offset;
 	
@@ -3603,7 +3587,7 @@ newest_mtime(const char *packagedir)
 	while ((name = g_dir_read_name(dir))) {
 		char *path;
 
-		path = g_build_filename(packagedir, name, NULL);
+		path = g_build_filename(packagedir, name, nullptr);
 		retval = g_stat(path, &statbuf);
 		g_free(path);
 		if (retval < 0)
@@ -3624,7 +3608,7 @@ is_cache_up_to_date (const char *mimedir, const char *packagedir)
 	char *mimeversion;
 	int retval;
 
-	mimeversion = g_build_filename(mimedir, "/version", NULL);
+	mimeversion = g_build_filename(mimedir, "/version", nullptr);
 	retval = g_stat(mimeversion, &version_stat);
 	g_free(mimeversion);
 	if (retval < 0)
@@ -3649,6 +3633,7 @@ int main(int argc, char **argv)
 	/* Install the filtering log handler */
 	g_log_set_default_handler(g_log_handler, NULL);
 
+	#ifndef _MSC_VER
 	while ((opt = getopt(argc, argv, "hvVn")) != -1)
 	{
 		switch (opt)
@@ -3665,8 +3650,8 @@ int main(int argc, char **argv)
 					  VERSION "\n" COPYING);
 				return EXIT_SUCCESS;
 			case 'V':
-				enabled_log_levels |= G_LOG_LEVEL_MESSAGE
-						      | G_LOG_LEVEL_INFO;
+				enabled_log_levels = static_cast<GLogLevelFlags>(enabled_log_levels | G_LOG_LEVEL_MESSAGE
+						      | G_LOG_LEVEL_INFO);
 				break;
 			case 'n':
 				if_newer = TRUE;
@@ -3676,15 +3661,27 @@ int main(int argc, char **argv)
 		}
 	}
 
+
 	if (optind != argc - 1)
 	{
 		usage(argv[0]);
 		return EXIT_FAILURE;
 	}
 
-	LIBXML_TEST_VERSION;
 
 	mime_dir = argv[optind];
+#else
+	if (strcmp(argv[argc - 1], "v")) {
+		g_fprintf(stderr,
+			  "update-mime-database (" PACKAGE ") "
+			  VERSION "\n" COPYING);
+		return EXIT_SUCCESS;
+	}
+
+	mime_dir = argv[argc - 1];
+#endif
+
+	LIBXML_TEST_VERSION;
 
 	/* Strip trailing / characters */
 	{
@@ -3696,9 +3693,9 @@ int main(int argc, char **argv)
 		}
 	}
 
-	package_dir = g_strconcat(mime_dir, "/packages", NULL);
+	package_dir = g_strconcat(mime_dir, "/packages", nullptr);
 
-	if (access(mime_dir, F_OK))
+	if (!fs::exists(mime_dir) && !fs::is_directory(fs::status(mime_dir)))
 	{
 		g_warning(_("Directory '%s' does not exist!"), package_dir);
 		return EXIT_FAILURE;
@@ -3706,7 +3703,7 @@ int main(int argc, char **argv)
 
 	g_message("Updating MIME database in %s...\n", mime_dir);
 
-	if (access(package_dir, F_OK))
+	if (!fs::exists(package_dir) && !fs::is_directory(fs::status(package_dir)))
 	{
 		g_fprintf(stderr,
 			_("Directory '%s' does not exist!\n"), package_dir);
@@ -3749,7 +3746,7 @@ int main(int argc, char **argv)
 
 		g_hash_table_foreach(globs_hash, collect_glob2, &glob_list);
 		glob_list = g_list_sort(glob_list, (GCompareFunc)compare_glob_by_weight);
-		globs_path = g_strconcat(mime_dir, "/globs.new", NULL);
+		globs_path = g_strconcat(mime_dir, "/globs.new", nullptr);
 		globs = fopen_gerror(globs_path, error);
 		if (!globs)
 			goto out;
@@ -3763,7 +3760,7 @@ int main(int argc, char **argv)
 			goto out;
 		g_free(globs_path);
 
-		globs_path = g_strconcat(mime_dir, "/globs2.new", NULL);
+		globs_path = g_strconcat(mime_dir, "/globs2.new", nullptr);
 		globs = fopen_gerror(globs_path, error);
 		if (!globs)
 			goto out;
@@ -3783,8 +3780,8 @@ int main(int argc, char **argv)
 	{
 		FILE *stream;
 		char *magic_path;
-		int i;
-		magic_path = g_strconcat(mime_dir, "/magic.new", NULL);
+		size_t i;
+		magic_path = g_strconcat(mime_dir, "/magic.new", nullptr);
 		stream = fopen_gerror(magic_path, error);
 		if (!stream)
 			goto out;
@@ -3809,7 +3806,7 @@ int main(int argc, char **argv)
 		FILE *stream;
 		char *ns_path;
 
-		ns_path = g_strconcat(mime_dir, "/XMLnamespaces.new", NULL);
+		ns_path = g_strconcat(mime_dir, "/XMLnamespaces.new", nullptr);
 		stream = fopen_gerror(ns_path, error);
 		if (!stream)
 			goto out;
@@ -3825,7 +3822,7 @@ int main(int argc, char **argv)
 		FILE *stream;
 		char *path;
 		
-		path = g_strconcat(mime_dir, "/subclasses.new", NULL);
+		path = g_strconcat(mime_dir, "/subclasses.new", nullptr);
 		stream = fopen_gerror(path, error);
 		if (!stream)
 			goto out;
@@ -3841,7 +3838,7 @@ int main(int argc, char **argv)
 		FILE *stream;
 		char *path;
 		
-		path = g_strconcat(mime_dir, "/aliases.new", NULL);
+		path = g_strconcat(mime_dir, "/aliases.new", nullptr);
 		stream = fopen_gerror(path, error);
 		if (!stream)
 			goto out;
@@ -3857,7 +3854,7 @@ int main(int argc, char **argv)
 		FILE *stream;
 		char *path;
 		
-		path = g_strconcat(mime_dir, "/types.new", NULL);
+		path = g_strconcat(mime_dir, "/types.new", nullptr);
 		stream = fopen_gerror(path, error);
 		if (!stream)
 			goto out;
@@ -3873,7 +3870,7 @@ int main(int argc, char **argv)
 		FILE *stream;
 		char *icon_path;
 
-		icon_path = g_strconcat(mime_dir, "/generic-icons.new", NULL);
+		icon_path = g_strconcat(mime_dir, "/generic-icons.new", nullptr);
 		stream = fopen_gerror(icon_path, error);
 		if (!stream)
 			goto out;
@@ -3889,7 +3886,7 @@ int main(int argc, char **argv)
 		FILE *stream;
 		char *icon_path;
 
-		icon_path = g_strconcat(mime_dir, "/icons.new", NULL);
+		icon_path = g_strconcat(mime_dir, "/icons.new", nullptr);
 		stream = fopen_gerror(icon_path, error);
 		if (!stream)
 			goto out;
@@ -3904,8 +3901,8 @@ int main(int argc, char **argv)
 	{
 		FILE *stream;
 		char *path;
-		int i;
-		path = g_strconcat(mime_dir, "/treemagic.new", NULL);
+		size_t i;
+		path = g_strconcat(mime_dir, "/treemagic.new", nullptr);
 		stream = fopen_gerror(path, error);
 		if (!stream)
 			goto out;
@@ -3930,7 +3927,7 @@ int main(int argc, char **argv)
 		FILE *stream;
 		char *path;
 		
-		path = g_strconcat(mime_dir, "/mime.cache.new", NULL);
+		path = g_strconcat(mime_dir, "/mime.cache.new", nullptr);
 		stream = fopen_gerror(path, error);
 		if (!stream)
 			goto out;
@@ -3946,7 +3943,7 @@ int main(int argc, char **argv)
 		FILE *stream;
 		char *path;
 
-		path = g_strconcat(mime_dir, "/version.new", NULL);
+		path = g_strconcat(mime_dir, "/version.new", nullptr);
 		stream = fopen_gerror(path, error);
 		if (!stream)
 			goto out;

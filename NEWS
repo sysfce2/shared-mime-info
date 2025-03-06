@@ -1,3 +1,113 @@
+shared-mime-info 2.4 (2023-11-12)
+
+* Restore mimetype name for *.bz2 and *.tar.bz2
+* Improve detection of application/mac-binhex40
+* Add application/x-msdownload and subtypes
+* Add Windows app store types
+* Give Windows Installer packages the package icon
+* Lower priority for text/x-mpsub's magic, so it doesn't match pcb-drillFile.drl
+* Add application/x-powershell
+* Add application/wasm
+* Change comment of text/x-mpsub
+* Change comment of text/x-mpl2
+* Add text/x-component
+* Give higher priority to the more specific image/apng magic
+* Recognize *.jfif as image/jpeg
+* Add application/its+xml
+* Add text/x-vb
+* Add text/x-basic
+* Add new group "chemical" in update-mime-database
+* Add mimetype for Protein Data Bank (pdb) files
+* Remove too generic magic from application/x-pak
+* Add application/json5
+* Add text/vbscript.encode
+* Add text/jscript.encode
+* Add text/jscript as synonym of text/javascript
+* Fix backwards relationship between text/javascript and application/ecmascript
+* Add application/vnd.cups-ppd
+* Add application/x-ms-shortcut
+* Give application/x-mswinurl the link icon
+
+Build:
+* Fix missing sentinel warning with clang
+* Fix false positive fdatasync detection on darwin
+* Fix string literal concatenation
+
+shared-mime-info 2.3 (2023-10-07)
+
+* Make update-mime-database compatible with MSVC (by porting it to C++)
+* Remove "##" magic for matlab files
+* Add application/x-ms-pdb
+* Identify .pdb files without a signature match as application/vnd.palm
+* text/vnd.familysearch.gedcom: use IANA registered type
+* application/vnd.dbf: use IANA registered type
+* application/vnd.dart: use IANA registered type
+* application/yaml: use IANA registered type
+* Update application/sieve.
+* Updated to latest xdgmime
+* Add subclass information for .ppt and .xls
+* Add application/x-bzip3
+* Add application/x-bzip for bzip2's deprecated predecessor bzip
+* Rename application/x-bzip to application/x-bzip2
+* add tiled map editor map and tileset files
+* Add image/apng
+* Lengthen image/png magic
+* Add JPEG XR mime type
+* Add Gerber and Excellon drill files
+* Bump magic priority for application/ovf
+* Fix description for audio/x-xi
+* Add Portable Font Resource `application/font-tdpfr`.
+* Add mimetype application/x-lmdb
+* Add definition and test file for StuffIt X archives.
+* spec: Clarify that namespaceURI can be empty
+* Add application/vnd.ms-officetheme
+* Add mime type for Typst files
+* Add text/x-nim and text/x-nimscript
+* Don't install man page on Windows
+* Improve matching for message/rfc822
+* Add mimetype for Blueprint source code
+* buildsystem - add options for building tests and translations
+* Give application/x-raw-floppy-disk-image the floppy media icon
+* Give generic optical disk images the optical media icon
+* Make application/vnd.squashfs a subclass of application/vnd.efi.img
+* Prefer application/vnd.efi.img over application/x-raw-disk-image
+* Prefer application/vnd.efi.iso over application/x-cd-image
+* Avoid meson errors when 'build-tools' is set to false
+* Add DOS/Windows batch file type
+* Add application/vnd.microsoft.windows.thumbnail-cache
+* Add application/x-fishscript and application/x-nuscript
+* Add perf data file type
+* use Sentence case for mime type descriptions
+* Revert "use Title Case for mime type description"
+* Add todo.txt mime type
+* Prefer video/vnd.avi over video/x-msvideo
+* Prefer audio/vnd.wave over audio/x-wav
+* Add mimetype for ERIS link files
+* Add mimetype for CBOR
+* Add support for newer AAXC Audible Audiobook format
+* ci: Use ci-templates to build image
+* Add Modrinth modpack
+* Add application/x-zpaq
+* CI: Use dnf5 instead of dnf
+* use Title Case for mime type description
+* Add mimetype for Quite OK Image Format (QOI)
+* ci: Use detached pipelines
+* Add OpenVPN profile
+* Prefer application/java-archive to application/x-java-archive
+* icons for 3d model formats
+* Make application/pgp-* not inherit from text/plain
+* Add text/julia for Julia source code
+* application/javascript: Rename to text/javascript
+* Change descriptions to say LibreOffice rather than OpenOffice
+* Add TAK audio mime type
+* video/vnd.youtube.yt: add magic
+* video/vnd.youtube.yt: use IANA registered type
+* text/markdown: add x-office-document generic-icon
+* Add two new languages
+* `audio/x-wav`: Add missing sub-class relationship with `application/x-riff`
+* Add mimetype for Flattened Devicetree (binary)
+* Add mimetype for Devicetree source code
+
 shared-mime-info 2.2 (2022-03-27)
 * model/3mf: new
 * Match shared libraries with version suffix

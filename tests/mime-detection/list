@@ -10,9 +10,13 @@
 
 # Images
 test.bmp image/bmp
-test.cel image/x-cel xxx
+test.cel image/x-kiss-cel
 test.dcm application/dicom
 test.eps image/x-eps
+testcard_gray.pfm image/x-pfm
+testcard_rgb.pfm image/x-pfm
+testcard_rgb.pxr image/x-pxr
+testcard_gray.sct image/x-sct
 # https://bugs.freedesktop.org/show_bug.cgi?id=55264
 Oriental_tattoo_by_daftpunk22.eps image/x-eps
 GammaChart.exr image/x-exr
@@ -40,6 +44,8 @@ balloon.jp2 image/jp2
 balloon.jpf image/jpx
 balloon.jpm image/jpm
 balloon.mj2 video/mj2
+# JPEG-XR
+blue.wdp image/jxr
 # From https://bugzilla.freedesktop.org/show_bug.cgi?id=55339
 test.mng video/x-mng
 test.pbm image/x-portable-bitmap
@@ -102,6 +108,7 @@ test-really-html-not-xhtml.html text/html ox
 test-really-html-not-perl.html text/html
 # Copied from https://gitlab.freedesktop.org/xdg/shared-mime-info/issues/120
 test.html text/html
+nomaximize.hta application/hta
 # Copied from http://cvs.fedoraproject.org/viewvc/comps/comps-f11.xml.in?revision=1.306
 test.xml.in application/xml x
 # Copied from http://bugs.freedesktop.org/show_bug.cgi?id=25581
@@ -135,6 +142,10 @@ test.astc image/astc
 test.nrw image/x-nikon-nrw ox
 test-with-container.jxl image/jxl
 test-without-container.jxl image/jxl
+# Copied from https://commons.wikimedia.org/wiki/File:Animated_PNG_example_bouncing_beach_ball.png
+Animated_PNG_example_bouncing_beach_ball.png image/apng x
+# Copied from https://github.com/ImageMagick/ImageMagick6/raw/main/PerlMagick/t/fpx/input_256.fpx
+input_256.fpx image/vnd.fpx
 
 # Documents
 ooo-6.0.doc application/msword
@@ -157,6 +168,45 @@ ooo-test.fodg application/vnd.oasis.opendocument.graphics-flat-xml ox
 ooo-test.fodp application/vnd.oasis.opendocument.presentation-flat-xml ox
 ooo-test.fods application/vnd.oasis.opendocument.spreadsheet-flat-xml ox
 ooo-test.fodt application/vnd.oasis.opendocument.text-flat-xml ox
+# Created with StarOffice 3.0
+so3.smf application/x-starmath x
+# Created with StarOffice 3.1
+so3.sdw application/x-starwriter x
+so3.sdc application/x-starcalc x
+so3.sdd application/x-starimpress x
+so3.sds application/x-starchart x
+# Created with StarOffice 4.0
+so4.sdw application/x-starwriter x
+so4.sgl application/x-starwriter-global x
+so4.sdc application/x-starcalc x
+so4.sdd application/x-starimpress x
+so4.sds application/x-starchart x
+so4.smf application/x-starmath x
+so4.smd application/x-starmail x
+# Created with StarOffice 5.2
+so5.sdw application/vnd.stardivision.writer
+so5.sgl application/vnd.stardivision.writer-global
+so5.sdc application/vnd.stardivision.calc
+so5.sdd application/vnd.stardivision.impress
+so5.sdp application/vnd.stardivision.impress-packed x
+so5.sda application/vnd.stardivision.draw
+so5.sds application/vnd.stardivision.chart
+so5.smf application/vnd.stardivision.math
+so5.sdm application/vnd.stardivision.mail
+# Created with LibreOffice 7.6
+lo7.doc application/msword
+lo7.xls application/vnd.ms-excel
+lo7.ppt application/vnd.ms-powerpoint
+# Created with LibreOffice 24.2
+lo24.odm application/vnd.oasis.opendocument.text-master
+lo24.otm application/vnd.oasis.opendocument.text-master-template
+# Created with WordPerfect 9
+regular.wpd application/vnd.wordperfect
+compound.wpd application/vnd.wordperfect
+# Created with Quattro Pro 6
+quattro6.wb2 application/x-quattropro ox
+# Created with Quattro Pro 9
+quattro9.qpw application/x-quattropro
 # Copied from https://bugs.freedesktop.org/show_bug.cgi?id=20604
 foo.doc application/msword
 # Copied from http://bugzilla.abisource.com/show_bug.cgi?id=6435
@@ -166,8 +216,10 @@ test-template.dot application/msword xox
 ocf10-20060911.epub application/epub+zip
 # Copied from https://standardebooks.org/ebooks/elizabeth-barrett-browning/sonnets-from-the-portuguese
 elizabeth-barrett-browning_sonnets-from-the-portuguese.azw3 application/vnd.amazon.mobi8-ebook ox
+# Created with BBeBinder
+blank.lrf application/x-sony-bbeb
 # Copied from http://libwps.svn.sourceforge.net/viewvc/libwps/trunk/reference/
-test.wps application/vnd.ms-works ox
+test.wps application/vnd.ms-works
 # Copied from https://bugs.freedesktop.org/show_bug.cgi?id=45922
 test.xlr application/vnd.ms-works ox
 # Copied from http://openxmldeveloper.org/articles/OpenXMLsamples.aspx
@@ -178,7 +230,7 @@ sample.pptx application/vnd.openxmlformats-officedocument.presentationml.present
 sample.ppsx application/vnd.openxmlformats-officedocument.presentationml.slideshow oxo
 # Copied from http://bugs.freedesktop.org/show_bug.cgi?id=20185
 pocket-word.psw application/x-pocket-word
-aportis.pdb application/x-aportisdoc
+aportis.pdb application/x-aportisdoc x
 # Copied from https://artcontext.net/art/01/mime/docs/show.php?type=application%2Fandrew-inset&js=
 internet.ez application/andrew-inset ox
 # Copied from http://extensions.services.openoffice.org/project/anaphraseus
@@ -198,7 +250,9 @@ white_640x480.kra application/x-krita
 test.mobi application/x-mobipocket-ebook
 test.lwp application/vnd.lotus-wordpro
 # Copied from https://bugs.freedesktop.org/show_bug.cgi?id=64946
-TS010082249.pub application/vnd.ms-publisher ox
+TS010082249.pub application/vnd.ms-publisher
+# Created with QuarkXPress 8.5.1
+qxp8.qxp application/vnd.quark.quarkxpress
 test.key application/vnd.apple.keynote
 # Created with Numbers 3.5
 test.numbers application/vnd.apple.numbers ox
@@ -214,7 +268,7 @@ test.xps application/vnd.ms-xpsdocument ox
 
 # Playlist, subtitle and audio formats
 stream.nsc application/x-netshow-channel
-stream.sdp application/sdp x
+stream.sdp application/sdp
 playlist.asx audio/x-ms-asx
 feed.rss application/rss+xml
 feed2 application/rss+xml x
@@ -255,7 +309,7 @@ live-streaming.m3u application/vnd.apple.mpegurl x
 # Copied from http://qthttp.apple.com.edgesuite.net/1006ad9g4hjk/all_w.m3u8
 all_w.m3u8 application/vnd.apple.mpegurl x
 # Copied from http://bugs.freedesktop.org/show_bug.cgi?id=42922
-test.vsd application/vnd.visio ox
+test.vsd application/vnd.visio
 # Copied from https://bugs.freedesktop.org/show_bug.cgi?id=40800
 test.dts audio/vnd.dts
 test.dtshd audio/vnd.dts.hd
@@ -283,6 +337,9 @@ test.tak audio/x-tak
 text-iso8859-15.txt text/plain
 text-utf8.txt text/plain
 test.tex text/x-tex
+test2.tex text/x-tex
+# Generate from test2.tex with texi2dvi from Texinfo 6.5
+test2.dvi application/x-dvi
 # Copied from http://www.computerperformance.co.uk/vista/vista_reg_examples.htm
 registry.reg text/x-ms-regedit
 # Copied from http://www.ss64.com/nt/regedit.html
@@ -298,11 +355,18 @@ bug-30656-xchat.conf application/octet-stream oxx
 bug-30656-xchat.conf text/plain x
 helloworld.java text/x-java ox
 helloworld.groovy text/x-groovy ox
+helloworld.bas text/x-basic ox
+helloworld.vb text/x-vb x
 helloworld.vbs text/vbscript ox
+# Created with `srcenc.exe helloworld.vbs helloworld.vbe`
+helloworld.vbe text/vbscript.encode ox
+helloworld.ps1 application/x-powershell
 build.gradle text/x-gradle ox
 ico.ksy text/x-kaitai-struct ox
 # Copied from http://asurvey.net/ccsfagent/media/survey.js
 survey.js text/javascript ox
+# Created with `srcenc.exe survey.js survey.exe`
+survey.jse text/jscript.encode
 # Copied from gecko/accessible/src/jsat/Utils.jsm in Boot2Gecko
 Utils.jsm text/javascript ox
 esm.mjs text/javascript ox
@@ -310,6 +374,8 @@ javascript-without-extension text/javascript xoo
 # The following two copied from RFC 4627.
 json_object.json application/json ox
 json_array.json application/json ox
+# Copy of json_array.json with comments and trailing commas
+json_array.json5 application/json5 ox
 # Copied from RFC 7033
 webfinger.jrd application/jrd+json ox
 # Copied from RFC 6902
@@ -354,7 +420,7 @@ html4.css text/css ox
 html5.css text/css ox
 # Copied from http://www.w3.org/TR/html5/offline.html#manifests
 test.manifest text/cache-manifest
-test.yaml application/x-yaml
+test.yaml application/yaml
 # Copied from https://toml.io/en/
 test.toml application/toml ox
 # hand-made
@@ -376,9 +442,13 @@ simple-troff.mm text/x-troff-mm xx
 test.cl text/x-opencl-src ox
 # hand-made
 test.mc2 text/vnd.senx.warpscript ox
+# Copied from http://todotxt.org/todo.txt
+todo.txt text/x-todo-txt
 # From https://github.com/OpenVPN/openvpn/blob/master/sample/sample-plugins/keying-material-exporter-demo/client.ovpn
 openvpn.ovpn application/x-openvpn-profile ox
 openvpn.openvpn application/x-openvpn-profile ox
+# From https://github.com/OpenPrinting/cups-filters/blob/master/ppdfiles/pxlcolor.ppd
+pxlcolor.ppd application/vnd.cups-ppd
 
 # http://www.apps.ietf.org/rfc/rfc4716.html#sec-3.6
 ssh-public-key.txt text/plain
@@ -408,9 +478,12 @@ test.scss text/x-scss ox
 test.jnlp application/x-java-jnlp-file
 # Python script
 test.py text/x-python
-test.pyx text/x-python ox
+test.pyx text/x-cython ox
 # https://gitlab.freedesktop.org/xdg/shared-mime-info/-/issues/127
 test_issue127.py text/x-python ox
+# Python 2 script
+test2.py text/x-python2 x
+test.py2 text/x-python2
 # Python 3 script
 test3.py text/x-python3 x
 test.py3 text/x-python3
@@ -441,9 +514,11 @@ test.csvs text/csv-schema ox
 test.coffee application/vnd.coffeescript ox
 # Copied from https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md#applying-security-schemes
 test.raml application/raml+yaml
+# Created with `echo 'Hello World!' > helloworld.txt && binhex -u helloworld.txt > helloworld.hqx`
+helloworld.hqx application/mac-binhex40
 
 # xml subtypes
-../../data/shared-mime-info-spec.xml application/x-docbook+xml xox
+../../data/shared-mime-info-spec.xml application/docbook+xml xox
 test.ttx application/x-font-ttx
 gtk-builder.ui application/x-gtk-builder x
 project.glade application/x-glade
@@ -468,6 +543,9 @@ test.owx application/owl+xml
 test.pgn application/vnd.chess-pgn
 # From KDE kfilemetadata test suite
 test_apple_systemprofiler.spx application/x-apple-systemprofiler+xml x
+shared-mime-info.its application/its+xml
+# From https://www.w3.org/TR/NOTE-HTMLComponents#oncontentchange
+oncontentchange.htc text/x-component ox
 
 # Archives
 # Copied from http://bugs.freedesktop.org/show_bug.cgi?id=14909
@@ -479,7 +557,15 @@ test.jar application/java-archive ox
 # Copied from http://bugs.freedesktop.org/show_bug.cgi?id=12620
 hello.pack application/x-java-pack200
 # Copied from http://www.apache.org/dist/httpd/binaries/win32/apache_2.2.9-win32-x86-no_ssl-r2.msi
-test.msi application/x-msi ox
+test.msi application/x-msi
+# Created by the Wine test suite: https://gitlab.winehq.org/wine/wine/-/blob/7c45c7c5ebb59237d568a4e5b38626422e670b63/dlls/msi/tests/patch.c#L695
+winetest-patch.msp application/microsoftpatch
+# Created by building the default blank Universal Windows C++ app in Visual Studio 2022
+App1_1.0.0.0_x64.appx application/appx ox
+App1_1.0.0.0_x64.appxbundle application/appxbundle ox
+App1_1.0.0.0_x64.msix application/msix ox
+App1_1.0.0.0_x64.msixbundle application/msixbundle ox
+App1_x64.appinstaller application/appinstaller
 # Created using 7z
 archive.7z application/x-7z-compressed
 archive2.7z.001 application/x-7z-compressed
@@ -494,18 +580,36 @@ good-1-delta-lzma2.tiff.xz application/x-xz
 # https://bugs.freedesktop.org/show_bug.cgi?id=55254
 sample.png.lzma application/x-lzma ox
 spinboxes-0.1.1-Linux.tar.xz application/x-xz-compressed-tar ox
+# Created using bzip Version 0.21
+test.bz application/x-bzip1
+# Created using GNU tar 1.34 and bzip Version 0.21
+test.tar.bz application/x-bzip1-compressed-tar ox
+# Created using bzip2 Version 1.0.8
+test.bz2 application/x-bzip2
+# Created using GNU tar 1.35 and bzip2 Version 1.0.8
+test.tar.bz2 application/x-bzip2-compressed-tar ox
+# Created using bzip3 1.2.2
+test.bz3 application/x-bzip3
+# Created using GNU tar 1.34 and bzip3 1.2.2
+test.tar.bz3 application/x-bzip3-compressed-tar ox
 # Created using lzip 1.1
 test.lz application/x-lzip
 # Created using Ark 16.07.70 + libarchive 3.1.2
 test.tar.lz application/x-lzip-compressed-tar ox
 # Created using lzop 1.02rc1, lzo 2.03
 test.lzo application/x-lzop
+# Created using rzip 2.1
+test.rz application/x-rzip
+# Created using GNU tar 1.35 and rzip 2.1
+test.tar.rz application/x-rzip-compressed-tar ox
 # Created using lrzip 0.45
 archive.lrz application/x-lrzip
 # Created using lz4 r110
 test.lz4 application/x-lz4
 # Created using Ark 16.07.70 + libarchive 3.2.0
 test.tar.lz4 application/x-lz4-compressed-tar ox
+# Created using zpaq v7.15
+test.zpaq application/x-zpaq
 # Created by zstd v1.3.5
 test.zst application/zstd
 # Created using Ark 18.11.70 + libarchive 3.3.3
@@ -523,6 +627,8 @@ test.zipx application/zip
 # From /usr/lib64/vlc/libcompat.a
 libcompat.a application/x-archive
 libcompat.ar application/x-archive
+# Created with Visual Studio 2022
+StaticLib1.lib application/x-archive
 # Created by hand
 foo-0.1-1.fc18.src.rpm application/x-source-rpm ox
 # Created using sharutils 4.11.1
@@ -539,15 +645,17 @@ test.xar application/x-xar
 serafettin.rar application/vnd.rar
 # From https://github.com/electron/asar/tree/main/test/input
 extractthis.asar application/x-asar
+# Created using StuffIt Deluxe 7.0
+test.sitx application/x-stuffitx
 
 # Audio/Video files
 # https://bugs.freedesktop.org/show_bug.cgi?id=20070#c4
 test.aiff audio/x-aiff
 # Copied from /usr/share/sounds/generic.wav
-test.wav audio/x-wav
-test.avi video/x-msvideo
+test.wav audio/vnd.wave
+test.avi video/vnd.avi
 # https://bugs.freedesktop.org/show_bug.cgi?id=55336
-test.avf video/x-msvideo
+test.avf video/vnd.avi
 # Copied from http://modarchive.org/index.php?request=view_by_moduleid&query=155849
 hereyes_remake.mo3 audio/x-mo3
 # Copied from http://media.annodex.net/cmmlwiki/CCFilm
@@ -603,19 +711,22 @@ stranger_-_run.mod audio/x-mod
 # Copied from https://github.com/inAudible-NG/audible-samples
 test.aa audio/x-pn-audibleaudio
 test.aax audio/vnd.audible.aax
+# Audible AAX without embedded file keys (2019 and later)
+test.aaxc audio/vnd.audible.aaxc
 # MPEG-4 files
 mp4v1-video-header.mp4 video/mp4
 mp4v2-video-header.mp4 video/mp4
 
 # Disk and CD/DVD images
-iso-file.iso application/x-cd-image oxo
-bug106330.iso application/x-cd-image oxo
+iso-file.iso application/vnd.efi.iso oxo
+bug106330.iso application/vnd.efi.iso oxo
 # N+ for PSP truncated to 1Ko
 n-plus.cso application/x-compressed-iso
-disk.img application/x-raw-disk-image oxo
+disk.img application/vnd.efi.img oxo
 disk.img.xz application/x-raw-disk-image-xz-compressed oxo
-disk.raw-disk-image application/x-raw-disk-image oxo
+disk.raw-disk-image application/vnd.efi.img oxo
 disk.raw-disk-image.xz application/x-raw-disk-image-xz-compressed oxo
+disk.gpt application/vnd.efi.img xoo
 # Disk 1 of the Agony Amiga game truncated to 1Ko
 adf-test.adf application/x-amiga-disk-format
 # AppImage
@@ -640,6 +751,9 @@ game-gear-test.gg application/x-gamegear-rom ox
 genesis1.bin application/x-genesis-rom x
 genesis2.bin application/x-genesis-rom x
 mega-drive-rom.gen application/x-genesis-rom
+# Sega Channel Revival v3
+sega-genesis-rom.smd application/x-genesis-rom
+sega-genesis-rom.md application/x-genesis-rom x
 eu_en_Sword_of_Vermilion.bin application/x-genesis-rom xo
 32x-rom.32x application/x-genesis-32x-rom
 pico-rom.bin application/x-sega-pico-rom x
@@ -686,6 +800,8 @@ virtual-boy-wario-land.vb application/x-virtual-boy-rom ox
 3ds-tloz-mm.3ds application/x-nintendo-3ds-rom
 # TSI9 truncated to 1Ko
 3ds-tsi9.3dsx application/x-nintendo-3ds-executable
+# Wonder Boy 3, Dragon's Trap, truncated to 512 bytes
+nintendo-switch-encrypted.xci application/x-nintendo-switch-xci
 
 # Video game packages
 # DOOM1.WAD trucated to 1Ko
@@ -736,6 +852,7 @@ test.cmake text/x-cmake ox
 meson.build text/x-meson ox
 meson_options.txt text/x-meson ox
 bluerect.mdi image/vnd.ms-modi
+# FictionBook eBook files
 Stallman_Richard_-_The_GNU_Manifesto.fb2 application/x-fictionbook+xml
 Stallman_Richard_-_The_GNU_Manifesto.fb2.zip application/x-zip-compressed-fb2
 test.p7b application/x-pkcs7-certificates ox
@@ -765,6 +882,9 @@ test.h5 application/x-hdf
 # From http://wiki.wireshark.org/SampleCaptures (ancp.pcap.gz, dns.cap)
 ancp.pcap application/vnd.tcpdump.pcap
 dns.cap application/vnd.tcpdump.pcap
+# From https://github.com/hadrielk/pcapng-test-generator
+test001.pcapng application/x-pcapng
+test001_be.pcapng application/x-pcapng
 # Created using Shalom Help Maker
 test.hlp application/winhlp
 # Case-insensitive glob
@@ -780,6 +900,7 @@ test-en.mo application/x-gettext-translation
 LiberationSans-Regular.ttf font/ttf
 # Converted from LiberationSans-Regular.ttf with http://ttf2woff.com/
 LiberationSans-Regular.woff font/woff
+test.pfr application/font-tdpfr
 nrl.trig application/trig oxo
 # Copied from http://git.savannah.gnu.org/cgit/gnash.git/plain/testsuite/samples/subshapes.swf
 subshapes.swf application/vnd.adobe.flash.movie
@@ -790,6 +911,19 @@ ls application/x-executable x
 # ELF shared library
 libldap-2.4.so.2 application/x-sharedlib oxo
 boardingpass.pkpass application/vnd.apple.pkpass
+# AppImage created by following https://appimage-builder.readthedocs.io/en/latest/intro/tutorial.html
+appimage-demo-qt5-latest-x86_64.AppImage application/vnd.appimage
+# DOS executable
+helloworld-dos.exe application/x-dosexec x
+# 16-bit Windows executable
+helloworld-win16.exe application/x-ms-ne-executable x
+# 32-bit Windows executable
+helloworld-win32.exe application/vnd.microsoft.portable-executable x
+# Generated with `cd /tmp && x86_64-w64-mingw32-clang -shared -fuse-ld=lld -Wl,--pdb=empty.pdb -x c /dev/null`
+empty.pdb application/x-ms-pdb x
+C.lnk application/x-ms-shortcut
+# WASM module https://rustwasm.github.io/wasm-bindgen/exbuild/add/53356255c2705a766855.module.wasm
+add.wasm application/wasm
 
 hello.xdgapp application/vnd.flatpak
 hello.flatpak application/vnd.flatpak
@@ -828,6 +962,8 @@ cplusplusfile.C text/x-c++src oxo
 cfile.c text/x-csrc oxo
 no-extension-c-comment text/x-csrc x
 test-gettext.c text/x-csrc
+helloworld.c text/x-csrc
+helloworld.s text/x-asm
 
 # Common Lisp source code
 common-lisp.asd text/x-common-lisp oxo
@@ -854,11 +990,16 @@ dbus-comment.service text/x-systemd-unit xxx
 dbus.service text/x-dbus-service
 dbus-comment.service text/x-dbus-service
 
+# QBrew recipe
+robust_porter.qbrew application/x-qbrew ox
+
 # 3D models and GCODEs
 # "cube(10);" exported by OpenSCAD
 cube.3mf model/3mf ox
 binary.stl model/stl oxo
 ascii.stl model/stl
+# from https://www.nist.gov/document/nist-ftc-test-case-definitions
+nist_ftc_11_asme1_rb.stp model/step
 test.gcode text/x.gcode ox
 20mm_Box.gx text/x-gcode-gx
 # Converted from binary.stl with Blender
@@ -890,7 +1031,7 @@ test.pys application/x-pyspread-bz-spreadsheet oxo
 test.pysu application/x-pyspread-spreadsheet
 
 # Dart source code
-test.dart text/x-dart oxo
+test.dart application/vnd.dart oxo
 
 # Godot files
 project.godot application/x-godot-project ox
@@ -919,6 +1060,24 @@ devicetree.dtb text/x-devicetree-binary
 test.avif image/avif
 test.avifs image/avif
 
+# QOI - The "Quite OK Image Format"
+# https://github.com/phoboslab/qoi
+rgb.qoi image/qoi
+rgba.qoi image/qoi
+
+# HEJ2 - Encapsulation of JPEG 2000 images into ISO/IEC 23008-12
+# https://www.itu.int/rec/T-REC-T.815-202106-I/en
+test.hej2 image/hej2k
+
+# LMDB (#168), file generated by baloo's basicindexingjobtest (LGPL)
+data.mdb application/x-lmdb x
+# MS Access DB, copied from Qt5's qtbase/tests/auto/sql/kernel/qsqldatabase/testdata/qtest.mdb (LGPL)
+msaccess.mdb application/vnd.ms-access
+# Apache Parquet file, created with pyarrow
+empty.parquet application/vnd.apache.parquet
+
+1EO8.pdb chemical/x-pdb
+
 # Org-mode file
 test.org text/org ox
 # OpenZIM file
@@ -927,6 +1086,104 @@ test.zim application/x-openzim
 test.qs application/sparql-query
 # SPARQL query results
 test.srx application/sparql-results+xml ox
+
+# Tiled files
+tiledsample/tiled_sample.tmx application/x-tiled-tmx ox
+tiledsample/tiled_sample.tsx application/x-tiled-tsx ox
+
+# Modrinth Modpack
+test.mrpack application/x-modrinth-modpack+zip ox
+
+# ERIS link file
+# https://eris.codeberg.page/eer/linkfile.xml
+test.eris application/x-eris-link+cbor
+
+# Fish script
+fishscript.sh application/x-fishscript xox
+fishscript.fish application/x-fishscript
+
+# Nu script
+nuscript.sh application/x-nuscript xox
+nuscript.nu application/x-nuscript
+
+# Perf Data file
+perf.data application/x-perf-data
+
+# Blueprint (https://gitlab.gnome.org/jwestman/blueprint-compiler)
+blueprint.blp text/x-blueprint ox
+
+# Nim source code
+test.nim text/x-nim ox
+test.nims text/x-nimscript ox
+test.nimble text/x-nimscript ox
+
+# Typst document
+test.typ text/x-typst ox
+
+# PCB Fabrication data transfer formats
+# Both GIMP brush and Gerber files share the glob for .gbr, so we can't use filename-based
+# tests here because the files are identified as GIMP brushes using the glob.
+pcb-gerber.gbr application/vnd.gerber x
+pcb-gerber.gts application/vnd.gerber x
+pcb-gerber-CommentNoExt application/vnd.gerber x
+pcb-gerber-FSLANoExt application/vnd.gerber x
+pcb-gerber-G75NoExt application/vnd.gerber x
+pcb-gerber-MONoExt application/vnd.gerber x
+pcb-gerber-TFNoExt application/vnd.gerber x
+
+pcb-gerberjob.gbrjob application/x-gerber-job ox
+
+pcb-drillFile.drl application/x-excellon
+pcb-drillFileNoExt application/x-excellon x
+
+# Tiled files
+tiledsample/tiled_sample.tmx application/x-tiled-tmx ox
+tiledsample/tiled_sample.tsx application/x-tiled-tsx ox
+
+# Modrinth Modpack
+test.mrpack application/x-modrinth-modpack+zip ox
+
+# ERIS link file
+# https://eris.codeberg.page/eer/linkfile.xml
+test.eris application/x-eris-link+cbor
+
+# Fish script
+fishscript.sh application/x-fishscript xox
+fishscript.fish application/x-fishscript
+
+# Nu script
+nuscript.sh application/x-nuscript xox
+nuscript.nu application/x-nuscript
+
+# Perf Data file
+perf.data application/x-perf-data
+
+# Blueprint (https://gitlab.gnome.org/jwestman/blueprint-compiler)
+blueprint.blp text/x-blueprint ox
+
+# Nim source code
+test.nim text/x-nim ox
+test.nims text/x-nimscript ox
+test.nimble text/x-nimscript ox
+
+# Typst document
+test.typ text/x-typst ox
+
+# PCB Fabrication data transfer formats
+# Both GIMP brush and Gerber files share the glob for .gbr, so we can't use filename-based
+# tests here because the files are identified as GIMP brushes using the glob.
+pcb-gerber.gbr application/vnd.gerber x
+pcb-gerber.gts application/vnd.gerber x
+pcb-gerber-CommentNoExt application/vnd.gerber x
+pcb-gerber-FSLANoExt application/vnd.gerber x
+pcb-gerber-G75NoExt application/vnd.gerber x
+pcb-gerber-MONoExt application/vnd.gerber x
+pcb-gerber-TFNoExt application/vnd.gerber x
+
+pcb-gerberjob.gbrjob application/x-gerber-job ox
+
+pcb-drillFile.drl application/x-excellon
+pcb-drillFileNoExt application/x-excellon x
 
 # AppStream software component
 test.metainfo.xml application/x-freedesktop-appstream-component

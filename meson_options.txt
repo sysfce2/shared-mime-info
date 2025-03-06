@@ -7,6 +7,10 @@ option('build-tools', type: 'boolean', value: true,
     description: 'Build the update-mime-database tools. If set to false only the mime data is installed.',
 )
 
-option('xdgmime-path', type: 'string', value: './xdgmime',
-    description: 'Path to the xdgmime executable',
+option('build-translations', type: 'boolean', value: true,
+    description: 'Build the translations.'
+)
+
+option('build-tests', type: 'boolean', value: true,
+    description: 'Build the test suite.  If not set then there will be no \'test\' build target.',
 )

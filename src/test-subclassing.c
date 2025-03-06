@@ -1,4 +1,5 @@
 #include <libxml/tree.h>
+#include <libxml/parser.h>
 #include <stdio.h>
 #include <string.h>
 
