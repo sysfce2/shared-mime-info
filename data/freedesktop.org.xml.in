@@ -8956,6 +8956,7 @@ command to generate the output files.
     <glob pattern="*.metainfo.xml"/>
     <glob pattern="*.appdata.xml"/>
   </mime-type>
+
   <mime-type type="application/x-freedesktop-appstream-releases">
     <comment>AppStream releases information</comment>
     <sub-class-of type="application/xml"/>
