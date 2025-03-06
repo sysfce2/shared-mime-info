@@ -927,3 +927,8 @@ test.zim application/x-openzim
 test.qs application/sparql-query
 # SPARQL query results
 test.srx application/sparql-results+xml ox
+
+# AppStream software component
+test.metainfo.xml application/x-freedesktop-appstream-component
+# AppStream releases information
+test.releases.xml application/x-freedesktop-appstream-releases
