@@ -1130,6 +1130,14 @@ test.nimble text/x-nimscript ox
 # Typst document
 test.typ text/vnd.typst ox
 
+# OpenSSH public keys
+id_ecdsa.pub text/x-ssh-public-key x
+id_ed25519.pub text/x-ssh-public-key x
+id_rsa.pub text/x-ssh-public-key x
+
+# OpenSSH private keys (no extension, filename based lookup should fail)
+id_ed25519 text/x-ssh-private-key x
+
 # PCB Fabrication data transfer formats
 # Both GIMP brush and Gerber files share the glob for .gbr, so we can't use filename-based
 # tests here because the files are identified as GIMP brushes using the glob.
