@@ -4565,6 +4565,42 @@ command to generate the output files.
     <glob pattern="*.ssa"/>
     <glob pattern="*.ass"/>
   </mime-type>
+  <mime-type type="text/x-ssh-public-key">
+    <comment>OpenSSH public key</comment>
+    <sub-class-of type="text/plain"/>
+    <magic>
+      <match type="string" offset="0" value="ssh-ed25519 "/>
+    </magic>
+    <magic>
+      <match type="string" offset="0" value="sk-ssh-ed25519@openssh.com "/>
+    </magic>
+    <magic>
+      <match type="string" offset="0" value="ecdsa-sha2-nistp521 "/>
+    </magic>
+    <magic>
+      <match type="string" offset="0" value="ecdsa-sha2-nistp384 "/>
+    </magic>
+    <magic>
+      <match type="string" offset="0" value="ecdsa-sha2-nistp256 "/>
+    </magic>
+    <magic>
+      <match type="string" offset="0" value="sk-ecdsa-sha2-nistp256@openssh.com "/>
+    </magic>
+    <magic>
+      <match type="string" offset="0" value="ssh-rsa "/>
+    </magic>
+    <magic>
+      <match type="string" offset="0" value="ssh-dss "/>
+    </magic>
+    <glob pattern="*.pub"/>
+  </mime-type>
+  <mime-type type="text/x-ssh-private-key">
+    <comment>OpenSSH private key</comment>
+    <sub-class-of type="text/plain"/>
+    <magic>
+      <match type="string" offset="0" value="-----BEGIN OPENSSH PRIVATE KEY-----"/>
+    </magic>
+  </mime-type>
   <mime-type type="text/x-subviewer">
     <comment>SubViewer subtitles</comment>
     <sub-class-of type="text/plain"/>
