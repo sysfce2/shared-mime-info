@@ -1172,7 +1172,7 @@ pcb-drillFile.drl application/x-excellon
 pcb-drillFileNoExt application/x-excellon x
 
 # NSIS Script
-installer.nsi text/x-nsis
+installer.nsi text/x-nsis ox
 
 # PAC script
 proxy.pac application/x-ns-proxy-autoconfig
