@@ -15,6 +15,8 @@ test.dcm application/dicom
 test.eps image/x-eps
 testcard_gray.pfm image/x-pfm
 testcard_rgb.pfm image/x-pfm
+testcard_gray.phm image/x-phm
+testcard_rgb.phm image/x-phm
 testcard_rgb.pxr image/x-pxr
 testcard_gray.sct image/x-sct
 # https://bugs.freedesktop.org/show_bug.cgi?id=55264
@@ -146,6 +148,8 @@ test-without-container.jxl image/jxl
 Animated_PNG_example_bouncing_beach_ball.png image/apng x
 # Copied from https://github.com/ImageMagick/ImageMagick6/raw/main/PerlMagick/t/fpx/input_256.fpx
 input_256.fpx image/vnd.fpx
+# From https://polyhaven.com/a/greenwich_park
+greenwich_park.hdr image/vnd.radiance
 
 # Documents
 ooo-6.0.doc application/msword
@@ -217,7 +221,7 @@ ocf10-20060911.epub application/epub+zip
 # Copied from https://standardebooks.org/ebooks/elizabeth-barrett-browning/sonnets-from-the-portuguese
 elizabeth-barrett-browning_sonnets-from-the-portuguese.azw3 application/vnd.amazon.mobi8-ebook ox
 # Created with BBeBinder
-blank.lrf application/x-sony-bbeb
+blank.lrf application/x-sony-bbeb x
 # Copied from http://libwps.svn.sourceforge.net/viewvc/libwps/trunk/reference/
 test.wps application/vnd.ms-works
 # Copied from https://bugs.freedesktop.org/show_bug.cgi?id=45922
@@ -371,6 +375,9 @@ survey.jse text/jscript.encode
 Utils.jsm text/javascript ox
 esm.mjs text/javascript ox
 javascript-without-extension text/javascript xoo
+# Copied from https://github.com/microsoft/TypeScript-Website/blob/v2/packages/documentation/copy/en/get-started/TS%20for%20JS%20Programmers.md
+UserAccount.ts application/typescript x
+UserAccount.cts application/typescript
 # The following two copied from RFC 4627.
 json_object.json application/json ox
 json_array.json application/json ox
@@ -432,9 +439,9 @@ test.mo text/x-modelica xoo
 # From https://bugs.freedesktop.org/show_bug.cgi?id=29733
 bibtex.bib text/x-bibtex
 # the following 6 test files are hand-made
-import-objc.m text/x-objcsrc
+import-objc.m text/x-objcsrc ox
 comment-objc.m text/x-objcsrc ox
-import-objc++.mm text/x-objc++src ox
+import-objc++.mm text/x-objc++src
 include-objc++.mm text/x-objc++src ox
 simple-troff.tr text/troff
 simple-troff.mm text/x-troff-mm xx
@@ -507,11 +514,13 @@ test.twig text/x-twig ox
 # Crystal
 test.cr text/x-crystal ox
 test.jl text/julia ox
-test.rs text/rust ox
+test.rs text/rust
 # Copied from http://digital-preservation.github.io/csv-schema/csv-schema-1.0.html#basics
 test.csvs text/csv-schema ox
 # Copied from http://coffeescript.org/#overview
 test.coffee application/vnd.coffeescript ox
+# Copied from https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/blob/master/elements/components/shared-mime-info.bst
+test.bst application/buildstream+yaml
 # Copied from https://github.com/raml-org/raml-spec/blob/master/versions/raml-10/raml-10.md#applying-security-schemes
 test.raml application/raml+yaml
 # Created with `echo 'Hello World!' > helloworld.txt && binhex -u helloworld.txt > helloworld.hqx`
@@ -829,6 +838,8 @@ test.pdf.lz application/x-lzpdf ox
 test.pdf.xz application/x-xzpdf ox
 Makefile text/x-makefile ox
 Makefile.gnu text/x-makefile ox
+Dockerfile text/x-dockerfile
+test.Dockerfile text/x-dockerfile
 googleearth.kml application/vnd.google-earth.kml+xml ox
 # Created using geojson.io
 test.geojson application/geo+json ox
@@ -911,6 +922,7 @@ ls application/x-executable x
 # ELF shared library
 libldap-2.4.so.2 application/x-sharedlib oxo
 boardingpass.pkpass application/vnd.apple.pkpass
+boardingpasses.pkpasses application/vnd.apple.pkpasses
 # AppImage created by following https://appimage-builder.readthedocs.io/en/latest/intro/tutorial.html
 appimage-demo-qt5-latest-x86_64.AppImage application/vnd.appimage
 # DOS executable
@@ -957,12 +969,10 @@ SConscript text/x-scons oxo
 SConscript.buildinfo text/x-scons oxo
 
 # Source code
-# the following 3 test files are hand-made
 cplusplusfile.C text/x-c++src oxo
 cfile.c text/x-csrc oxo
-no-extension-c-comment text/x-csrc x
-test-gettext.c text/x-csrc
-helloworld.c text/x-csrc
+test-gettext.c text/x-csrc ox
+helloworld.c text/x-csrc ox
 helloworld.s text/x-asm
 
 # Common Lisp source code
@@ -1044,7 +1054,7 @@ test.gdshader application/x-godot-shader ox
 test.gd application/x-gdscript ox
 
 # Kotlin source code
-test.kt text/x-kotlin ox
+test.kt text/x-kotlin
 
 # Device Tree Source
 devicetree1.dts text/x-devicetree-source xoo
@@ -1118,7 +1128,7 @@ test.nims text/x-nimscript ox
 test.nimble text/x-nimscript ox
 
 # Typst document
-test.typ text/x-typst ox
+test.typ text/vnd.typst ox
 
 # PCB Fabrication data transfer formats
 # Both GIMP brush and Gerber files share the glob for .gbr, so we can't use filename-based
