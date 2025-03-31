@@ -1147,6 +1147,6 @@ pcb-drillFile.drl application/x-excellon
 pcb-drillFileNoExt application/x-excellon x
 
 # AppStream software component
-test.metainfo.xml application/x-freedesktop-appstream-component
+test.metainfo.xml application/x-freedesktop-appstream-component ox
 # AppStream releases information
-test.releases.xml application/x-freedesktop-appstream-releases
+test.releases.xml application/x-freedesktop-appstream-releases ox
