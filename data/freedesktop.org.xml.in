@@ -1629,6 +1629,7 @@ command to generate the output files.
       </match>
     </magic>
     <glob pattern="*.pcapng"/>
+    <glob pattern="*.scap"/>
     <glob pattern="*.ntar"/>
   </mime-type>
   <mime-type type="application/vnd.wordperfect">
@@ -4565,6 +4566,42 @@ command to generate the output files.
     <glob pattern="*.ssa"/>
     <glob pattern="*.ass"/>
   </mime-type>
+  <mime-type type="text/x-ssh-public-key">
+    <comment>OpenSSH public key</comment>
+    <sub-class-of type="text/plain"/>
+    <magic>
+      <match type="string" offset="0" value="ssh-ed25519 "/>
+    </magic>
+    <magic>
+      <match type="string" offset="0" value="sk-ssh-ed25519@openssh.com "/>
+    </magic>
+    <magic>
+      <match type="string" offset="0" value="ecdsa-sha2-nistp521 "/>
+    </magic>
+    <magic>
+      <match type="string" offset="0" value="ecdsa-sha2-nistp384 "/>
+    </magic>
+    <magic>
+      <match type="string" offset="0" value="ecdsa-sha2-nistp256 "/>
+    </magic>
+    <magic>
+      <match type="string" offset="0" value="sk-ecdsa-sha2-nistp256@openssh.com "/>
+    </magic>
+    <magic>
+      <match type="string" offset="0" value="ssh-rsa "/>
+    </magic>
+    <magic>
+      <match type="string" offset="0" value="ssh-dss "/>
+    </magic>
+    <glob pattern="*.pub"/>
+  </mime-type>
+  <mime-type type="text/x-ssh-private-key">
+    <comment>OpenSSH private key</comment>
+    <sub-class-of type="text/plain"/>
+    <magic>
+      <match type="string" offset="0" value="-----BEGIN OPENSSH PRIVATE KEY-----"/>
+    </magic>
+  </mime-type>
   <mime-type type="text/x-subviewer">
     <comment>SubViewer subtitles</comment>
     <sub-class-of type="text/plain"/>
@@ -5553,6 +5590,13 @@ command to generate the output files.
       <match type="string" value="ftypj2ki" offset="4"/>
     </magic>
     <glob pattern="*.hej2"/>
+  </mime-type>
+  <mime-type type="image/avci">
+    <comment>AVC-encoded image encapsulated in HEIF</comment>
+    <magic>
+      <match type="string" value="ftypavci" offset="4"/>
+    </magic>
+    <glob pattern="*.avci"/>
   </mime-type>
   <mime-type type="image/ief">
     <comment>IEF image</comment>
@@ -9188,6 +9232,15 @@ command to generate the output files.
     <magic>
       <match type="string" value="PH\n" offset="0"/>
       <match type="string" value="Ph\n" offset="0"/>
+    </magic>
+  </mime-type>
+
+  <mime-type type="application/x-ns-proxy-autoconfig">
+    <comment>Proxy Auto-Configuration file</comment>
+    <sub-class-of type="text/javascript"/>
+    <glob pattern="*.pac"/>
+    <magic>
+      <match type="string" value="function FindProxyForURL" offset="0:3000" />
     </magic>
   </mime-type>
 
