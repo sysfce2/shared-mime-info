@@ -447,6 +447,7 @@ simple-troff.tr text/troff
 simple-troff.mm text/x-troff-mm xx
 # Copied from LLVM project test suite
 test.cl text/x-opencl-csrc ox
+test.clcpp text/x-opencl-c++src ox
 # hand-made
 test.mc2 text/vnd.senx.warpscript ox
 # Copied from http://todotxt.org/todo.txt

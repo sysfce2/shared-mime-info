@@ -7486,6 +7486,13 @@ command to generate the output files.
     <glob pattern="*.cl"/>
     <alias type="text/x-opencl-src"/>
   </mime-type>
+  <mime-type type="text/x-opencl-c++src">
+    <comment>C++ for OpenCL source code</comment>
+    <acronym>OpenCL</acronym>
+    <expanded-acronym>Open Computing Language</expanded-acronym>
+    <sub-class-of type="text/x-c++src"/>
+    <glob pattern="*.clcpp"/>
+  </mime-type>
   <mime-type type="text/x-matlab">
     <comment>MATLAB file</comment>
     <sub-class-of type="text/plain"/>
