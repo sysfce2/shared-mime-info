@@ -446,7 +446,7 @@ include-objc++.mm text/x-objc++src ox
 simple-troff.tr text/troff
 simple-troff.mm text/x-troff-mm xx
 # Copied from LLVM project test suite
-test.cl text/x-opencl-src ox
+test.cl text/x-opencl-csrc ox
 # hand-made
 test.mc2 text/vnd.senx.warpscript ox
 # Copied from http://todotxt.org/todo.txt
