@@ -1178,3 +1178,15 @@ test.spdx text/spdx
 test.cdx.json application/vnd.cyclonedx+json ox
 # https://raw.githubusercontent.com/CycloneDX/bom-examples/refs/heads/master/SBOM/cern-lhc-vdm-editor-e564943/bom.xml
 test.cdx.xml application/vnd.cyclonedx+xml ox
+
+# SF3 files
+# https://shirakumo.org/projects/sf3/tree/master/samples
+sf3/blend.vec.sf3 image/x.sf3-vector
+sf3/combine.phys.sf3 model/x.sf3-physics
+sf3/f4-44100-2.au.sf3 audio/x.sf3
+sf3/markup.txt.sf3 application/x.sf3-text
+sf3/multi-text.ar.sf3 application/x.sf3-archive
+sf3/pbr-quad.mod.sf3 model/x.sf3
+sf3/rgb-u8-1x1.img.sf3 image/x.sf3
+sf3/two-chunks.log.sf3 application/x.sf3-log
+sf3/two-rows.tab.sf3 application/x.sf3-table
