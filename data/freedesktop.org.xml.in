@@ -5339,6 +5339,18 @@ command to generate the output files.
     <glob pattern="*.669"/>
     <glob pattern="*.med"/>
   </mime-type>
+  <mime-type type="audio/x-dsp">
+    <comment>Dynamic Studio module audio</comment>
+    <magic>
+      <match type="string" value="DSm\x1A\x20" offset="0">
+        <!-- number of channels: 1-16 -->
+        <match type="byte" value="0x0" mask="0xf0" offset="45"/>
+        <match type="byte" value="0x10" offset="45"/>
+      </match>
+    </magic>
+    <glob pattern="*.dsm"/>
+    <glob pattern="*.dsp" weight="40"/>
+  </mime-type>
   <mime-type type="audio/mp2">
     <comment>MP2 audio</comment>
     <alias type="audio/x-mp2"/>
