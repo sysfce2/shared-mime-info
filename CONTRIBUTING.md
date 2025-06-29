@@ -1,5 +1,5 @@
 Note: latest version of this file is at:
-https://gitlab.freedesktop.org/xdg/shared-mime-info/-/blob/master/HACKING.md
+https://gitlab.freedesktop.org/xdg/shared-mime-info/-/blob/master/CONTRIBUTING.md
 
 A few ground rules for people interested in adding new mime-types.
 
