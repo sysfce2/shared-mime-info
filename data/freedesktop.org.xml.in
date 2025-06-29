@@ -7467,6 +7467,22 @@ command to generate the output files.
     </magic>
     <glob pattern="*.reg"/>
   </mime-type>
+  <mime-type type="text/x-ms-visualstudio.project">
+    <comment>Visual Studio Project</comment>
+    <sub-class-of type="text/plain"/>
+    <magic>
+      <match type="string" value="# Microsoft Developer Studio Project File" offset="0"/>
+    </magic>
+    <glob pattern="*.dsp"/>
+  </mime-type>
+  <mime-type type="text/x-ms-visualstudio.workspace">
+    <comment>Visual Studio Workspace</comment>
+    <sub-class-of type="text/plain"/>
+    <magic>
+      <match type="string" value="Microsoft Developer Studio Workspace File" offset="0"/>
+    </magic>
+    <glob pattern="*.dsw"/>
+  </mime-type>
   <mime-type type="text/x-mof">
     <comment>MOF file</comment>
     <acronym>MOF</acronym>

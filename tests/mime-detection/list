@@ -527,6 +527,9 @@ test.bst application/buildstream+yaml
 test.raml application/raml+yaml
 # Created with `echo 'Hello World!' > helloworld.txt && binhex -u helloworld.txt > helloworld.hqx`
 helloworld.hqx application/mac-binhex40
+# Microsoft Developer Studio (Legacy Visual Studio)
+test_vs_project.dsp text/x-ms-visualstudio.project
+test_vs_workspace.dsw text/x-ms-visualstudio.workspace
 
 # xml subtypes
 ../../data/shared-mime-info-spec.xml application/docbook+xml xox
