@@ -3064,6 +3064,17 @@ command to generate the output files.
     <generic-icon name="text-x-script"/>
     <glob pattern="*.json5"/>
   </mime-type>
+  <mime-type type="application/har+json">
+    <comment>HTTP archive</comment>
+    <sub-class-of type="application/json"/>
+    <generic-icon name="package-x-generic"/>
+    <magic priority="10">
+      <match type="string" value="{" offset="0">
+        <match type="string" value='"log":' offset="1:256"/>
+      </match>
+    </magic>
+    <glob pattern="*.har"/>
+  </mime-type>
   <mime-type type="application/jrd+json">
     <comment>JRD document</comment>
     <acronym>JRD</acronym>
