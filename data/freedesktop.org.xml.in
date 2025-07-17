@@ -8878,6 +8878,14 @@ command to generate the output files.
     </magic>
   </mime-type>
 
+  <mime-type type="application/x-amf">
+    <comment>AMF 3D model</comment>
+    <acronym>AMF</acronym>
+    <expanded-acronym>Additive Manufacturing File</expanded-acronym>
+    <generic-icon name="image-x-generic"/>
+    <glob pattern="*.amf"/>
+  </mime-type>
+
   <mime-type type="text/x.gcode">
     <comment>G-code file</comment>
     <sub-class-of type="text/plain"/>

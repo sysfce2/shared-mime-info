@@ -1023,6 +1023,9 @@ test.gcode text/x.gcode ox
 # Converted from binary.stl with Blender
 test.obj model/obj x
 test.mtl model/mtl
+# from https://www.printables.com/model/1283304-mac-classic-bezel/files
+bezel-v3-short-edge.amf application/x-amf oxo
+bezel-v3-short-edge-uncompressed.amf application/x-amf oxo
 
 # Virtualization disk images
 disk.qcow2 application/x-qemu-disk
