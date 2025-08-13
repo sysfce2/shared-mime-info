@@ -9311,11 +9311,14 @@ command to generate the output files.
 
   <mime-type type="text/x-nsis">
     <comment>NSIS Script</comment>
+    <acronym>NSIS</acronym>
+    <expanded-acronym>Nullsoft Scriptable Install System</expanded-acronym>
     <sub-class-of type="text/plain"/>
     <generic-icon name="text-x-generic"/>
     <glob pattern="*.nsi"/>
     <glob pattern="*.nsh"/>
   </mime-type>
+
   <mime-type type="image/x-phm">
     <comment>Portable HalfMap</comment>
     <glob pattern="*.phm"/>
