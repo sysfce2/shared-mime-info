@@ -7160,7 +7160,14 @@ command to generate the output files.
   <mime-type type="text/x-vala">
     <comment>Vala source code</comment>
     <sub-class-of type="text/plain"/>
+    <sub-class-of type='application/x-executable'/>
     <magic priority="10">
+      <match type="string" value="#!/bin/vala" offset="0"/>
+      <match type="string" value="#!/usr/bin/vala" offset="0"/>
+      <match type="string" value="#!/usr/bin/env vala" offset="0"/>
+      <match type="string" value="#!/usr/bin/env -S vala" offset="0"/>
+      <match type="string" value="#!/bin/env vala" offset="0"/>
+      <match type="string" value="#!/bin/env -S vala" offset="0"/>
       <match type="string" value="//" offset="0"/>
       <match type="string" value="/*" offset="0"/>
       <match type="string" value="class" offset="0"/>
