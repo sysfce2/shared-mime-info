@@ -720,6 +720,8 @@ cyborg.med audio/x-med
 simon.669 audio/x-669
 # http://modarchive.org/module.php?61261
 4jsno.669 audio/x-669
+# http://modarchive.org/module.php?200153
+ichwills.ult audio/x-ult
 # https://gitlab.freedesktop.org/xdg/shared-mime-info/-/issues/144
 false-positive-669 text/plain x
 # Copied from http://modarchive.org/index.php?request=view_by_moduleid&query=177387 (public domain)
