@@ -5277,10 +5277,34 @@ command to generate the output files.
   <mime-type type="audio/x-mod">
     <comment>Amiga SoundTracker audio</comment>
     <magic priority="40">
-      <match type="string" value="MTM" offset="0"/>
+      <match type="string" value="M.K." offset="1080"/>
+      <match type="string" value="M!K!" offset="1080"/>
+      <match type="string" value="N.T." offset="1080"/>
+      <match type="string" value="FLT4" offset="1080"/>
+      <match type="string" value="FLT8" offset="1080"/>
+      <match type="string" value="CHN" offset="1081"/>  <!-- 1CHN - 9CHN -->
+      <match type="string" value="CH" offset="1082"/>   <!-- 10CH - 99CH -->
+      <match type="string" value="CN" offset="1083"/>   <!-- 10CN - 99CN -->
+    </magic>
+    <glob pattern="*.mod"/>
+    <glob pattern="*.m15"/>
+    <glob pattern="*.stk"/>
+    <glob pattern="*.nst"/>
+    <glob pattern="*.fst"/>
+  </mime-type>
+  <mime-type type="audio/x-med">
+    <comment>OctaMED audio</comment>
+    <magic priority="40">
       <match type="string" value="MMD0" offset="0"/>
       <match type="string" value="MMD1" offset="0"/>
-      <!-- 669 composer files: "if" and "JN" -->
+      <match type="string" value="MMD2" offset="0"/>
+      <match type="string" value="MMD3" offset="0"/>
+    </magic>
+    <glob pattern="*.med"/>
+  </mime-type>
+  <mime-type type="audio/x-669">
+    <comment>Composer 669 audio</comment>
+    <magic priority="40">
       <match type="byte" value="0x0" mask="0x80" offset="112">
         <match type="string" value="if" offset="0">
           <!-- tempo list last byte: 0-31 (0 = known false positive) -->
@@ -5327,17 +5351,26 @@ command to generate the output files.
           </match>
         </match>
       </match>
-      <match type="string" value="MAS_UTrack_V00" offset="0"/>
-      <match type="string" value="M.K." offset="1080"/>
-      <match type="string" value="M!K!" offset="1080"/>
     </magic>
-    <glob pattern="*.mod"/>
-    <glob pattern="*.ult"/>
-    <glob pattern="*.uni"/>
-    <glob pattern="*.m15"/>
-    <glob pattern="*.mtm"/>
     <glob pattern="*.669"/>
-    <glob pattern="*.med"/>
+    <glob pattern="*.uni"/>
+    <alias type="audio/x-669-mod"/>
+  </mime-type>
+  <mime-type type="audio/x-mtm">
+    <comment>MultiTracker audio</comment>
+    <magic priority="40">
+      <match type="string" value="MTM" offset="0"/>
+    </magic>
+    <glob pattern="*.mtm"/>
+    <alias type="audio/x-multitrack"/>
+  </mime-type>
+  <mime-type type="audio/x-ult">
+    <comment>UltraTracker audio</comment>
+    <magic priority="40">
+      <match type="string" value="MAS_UTrack_V00" offset="0"/>
+    </magic>
+    <glob pattern="*.ult"/>
+    <alias type="audio/x-multimate-mod"/>
   </mime-type>
   <mime-type type="audio/x-dsp">
     <comment>Dynamic Studio module audio</comment>

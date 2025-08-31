@@ -713,13 +713,13 @@ xml-in-mp3.mp3 audio/mpeg
 # http://samples.mplayerhq.hu/A-codecs/AAC/ct_faac-adts.aac
 ct_faac-adts.aac audio/aac
 # http://www.modarchive.org/module.php?38589
-break.mtm audio/x-mod
+break.mtm audio/x-mtm
 # http://modarchive.org/module.php?174623
-cyborg.med audio/x-mod
+cyborg.med audio/x-med
 # http://modarchive.org/module.php?57259
-simon.669 audio/x-mod
+simon.669 audio/x-669
 # http://modarchive.org/module.php?61261
-4jsno.669 audio/x-mod
+4jsno.669 audio/x-669
 # https://gitlab.freedesktop.org/xdg/shared-mime-info/-/issues/144
 false-positive-669 text/plain x
 # Copied from http://modarchive.org/index.php?request=view_by_moduleid&query=177387 (public domain)
