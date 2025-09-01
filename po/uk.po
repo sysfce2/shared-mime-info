@@ -164,7 +164,7 @@ msgstr "документ Plucker"
 
 #: data/freedesktop.org.xml.in:385
 msgid "BuildStream element"
-msgstr ""
+msgstr "елемент BuildStream"
 
 #: data/freedesktop.org.xml.in:393
 msgid "RAML document"
@@ -188,7 +188,7 @@ msgstr "документ SMIL"
 
 #: data/freedesktop.org.xml.in:448
 msgid "SPDX SBOM document"
-msgstr ""
+msgstr "документ SBOM SPDX"
 
 #: data/freedesktop.org.xml.in:455
 msgid "WPL playlist"
@@ -279,7 +279,7 @@ msgstr "опис принтера PostScript"
 
 #: data/freedesktop.org.xml.in:658 data/freedesktop.org.xml.in:665
 msgid "CycloneDX BOM document"
-msgstr ""
+msgstr "документ BOM CycloneDX"
 
 #: data/freedesktop.org.xml.in:679
 msgid "Lotus 1-2-3 spreadsheet"
@@ -1219,7 +1219,7 @@ msgstr "документ JSON5"
 
 #: data/freedesktop.org.xml.in:3068
 msgid "HTTP archive"
-msgstr ""
+msgstr "архїв HTTP"
 
 #: data/freedesktop.org.xml.in:3079
 msgid "JRD document"
@@ -1756,7 +1756,7 @@ msgstr "скрипт оболонки fish"
 
 #: data/freedesktop.org.xml.in:4426
 msgid "Nushell script"
-msgstr ""
+msgstr "скрипт Nushell"
 
 #: data/freedesktop.org.xml.in:4437
 msgid "Shockwave Flash file"
@@ -1837,11 +1837,11 @@ msgstr "субтитри SSA"
 
 #: data/freedesktop.org.xml.in:4610
 msgid "OpenSSH public key"
-msgstr ""
+msgstr "відкритий ключ OpenSSH"
 
 #: data/freedesktop.org.xml.in:4639
 msgid "OpenSSH private key"
-msgstr ""
+msgstr "закритий ключ OpenSSH"
 
 #: data/freedesktop.org.xml.in:4646
 msgid "SubViewer subtitles"
@@ -2169,7 +2169,7 @@ msgstr "документ RealMedia"
 
 #: data/freedesktop.org.xml.in:5473
 msgid "Radiance HDR image"
-msgstr ""
+msgstr "зображення HDR Radiance"
 
 #: data/freedesktop.org.xml.in:5484
 msgid "RealPix document"
@@ -2249,7 +2249,7 @@ msgstr "запаковане до HEIF зображення JPEG 2000"
 
 #: data/freedesktop.org.xml.in:5636
 msgid "AVC-encoded image encapsulated in HEIF"
-msgstr ""
+msgstr "закодоване до AVC зображення, вкладене до HEIF"
 
 #: data/freedesktop.org.xml.in:5643
 msgid "IEF image"
@@ -2753,7 +2753,7 @@ msgstr "таблиця стилів CSS"
 
 #: data/freedesktop.org.xml.in:6784
 msgid "SPDX document"
-msgstr ""
+msgstr "документ SPDX"
 
 #: data/freedesktop.org.xml.in:6794
 msgid "Electronic business card"
@@ -2921,7 +2921,7 @@ msgstr "початковий код мовою C"
 
 #: data/freedesktop.org.xml.in:7118
 msgid "Docker container build file"
-msgstr ""
+msgstr "файл збирання контейнера Docker"
 
 #: data/freedesktop.org.xml.in:7131
 msgid "Assembly code"
@@ -3085,11 +3085,11 @@ msgstr "початковий код мовою OCaml"
 
 #: data/freedesktop.org.xml.in:7526
 msgid "OpenCL C source code"
-msgstr ""
+msgstr "початковий код мовою C OpenCL"
 
 #: data/freedesktop.org.xml.in:7540
 msgid "C++ for OpenCL source code"
-msgstr ""
+msgstr "початковий код мовою C++ OpenCL"
 
 #: data/freedesktop.org.xml.in:7547
 msgid "MATLAB file"
@@ -3611,7 +3611,7 @@ msgstr "пропуск Apple Wallet"
 
 #: data/freedesktop.org.xml.in:8723
 msgid "Apple Wallet passes bundle"
-msgstr ""
+msgstr "комплект паролів Apple Wallet"
 
 #: data/freedesktop.org.xml.in:8734
 msgid "Adobe PageMaker document"
@@ -3819,8 +3819,8 @@ msgstr "портативна FloatMap"
 
 #: data/freedesktop.org.xml.in:9275
 msgid "Portable HalfMap"
-msgstr ""
+msgstr "портативний HalfMap"
 
 #: data/freedesktop.org.xml.in:9284
 msgid "Proxy Auto-Configuration file"
-msgstr ""
+msgstr "файл автоналаштувань проксі"

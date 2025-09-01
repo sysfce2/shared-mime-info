@@ -160,7 +160,7 @@ msgstr "Pluckeri dokument"
 
 #: data/freedesktop.org.xml.in:385
 msgid "BuildStream element"
-msgstr ""
+msgstr "BuildStreami element"
 
 #: data/freedesktop.org.xml.in:393
 msgid "RAML document"
@@ -184,7 +184,7 @@ msgstr "SMIL dokument"
 
 #: data/freedesktop.org.xml.in:448
 msgid "SPDX SBOM document"
-msgstr ""
+msgstr "SPDX SBOM dokument"
 
 #: data/freedesktop.org.xml.in:455
 msgid "WPL playlist"
@@ -275,7 +275,7 @@ msgstr "PostScripti printerikirjeldus"
 
 #: data/freedesktop.org.xml.in:658 data/freedesktop.org.xml.in:665
 msgid "CycloneDX BOM document"
-msgstr ""
+msgstr "CycloneDX BOM dokument"
 
 #: data/freedesktop.org.xml.in:679
 msgid "Lotus 1-2-3 spreadsheet"
@@ -1215,7 +1215,7 @@ msgstr "JSON5 dokument"
 
 #: data/freedesktop.org.xml.in:3068
 msgid "HTTP archive"
-msgstr ""
+msgstr "HTTP arhiiv"
 
 #: data/freedesktop.org.xml.in:3079
 msgid "JRD document"
@@ -1752,7 +1752,7 @@ msgstr "Fish'i kestaskript"
 
 #: data/freedesktop.org.xml.in:4426
 msgid "Nushell script"
-msgstr ""
+msgstr "Nushelli skript"
 
 #: data/freedesktop.org.xml.in:4437
 msgid "Shockwave Flash file"
@@ -1833,11 +1833,11 @@ msgstr "SSA subtiitrid"
 
 #: data/freedesktop.org.xml.in:4610
 msgid "OpenSSH public key"
-msgstr ""
+msgstr "OpenSSH avalik võti"
 
 #: data/freedesktop.org.xml.in:4639
 msgid "OpenSSH private key"
-msgstr ""
+msgstr "OpenSSH privaatvõti"
 
 #: data/freedesktop.org.xml.in:4646
 msgid "SubViewer subtitles"
@@ -2165,7 +2165,7 @@ msgstr "RealMedia dokument"
 
 #: data/freedesktop.org.xml.in:5473
 msgid "Radiance HDR image"
-msgstr ""
+msgstr "Radiance'i HDR-pilt"
 
 #: data/freedesktop.org.xml.in:5484
 msgid "RealPix document"
@@ -2245,7 +2245,7 @@ msgstr "HEIF-konteineris JPEG 2000 pilt"
 
 #: data/freedesktop.org.xml.in:5636
 msgid "AVC-encoded image encapsulated in HEIF"
-msgstr ""
+msgstr "AVC-kodeeringus pilt HEIF-konteineris"
 
 #: data/freedesktop.org.xml.in:5643
 msgid "IEF image"
@@ -2749,7 +2749,7 @@ msgstr "CSS laaditabel"
 
 #: data/freedesktop.org.xml.in:6784
 msgid "SPDX document"
-msgstr ""
+msgstr "SPDXi document"
 
 #: data/freedesktop.org.xml.in:6794
 msgid "Electronic business card"
@@ -2917,7 +2917,7 @@ msgstr "C lähtekood"
 
 #: data/freedesktop.org.xml.in:7118
 msgid "Docker container build file"
-msgstr ""
+msgstr "Dockeri konteineri kompileerimisjuhend"
 
 #: data/freedesktop.org.xml.in:7131
 msgid "Assembly code"
@@ -3081,11 +3081,11 @@ msgstr "OCamli lähtekood"
 
 #: data/freedesktop.org.xml.in:7526
 msgid "OpenCL C source code"
-msgstr ""
+msgstr "C OpenCL'i lähtekoodi jaoks"
 
 #: data/freedesktop.org.xml.in:7540
 msgid "C++ for OpenCL source code"
-msgstr ""
+msgstr "C++ OpenCL'i lähtekoodi jaoks"
 
 #: data/freedesktop.org.xml.in:7547
 msgid "MATLAB file"
@@ -3607,7 +3607,7 @@ msgstr "Apple Walleti dokument"
 
 #: data/freedesktop.org.xml.in:8723
 msgid "Apple Wallet passes bundle"
-msgstr ""
+msgstr "Apple Walleti dokumentide pakk"
 
 #: data/freedesktop.org.xml.in:8734
 msgid "Adobe PageMaker document"
@@ -3815,8 +3815,8 @@ msgstr "Portable FloatMapi pilt"
 
 #: data/freedesktop.org.xml.in:9275
 msgid "Portable HalfMap"
-msgstr ""
+msgstr "Portable HalfMapi pilt"
 
 #: data/freedesktop.org.xml.in:9284
 msgid "Proxy Auto-Configuration file"
-msgstr ""
+msgstr "Proksiserveri automaatse seadistamise fail"

@@ -164,7 +164,7 @@ msgstr "Documento do Plucker"
 
 #: data/freedesktop.org.xml.in:385
 msgid "BuildStream element"
-msgstr ""
+msgstr "Elemento BuildStream"
 
 #: data/freedesktop.org.xml.in:393
 msgid "RAML document"
@@ -188,7 +188,7 @@ msgstr "Documento SMIL"
 
 #: data/freedesktop.org.xml.in:448
 msgid "SPDX SBOM document"
-msgstr ""
+msgstr "Documento SBOM SPDX"
 
 #: data/freedesktop.org.xml.in:455
 msgid "WPL playlist"
@@ -279,7 +279,7 @@ msgstr "Descrição de impressora PostScript"
 
 #: data/freedesktop.org.xml.in:658 data/freedesktop.org.xml.in:665
 msgid "CycloneDX BOM document"
-msgstr ""
+msgstr "Documento BOM CycloneDX"
 
 #: data/freedesktop.org.xml.in:679
 msgid "Lotus 1-2-3 spreadsheet"
@@ -1219,7 +1219,7 @@ msgstr "Documento JSON5"
 
 #: data/freedesktop.org.xml.in:3068
 msgid "HTTP archive"
-msgstr ""
+msgstr "Arquivo HTTP"
 
 #: data/freedesktop.org.xml.in:3079
 msgid "JRD document"
@@ -1756,7 +1756,7 @@ msgstr "Script de shell Fish"
 
 #: data/freedesktop.org.xml.in:4426
 msgid "Nushell script"
-msgstr ""
+msgstr "Script de nushell"
 
 #: data/freedesktop.org.xml.in:4437
 msgid "Shockwave Flash file"
@@ -1837,11 +1837,11 @@ msgstr "Legendas SSA"
 
 #: data/freedesktop.org.xml.in:4610
 msgid "OpenSSH public key"
-msgstr ""
+msgstr "Chave pública OpenSSH"
 
 #: data/freedesktop.org.xml.in:4639
 msgid "OpenSSH private key"
-msgstr ""
+msgstr "Chave privada OpenSSH"
 
 #: data/freedesktop.org.xml.in:4646
 msgid "SubViewer subtitles"
@@ -2169,7 +2169,7 @@ msgstr "Documento RealMedia"
 
 #: data/freedesktop.org.xml.in:5473
 msgid "Radiance HDR image"
-msgstr ""
+msgstr "Imagem Radiance HDR"
 
 #: data/freedesktop.org.xml.in:5484
 msgid "RealPix document"
@@ -2249,7 +2249,7 @@ msgstr "Imagem JPEG 2000 encapsulada em HEIF"
 
 #: data/freedesktop.org.xml.in:5636
 msgid "AVC-encoded image encapsulated in HEIF"
-msgstr ""
+msgstr "Imagem codificada com AVC encapsulada em HEIF"
 
 #: data/freedesktop.org.xml.in:5643
 msgid "IEF image"
@@ -2753,7 +2753,7 @@ msgstr "Folha de estilo CSS"
 
 #: data/freedesktop.org.xml.in:6784
 msgid "SPDX document"
-msgstr ""
+msgstr "Documento SPDX"
 
 #: data/freedesktop.org.xml.in:6794
 msgid "Electronic business card"
@@ -2921,7 +2921,7 @@ msgstr "Código-fonte C"
 
 #: data/freedesktop.org.xml.in:7118
 msgid "Docker container build file"
-msgstr ""
+msgstr "Arquivo de construção de contêiner Docker"
 
 #: data/freedesktop.org.xml.in:7131
 msgid "Assembly code"
@@ -3085,11 +3085,11 @@ msgstr "Código-fonte OCaml"
 
 #: data/freedesktop.org.xml.in:7526
 msgid "OpenCL C source code"
-msgstr ""
+msgstr "Código-fonte C OpenCL"
 
 #: data/freedesktop.org.xml.in:7540
 msgid "C++ for OpenCL source code"
-msgstr ""
+msgstr "C++ para código-fonte OpenCL"
 
 #: data/freedesktop.org.xml.in:7547
 msgid "MATLAB file"
@@ -3611,7 +3611,7 @@ msgstr "Passe do Apple Wallet"
 
 #: data/freedesktop.org.xml.in:8723
 msgid "Apple Wallet passes bundle"
-msgstr ""
+msgstr "Pscote de passes do Apple Wallet"
 
 #: data/freedesktop.org.xml.in:8734
 msgid "Adobe PageMaker document"
@@ -3819,8 +3819,8 @@ msgstr "Portable FloatMap"
 
 #: data/freedesktop.org.xml.in:9275
 msgid "Portable HalfMap"
-msgstr ""
+msgstr "Portable HalfMap"
 
 #: data/freedesktop.org.xml.in:9284
 msgid "Proxy Auto-Configuration file"
-msgstr ""
+msgstr "Arquivo de autoconfiguração de proxy"
