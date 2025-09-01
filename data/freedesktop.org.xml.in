@@ -444,6 +444,13 @@ command to generate the output files.
     <root-XML namespaceURI="http://www.w3.org/2005/SMIL21/Language" localName="smil"/>
     <root-XML namespaceURI="http://www.w3.org/ns/SMIL" localName="smil"/>
   </mime-type>
+  <mime-type type="application/spdx+json">
+    <comment>SPDX SBOM document</comment>
+    <acronym>SPDX SBOM</acronym>
+    <expanded-acronym>Software Package Data Exchange Software Bill Of Materials</expanded-acronym>
+    <sub-class-of type="application/json"/>
+    <glob pattern="*.spdx.json"/>
+  </mime-type>
   <mime-type type="application/vnd.ms-wpl">
     <comment>WPL playlist</comment>
     <acronym>WPL</acronym>
@@ -646,6 +653,27 @@ command to generate the output files.
       <match type="string" value="*PPD-Adobe:" offset="0"/>
     </magic>
     <glob pattern="*.ppd"/>
+  </mime-type>
+  <mime-type type="application/vnd.cyclonedx+json">
+    <comment>CycloneDX BOM document</comment>
+    <acronym>BOM</acronym>
+    <expanded-acronym>Bill Of Materials</expanded-acronym>
+    <sub-class-of type="application/json"/>
+    <glob pattern="*.cdx.json"/>
+  </mime-type>
+  <mime-type type="application/vnd.cyclonedx+xml">
+    <comment>CycloneDX BOM document</comment>
+    <acronym>BOM</acronym>
+    <expanded-acronym>Bill Of Materials</expanded-acronym>
+    <sub-class-of type="application/xml"/>
+    <glob pattern="*.cdx.xml"/>
+    <root-XML namespaceURI="http://cyclonedx.org/schema/bom/1.0" localName="bom"/>
+    <root-XML namespaceURI="http://cyclonedx.org/schema/bom/1.1" localName="bom"/>
+    <root-XML namespaceURI="http://cyclonedx.org/schema/bom/1.2" localName="bom"/>
+    <root-XML namespaceURI="http://cyclonedx.org/schema/bom/1.3" localName="bom"/>
+    <root-XML namespaceURI="http://cyclonedx.org/schema/bom/1.4" localName="bom"/>
+    <root-XML namespaceURI="http://cyclonedx.org/schema/bom/1.5" localName="bom"/>
+    <root-XML namespaceURI="http://cyclonedx.org/schema/bom/1.6" localName="bom"/>
   </mime-type>
   <mime-type type="application/vnd.lotus-1-2-3">
     <comment>Lotus 1-2-3 spreadsheet</comment>
@@ -1585,6 +1613,12 @@ command to generate the output files.
     <comment>Android package</comment>
     <sub-class-of type="application/java-archive"/>
     <glob pattern="*.apk"/>
+  </mime-type>
+  <mime-type type="application/x-alpine-package-keeper-package">
+    <comment>Alpine Package Keeper package</comment>
+    <generic-icon name="package-x-generic"/>
+    <sub-class-of type="application/x-compressed-tar"/>
+    <glob pattern="*.apk" weight="40"/>
   </mime-type>
   <mime-type type="application/vnd.symbian.install">
     <comment>SIS package</comment>
@@ -2752,6 +2786,7 @@ command to generate the output files.
     <generic-icon name="application-x-executable"/>
     <magic>
       <match type="string" value="SEGA GENESIS" offset="256"/>
+      <match type="string" value="SEGA MEGADRIVE" offset="256"/>
       <match type="string" value="SEGA MEGA DRIVE" offset="256"/>
       <match type="string" value="SEGA_MEGA_DRIVE" offset="256"/>
       <match type="string" value="SEGA SSF" offset="256"/>
@@ -3034,6 +3069,17 @@ command to generate the output files.
     <sub-class-of type="application/ecmascript"/>
     <generic-icon name="text-x-script"/>
     <glob pattern="*.json5"/>
+  </mime-type>
+  <mime-type type="application/har+json">
+    <comment>HTTP archive</comment>
+    <sub-class-of type="application/json"/>
+    <generic-icon name="package-x-generic"/>
+    <magic priority="10">
+      <match type="string" value="{" offset="0">
+        <match type="string" value='"log":' offset="1:256"/>
+      </match>
+    </magic>
+    <glob pattern="*.har"/>
   </mime-type>
   <mime-type type="application/jrd+json">
     <comment>JRD document</comment>
@@ -4277,6 +4323,7 @@ command to generate the output files.
       <match type="string" value="module" offset="0"/>
     </magic>
     <glob pattern="*.rb"/>
+    <alias type="text/x-ruby"/>
   </mime-type>
   <mime-type type="application/x-markaby">
     <comment>Markaby script</comment>
@@ -5431,6 +5478,7 @@ command to generate the output files.
   </mime-type>
   <mime-type type="image/vnd.radiance">
     <comment>Radiance HDR image</comment>
+    <alias type="image/x-hdr"/>
     <magic>
       <match type="string" value="#?RADIANCE" offset="0"/>
     </magic>
@@ -6739,6 +6787,16 @@ command to generate the output files.
     <sub-class-of type="text/plain"/>
     <glob pattern="*.css"/>
   </mime-type>
+  <mime-type type="text/spdx">
+    <comment>SPDX document</comment>
+    <acronym>SPDX</acronym>
+    <expanded-acronym>Software Package Data Exchange</expanded-acronym>
+    <sub-class-of type="text/plain"/>
+    <magic>
+      <match type="string" value="SPDXVersion: SPDX-" offset="0"/>
+    </magic>
+    <glob pattern="*.spdx"/>
+  </mime-type>
   <mime-type type="text/vcard">
     <comment>Electronic business card</comment>
     <alias type="text/directory"/>
@@ -7108,7 +7166,14 @@ command to generate the output files.
   <mime-type type="text/x-vala">
     <comment>Vala source code</comment>
     <sub-class-of type="text/plain"/>
+    <sub-class-of type='application/x-executable'/>
     <magic priority="10">
+      <match type="string" value="#!/bin/vala" offset="0"/>
+      <match type="string" value="#!/usr/bin/vala" offset="0"/>
+      <match type="string" value="#!/usr/bin/env vala" offset="0"/>
+      <match type="string" value="#!/usr/bin/env -S vala" offset="0"/>
+      <match type="string" value="#!/bin/env vala" offset="0"/>
+      <match type="string" value="#!/bin/env -S vala" offset="0"/>
       <match type="string" value="//" offset="0"/>
       <match type="string" value="/*" offset="0"/>
       <match type="string" value="class" offset="0"/>
@@ -7416,6 +7481,22 @@ command to generate the output files.
     </magic>
     <glob pattern="*.reg"/>
   </mime-type>
+  <mime-type type="text/x-ms-visualstudio.project">
+    <comment>Visual Studio Project</comment>
+    <sub-class-of type="text/plain"/>
+    <magic>
+      <match type="string" value="# Microsoft Developer Studio Project File" offset="0"/>
+    </magic>
+    <glob pattern="*.dsp"/>
+  </mime-type>
+  <mime-type type="text/x-ms-visualstudio.workspace">
+    <comment>Visual Studio Workspace</comment>
+    <sub-class-of type="text/plain"/>
+    <magic>
+      <match type="string" value="Microsoft Developer Studio Workspace File" offset="0"/>
+    </magic>
+    <glob pattern="*.dsw"/>
+  </mime-type>
   <mime-type type="text/x-mof">
     <comment>MOF file</comment>
     <acronym>MOF</acronym>
@@ -7471,8 +7552,8 @@ command to generate the output files.
       <match type="string" value="fun" offset="0"/>
     </magic>
   </mime-type>
-  <mime-type type="text/x-opencl-src">
-    <comment>OpenCL source code</comment>
+  <mime-type type="text/x-opencl-csrc">
+    <comment>OpenCL C source code</comment>
     <acronym>OpenCL</acronym>
     <expanded-acronym>Open Computing Language</expanded-acronym>
     <sub-class-of type="text/x-csrc"/>
@@ -7483,6 +7564,14 @@ command to generate the output files.
       <match type="string" value="struct" offset="0"/>
     </magic>
     <glob pattern="*.cl"/>
+    <alias type="text/x-opencl-src"/>
+  </mime-type>
+  <mime-type type="text/x-opencl-c++src">
+    <comment>C++ for OpenCL source code</comment>
+    <acronym>OpenCL</acronym>
+    <expanded-acronym>Open Computing Language</expanded-acronym>
+    <sub-class-of type="text/x-c++src"/>
+    <glob pattern="*.clcpp"/>
   </mime-type>
   <mime-type type="text/x-matlab">
     <comment>MATLAB file</comment>
@@ -8803,6 +8892,14 @@ command to generate the output files.
     </magic>
   </mime-type>
 
+  <mime-type type="application/x-amf">
+    <comment>AMF 3D model</comment>
+    <acronym>AMF</acronym>
+    <expanded-acronym>Additive Manufacturing File</expanded-acronym>
+    <generic-icon name="image-x-generic"/>
+    <glob pattern="*.amf"/>
+  </mime-type>
+
   <mime-type type="text/x.gcode">
     <comment>G-code file</comment>
     <sub-class-of type="text/plain"/>
@@ -9244,4 +9341,94 @@ command to generate the output files.
     </magic>
   </mime-type>
 
+  <mime-type type="application/x.sf3-archive">
+    <comment>SF3 Archive</comment>
+    <acronym>SF3</acronym>
+    <expanded-acronym>Simple File Format Family</expanded-acronym>
+    <glob pattern="*.ar.sf3"/>
+    <glob pattern="*.sf3"/>
+    <magic>
+      <match type="string" value="\x81SF3\x00\xE0\xD0\x0D\x0A\x0A\x01" offset="0"/>
+    </magic>
+  </mime-type>
+  <mime-type type="audio/x.sf3">
+    <comment>SF3 Audio</comment>
+    <acronym>SF3</acronym>
+    <expanded-acronym>Simple File Format Family</expanded-acronym>
+    <glob pattern="*.au.sf3"/>
+    <glob pattern="*.sf3"/>
+    <magic>
+      <match type="string" value="\x81SF3\x00\xE0\xD0\x0D\x0A\x0A\x02" offset="0"/>
+    </magic>
+  </mime-type>
+  <mime-type type="image/x.sf3">
+    <comment>SF3 Image</comment>
+    <acronym>SF3</acronym>
+    <expanded-acronym>Simple File Format Family</expanded-acronym>
+    <glob pattern="*.img.sf3"/>
+    <glob pattern="*.sf3"/>
+    <magic>
+      <match type="string" value="\x81SF3\x00\xE0\xD0\x0D\x0A\x0A\x03" offset="0"/>
+    </magic>
+  </mime-type>
+  <mime-type type="application/x.sf3-log">
+    <comment>SF3 Log File</comment>
+    <acronym>SF3</acronym>
+    <expanded-acronym>Simple File Format Family</expanded-acronym>
+    <glob pattern="*.log.sf3"/>
+    <glob pattern="*.sf3"/>
+    <magic>
+      <match type="string" value="\x81SF3\x00\xE0\xD0\x0D\x0A\x0A\x04" offset="0"/>
+    </magic>
+  </mime-type>
+  <mime-type type="model/x.sf3">
+    <comment>SF3 3D Model</comment>
+    <acronym>SF3</acronym>
+    <expanded-acronym>Simple File Format Family</expanded-acronym>
+    <glob pattern="*.mod.sf3"/>
+    <glob pattern="*.sf3"/>
+    <magic>
+      <match type="string" value="\x81SF3\x00\xE0\xD0\x0D\x0A\x0A\x05" offset="0"/>
+    </magic>
+  </mime-type>
+  <mime-type type="model/x.sf3-physics">
+    <comment>SF3 Physics Model</comment>
+    <acronym>SF3</acronym>
+    <expanded-acronym>Simple File Format Family</expanded-acronym>
+    <glob pattern="*.phys.sf3"/>
+    <glob pattern="*.sf3"/>
+    <magic>
+      <match type="string" value="\x81SF3\x00\xE0\xD0\x0D\x0A\x0A\x06" offset="0"/>
+    </magic>
+  </mime-type>
+  <mime-type type="application/x.sf3-table">
+    <comment>SF3 Table</comment>
+    <acronym>SF3</acronym>
+    <expanded-acronym>Simple File Format Family</expanded-acronym>
+    <glob pattern="*.tab.sf3"/>
+    <glob pattern="*.sf3"/>
+    <magic>
+      <match type="string" value="\x81SF3\x00\xE0\xD0\x0D\x0A\x0A\x07" offset="0"/>
+    </magic>
+  </mime-type>
+  <mime-type type="application/x.sf3-text">
+    <comment>SF3 Rich Text</comment>
+    <acronym>SF3</acronym>
+    <expanded-acronym>Simple File Format Family</expanded-acronym>
+    <glob pattern="*.txt.sf3"/>
+    <glob pattern="*.sf3"/>
+    <magic>
+      <match type="string" value="\x81SF3\x00\xE0\xD0\x0D\x0A\x0A\x08" offset="0"/>
+    </magic>
+  </mime-type>
+  <mime-type type="image/x.sf3-vector">
+    <comment>SF3 Vector Graphic</comment>
+    <acronym>SF3</acronym>
+    <expanded-acronym>Simple File Format Family</expanded-acronym>
+    <glob pattern="*.vec.sf3"/>
+    <glob pattern="*.sf3"/>
+    <magic>
+      <match type="string" value="\x81SF3\x00\xE0\xD0\x0D\x0A\x0A\x09" offset="0"/>
+    </magic>
+  </mime-type>
 </mime-info>

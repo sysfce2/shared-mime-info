@@ -392,6 +392,7 @@ json-ld-full-iri.jsonld application/ld+json ox
 schema.json application/schema+json x
 test.ipynb application/x-ipynb+json
 test-reordered.ipynb application/x-ipynb+json ox
+har_example.har application/har+json
 test.cs text/x-csharp ox
 test.dot text/vnd.graphviz x
 test.vala text/x-vala ox
@@ -446,7 +447,8 @@ include-objc++.mm text/x-objc++src ox
 simple-troff.tr text/troff
 simple-troff.mm text/x-troff-mm xx
 # Copied from LLVM project test suite
-test.cl text/x-opencl-src ox
+test.cl text/x-opencl-csrc ox
+test.clcpp text/x-opencl-c++src ox
 # hand-made
 test.mc2 text/vnd.senx.warpscript ox
 # Copied from http://todotxt.org/todo.txt
@@ -525,6 +527,9 @@ test.bst application/buildstream+yaml
 test.raml application/raml+yaml
 # Created with `echo 'Hello World!' > helloworld.txt && binhex -u helloworld.txt > helloworld.hqx`
 helloworld.hqx application/mac-binhex40
+# Microsoft Developer Studio (Legacy Visual Studio)
+test_vs_project.dsp text/x-ms-visualstudio.project
+test_vs_workspace.dsw text/x-ms-visualstudio.workspace
 
 # xml subtypes
 ../../data/shared-mime-info-spec.xml application/docbook+xml xox
@@ -656,6 +661,8 @@ serafettin.rar application/vnd.rar
 extractthis.asar application/x-asar
 # Created using StuffIt Deluxe 7.0
 test.sitx application/x-stuffitx
+# From https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/shared-mime-info-doc-2.4-r1.apk
+shared-mime-info-doc-2.4-r1.apk application/x-alpine-package-keeper-package xxo
 
 # Audio/Video files
 # https://bugs.freedesktop.org/show_bug.cgi?id=20070#c4
@@ -759,6 +766,7 @@ sms-test.sms application/x-sms-rom ox
 game-gear-test.gg application/x-gamegear-rom ox
 genesis1.bin application/x-genesis-rom x
 genesis2.bin application/x-genesis-rom x
+genesis3.smd application/x-genesis-rom
 mega-drive-rom.gen application/x-genesis-rom
 # Sega Channel Revival v3
 sega-genesis-rom.smd application/x-genesis-rom
@@ -1017,6 +1025,9 @@ test.gcode text/x.gcode ox
 # Converted from binary.stl with Blender
 test.obj model/obj x
 test.mtl model/mtl
+# from https://www.printables.com/model/1283304-mac-classic-bezel/files
+bezel-v3-short-edge.amf application/x-amf oxo
+bezel-v3-short-edge-uncompressed.amf application/x-amf oxo
 
 # Virtualization disk images
 disk.qcow2 application/x-qemu-disk
@@ -1167,3 +1178,25 @@ test.releases.xml application/x-freedesktop-appstream-releases ox
 
 # PAC script
 proxy.pac application/x-ns-proxy-autoconfig
+
+# SBOM files
+# https://github.com/spdx/spdx-examples/blob/master/presentations/OSS-NA-2023/SPDXVersion2.3/01-MinimalSBOM.json
+test.spdx.json application/spdx+json ox
+# test.spdx.json converted using https://tools.spdx.org/app/convert/
+test.spdx text/spdx
+# https://raw.githubusercontent.com/CycloneDX/bom-examples/refs/heads/master/SBOM/cern-lhc-vdm-editor-e564943/bom.json
+test.cdx.json application/vnd.cyclonedx+json ox
+# https://raw.githubusercontent.com/CycloneDX/bom-examples/refs/heads/master/SBOM/cern-lhc-vdm-editor-e564943/bom.xml
+test.cdx.xml application/vnd.cyclonedx+xml ox
+
+# SF3 files
+# https://shirakumo.org/projects/sf3/tree/master/samples
+sf3/blend.vec.sf3 image/x.sf3-vector
+sf3/combine.phys.sf3 model/x.sf3-physics
+sf3/f4-44100-2.au.sf3 audio/x.sf3
+sf3/markup.txt.sf3 application/x.sf3-text
+sf3/multi-text.ar.sf3 application/x.sf3-archive
+sf3/pbr-quad.mod.sf3 model/x.sf3
+sf3/rgb-u8-1x1.img.sf3 image/x.sf3
+sf3/two-chunks.log.sf3 application/x.sf3-log
+sf3/two-rows.tab.sf3 application/x.sf3-table
