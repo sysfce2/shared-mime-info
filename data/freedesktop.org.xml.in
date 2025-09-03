@@ -2278,10 +2278,11 @@ command to generate the output files.
     </magic>
     <glob pattern="*.iso"/>
   </mime-type>
-  <mime-type type="application/x-nintendo-ds-rom">
+  <mime-type type="application/vnd.nintendo.nitro.rom">
     <comment>Nintendo DS ROM</comment>
     <generic-icon name="application-x-executable"/>
     <glob pattern="*.nds"/>
+    <alias type="application/x-nintendo-ds-rom" />
   </mime-type>
   <mime-type type="application/x-nintendo-3ds-rom">
     <comment>Nintendo 3DS ROM</comment>
