@@ -9745,4 +9745,10 @@ command to generate the output files.
       <match type="string" value="\x81SF3\x00\xE0\xD0\x0D\x0A\x0A\x09" offset="0"/>
     </magic>
   </mime-type>
+  <mime-type type="text/slint">
+    <comment>Slint Language</comment>
+    <sub-class-of type="text/plain"/>
+    <generic-icon name="text-x-script"/>
+    <glob pattern="*.slint"/>
+  </mime-type>
 </mime-info>
