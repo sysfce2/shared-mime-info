@@ -945,6 +945,8 @@ boardingpasses.pkpasses application/vnd.apple.pkpasses
 appimage-demo-qt5-latest-x86_64.AppImage application/vnd.appimage
 # DOS executable
 helloworld-dos.exe application/x-dosexec x
+# DOS/4G executable, compiled with `owcc -bdos4g helloworld.c -o helloworld-dos4g.exe`
+helloworld-dos4g.exe application/x-lx-executable x
 # 16-bit Windows executable
 helloworld-win16.exe application/x-ms-ne-executable x
 # 32-bit Windows executable

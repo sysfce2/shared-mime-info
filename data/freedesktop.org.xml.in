@@ -3652,11 +3652,33 @@ command to generate the output files.
     </magic>
     <glob pattern="*.exe" weight="30"/>
   </mime-type>
+  <mime-type type="application/x-lx-executable">
+    <comment>32-bit DOS executable</comment>
+    <acronym>DOS</acronym>
+    <expanded-acronym>Disk Operating System</expanded-acronym>
+    <sub-class-of type="application/x-msdownload"/>
+    <generic-icon name="application-x-executable"/>
+    <magic>
+      <match type="string" value="LE" offset="0"/>
+      <match type="string" value="LX" offset="0"/>
+    </magic>
+    <magic priority="70">
+      <match type="string" value="MZ" offset="0">
+        <match type="string" value="LE" offset="64:1024"/>
+        <match type="string" value="LX" offset="64:1024"/>
+      </match>
+    </magic>
+    <glob pattern="*.exe" weight="10"/>
+    <glob pattern="*.386" weight="10"/>
+    <glob pattern="*.dll" weight="10"/>
+    <glob pattern="*.sys" weight="10"/>
+    <glob pattern="*.vxd" weight="10"/>
+  </mime-type>
   <mime-type type="application/x-ms-ne-executable">
     <comment>16-bit Windows program</comment>
     <sub-class-of type="application/x-msdownload"/>
     <generic-icon name="application-x-executable"/>
-    <magic priority="70">
+    <magic priority="80">
       <match type="string" value="MZ" offset="0">
         <match type="string" value="NE" offset="64:256"/>
       </match>
@@ -3673,7 +3695,7 @@ command to generate the output files.
     <expanded-acronym>Extensible Firmware Interface</expanded-acronym>
     <sub-class-of type="application/x-msdownload"/>
     <generic-icon name="application-x-executable"/>
-    <magic priority="80">
+    <magic priority="90">
       <match type="string" value="MZ" offset="0">
         <match type="string" value="PE\0\0" offset="64:256"/>
       </match>
