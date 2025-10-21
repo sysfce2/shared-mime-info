@@ -1176,6 +1176,9 @@ test.metainfo.xml application/x-freedesktop-appstream-component ox
 # AppStream releases information
 test.releases.xml application/x-freedesktop-appstream-releases ox
 
+# NSIS Script
+installer.nsi text/x-nsis ox
+
 # PAC script
 proxy.pac application/x-ns-proxy-autoconfig
 

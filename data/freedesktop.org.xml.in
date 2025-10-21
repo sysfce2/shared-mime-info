@@ -9309,6 +9309,16 @@ command to generate the output files.
     </magic>
   </mime-type>
 
+  <mime-type type="text/x-nsis">
+    <comment>NSIS Script</comment>
+    <acronym>NSIS</acronym>
+    <expanded-acronym>Nullsoft Scriptable Install System</expanded-acronym>
+    <sub-class-of type="text/plain"/>
+    <generic-icon name="text-x-generic"/>
+    <glob pattern="*.nsi"/>
+    <glob pattern="*.nsh"/>
+  </mime-type>
+
   <mime-type type="application/x-freedesktop-appstream-component">
     <comment>AppStream software component</comment>
     <sub-class-of type="application/xml"/>
@@ -9323,6 +9333,7 @@ command to generate the output files.
     <generic-icon name="text-x-generic"/>
     <glob pattern="*.releases.xml"/>
   </mime-type>
+
   <mime-type type="image/x-phm">
     <comment>Portable HalfMap</comment>
     <glob pattern="*.phm"/>

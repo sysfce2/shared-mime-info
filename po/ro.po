@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-08-30 11:14+0200\n"
 "PO-Revision-Date: 2010-11-30 12:22+0000\n"
-"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024-2025\n"
+"Last-Translator: Daniel Șerbănescu <daniel@serbanescu.dk>, 2019\n"
 "Language-Team: Romanian (http://app.transifex.com/freedesktop/shared-mime-info/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -161,7 +161,7 @@ msgstr "document Plucker"
 
 #: data/freedesktop.org.xml.in:385
 msgid "BuildStream element"
-msgstr ""
+msgstr "element BuildStream"
 
 #: data/freedesktop.org.xml.in:393
 msgid "RAML document"
@@ -185,7 +185,7 @@ msgstr "document SMIL"
 
 #: data/freedesktop.org.xml.in:448
 msgid "SPDX SBOM document"
-msgstr ""
+msgstr "document SPDX SBOM"
 
 #: data/freedesktop.org.xml.in:455
 msgid "WPL playlist"
@@ -276,7 +276,7 @@ msgstr "descriere de imprimantă PostScript"
 
 #: data/freedesktop.org.xml.in:658 data/freedesktop.org.xml.in:665
 msgid "CycloneDX BOM document"
-msgstr ""
+msgstr "document CycloneDX BOM"
 
 #: data/freedesktop.org.xml.in:679
 msgid "Lotus 1-2-3 spreadsheet"
@@ -1216,7 +1216,7 @@ msgstr "document JSON5"
 
 #: data/freedesktop.org.xml.in:3068
 msgid "HTTP archive"
-msgstr ""
+msgstr "arhivă HTTP"
 
 #: data/freedesktop.org.xml.in:3079
 msgid "JRD document"
@@ -1753,7 +1753,7 @@ msgstr "script shell Fish"
 
 #: data/freedesktop.org.xml.in:4426
 msgid "Nushell script"
-msgstr ""
+msgstr "script Nushell"
 
 #: data/freedesktop.org.xml.in:4437
 msgid "Shockwave Flash file"
@@ -1834,11 +1834,11 @@ msgstr "subtitrare SSA"
 
 #: data/freedesktop.org.xml.in:4610
 msgid "OpenSSH public key"
-msgstr ""
+msgstr "cheie publică OpenSSH"
 
 #: data/freedesktop.org.xml.in:4639
 msgid "OpenSSH private key"
-msgstr ""
+msgstr "cheie privată OpenSSH"
 
 #: data/freedesktop.org.xml.in:4646
 msgid "SubViewer subtitles"
@@ -2166,7 +2166,7 @@ msgstr "document RealMedia"
 
 #: data/freedesktop.org.xml.in:5473
 msgid "Radiance HDR image"
-msgstr ""
+msgstr "imagine Radiance HDR"
 
 #: data/freedesktop.org.xml.in:5484
 msgid "RealPix document"
@@ -2246,7 +2246,7 @@ msgstr "imagine JPEG 2000 încapsulată în HEIF"
 
 #: data/freedesktop.org.xml.in:5636
 msgid "AVC-encoded image encapsulated in HEIF"
-msgstr ""
+msgstr "imagine codificată AVC încapsulată în HEIF"
 
 #: data/freedesktop.org.xml.in:5643
 msgid "IEF image"
@@ -2750,7 +2750,7 @@ msgstr "pagină de stil CSS"
 
 #: data/freedesktop.org.xml.in:6784
 msgid "SPDX document"
-msgstr ""
+msgstr "document SPDX"
 
 #: data/freedesktop.org.xml.in:6794
 msgid "Electronic business card"
@@ -2918,7 +2918,7 @@ msgstr "cod sursă C"
 
 #: data/freedesktop.org.xml.in:7118
 msgid "Docker container build file"
-msgstr ""
+msgstr "fișier de construire a containerului Docker"
 
 #: data/freedesktop.org.xml.in:7131
 msgid "Assembly code"
@@ -3082,11 +3082,11 @@ msgstr "cod sursă OCaml"
 
 #: data/freedesktop.org.xml.in:7526
 msgid "OpenCL C source code"
-msgstr ""
+msgstr "cod sursă C OpenCL"
 
 #: data/freedesktop.org.xml.in:7540
 msgid "C++ for OpenCL source code"
-msgstr ""
+msgstr "cod sursă C++ pentru OpenCL"
 
 #: data/freedesktop.org.xml.in:7547
 msgid "MATLAB file"
@@ -3608,7 +3608,7 @@ msgstr "parolă acces Apple Wallet"
 
 #: data/freedesktop.org.xml.in:8723
 msgid "Apple Wallet passes bundle"
-msgstr ""
+msgstr "pachet de parole Apple Wallet "
 
 #: data/freedesktop.org.xml.in:8734
 msgid "Adobe PageMaker document"
@@ -3816,8 +3816,8 @@ msgstr "portable float-map (pfm)"
 
 #: data/freedesktop.org.xml.in:9275
 msgid "Portable HalfMap"
-msgstr ""
+msgstr "format HalfMap portabil"
 
 #: data/freedesktop.org.xml.in:9284
 msgid "Proxy Auto-Configuration file"
-msgstr ""
+msgstr "fișier de autoconfigurare proxy"
