@@ -863,6 +863,12 @@ dreamcast-us-samba-de-amigo-track-1.bin application/x-dreamcast-rom x
 m64p_test_rom.n64 application/x-n64-rom
 m64p_test_rom.v64 application/x-n64-rom
 m64p_test_rom.z64 application/x-n64-rom
+# TLoZ Twilight Princess (Wii), skeletonized and truncated to 1Ko
+wii.rvz application/x-wii-rom o
+wii.wia application/x-wii-rom o
+# TLoZ Twilight Princess (GameCube), skeletonized and truncated to 1Ko
+gamecube.rvz application/x-gamecube-rom x
+gamecube.wia application/x-gamecube-rom x
 # Castlevania: The Adventure Rebirth truncated to 1Ko
 wii.wad application/x-wii-wad x
 # Mariobros from Atari 7800 truncated to 1Ko
