@@ -920,6 +920,14 @@ IWAD.WAD application/x-doom-wad
 # ICARUS.WAD trucated to 1Ko
 PWAD.WAD application/x-doom-wad
 
+# Fantasy console cartridges, binary programs, and program source
+# Custom example code for XDG, under the same license
+helloworld.ch8 application/x-chip8-program ox
+helloworld.8o application/x-chip8-octo-source ox
+helloworld.nx application/x-lowresnx-program ox
+helloworld.tic application/x-tic80-item ox
+helloworld.p8 application/x-pico8-cartridge x
+
 # Models
 cube.igs model/iges
 cube.wrl model/vrml
