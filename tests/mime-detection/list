@@ -763,6 +763,23 @@ classiq1.hfe application/x-hfe-floppy-image
 # Thomson cartridge and cassette formats
 blitz.m7 application/x-thomson-cartridge-memo7 oxo
 androide.k7 application/x-thomson-cassette oxo
+# Saved BASIC "hello world", truncated to 1Ko
+commodore-tape-hello-truncated.tap application/x-commodore-tape
+# Blasteroids, truncated to just the tape header & first file header
+commodore-tape-header.t64 application/x-commodore-tape
+# Attack of the Mutant Camels, header-only hex dump example from VICE docs
+commodore-cartridge-c64-header.crt application/x-commodore-crt xo
+# Formatted floppy and HD images, truncated to 1Ko
+commodore-disk-blank-truncated.d90 application/x-commodore-d90-disk
+commodore-disk-blank-truncated.g64 application/x-commodore-g64-disk
+commodore-disk-blank-truncated.g71 application/x-commodore-g71-disk
+commodore-disk-blank-truncated.x64 application/x-commodore-x64-disk
+# Empty files: formats have nice magic, but it's too far into the file
+commodore-disk-name-only.d64 application/x-commodore-d64-disk ox
+commodore-disk-name-only.d71 application/x-commodore-d71-disk ox
+commodore-disk-name-only.d81 application/x-commodore-d81-disk ox
+commodore-disk-name-only.d80 application/x-commodore-d80-disk ox
+commodore-disk-name-only.d82 application/x-commodore-d82-disk ox
 
 # Video game ROMs
 # Super Tank truncated to 1Ko

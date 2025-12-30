@@ -2395,6 +2395,118 @@ command to generate the output files.
     </magic>
     <alias type="application/x-sap-file"/>
   </mime-type>
+
+  <mime-type type="application/x-commodore-tape">
+    <comment>Commodore tape image</comment>
+    <generic-icon name="application-x-executable"/>
+    <magic>
+      <match type="string" offset="0" value="C64-TAPE-RAW"/><!-- for .tap -->
+      <match type="string" offset="0" value="C64"><!-- for .t64 -->
+        <match type="little16" offset="32" value="0x0100"/><!-- v1.0 -->
+        <match type="little16" offset="32" value="0x0101"/><!-- v1.1 -->
+        <match type="little16" offset="32" value="0x0200"/><!-- v2.0 -->
+      </match>
+    </magic>
+    <glob pattern="*.tap"/>
+    <glob pattern="*.t64"/>
+  </mime-type>
+
+  <mime-type type="application/x-commodore-g64-disk">
+    <comment>Commodore 1541 floppy disk image</comment>
+    <generic-icon name="application-x-executable"/>
+    <magic>
+      <match type="string" offset="0" value="GCR-1541"/>
+    </magic>
+    <glob pattern="*.g64"/>
+  </mime-type>
+  <mime-type type="application/x-commodore-g71-disk">
+    <comment>Commodore 1571 floppy disk image</comment>
+    <generic-icon name="application-x-executable"/>
+    <magic>
+      <match type="string" offset="0" value="GCR-1571"/>
+    </magic>
+    <glob pattern="*.g71"/>
+  </mime-type>
+  <mime-type type="application/x-commodore-d64-disk">
+    <comment>Commodore 1571 floppy disk image</comment>
+    <generic-icon name="application-x-executable"/>
+    <!-- Disabled, the magic would be too far into the file
+    <magic>
+      <match type="string" offset="91392" value="\x12\x01\x41\x00"/>
+    </magic>
+    -->
+    <glob pattern="*.d64"/>
+  </mime-type>
+  <mime-type type="application/x-commodore-x64-disk">
+    <comment>Commodore C64 headered disk image</comment>
+    <generic-icon name="application-x-executable"/>
+    <magic>
+      <match type="string" offset="0" value="\x43\x15\x41\x64"/>
+    </magic>
+    <glob pattern="*.x64"/>
+  </mime-type>
+  <mime-type type="application/x-commodore-d71-disk">
+    <comment>Commodore 1571 floppy disk image</comment>
+    <generic-icon name="application-x-executable"/>
+    <!-- Disabled, the magic would be too far into the file
+    <magic>
+      <match type="string" offset="91392" value="\x12\x01\x41\x80"/>
+    </magic>
+    -->
+    <glob pattern="*.d71"/>
+  </mime-type>
+  <mime-type type="application/x-commodore-d81-disk">
+    <comment>Commodore 1581 floppy disk image</comment>
+    <generic-icon name="application-x-executable"/>
+    <!-- Disabled, the magic would be too far into the file
+    <magic>
+      <match type="string" offset="399360" value="\x28\x03\x44\x00"/>
+    </magic>
+    -->
+    <glob pattern="*.d81"/>
+  </mime-type>
+  <mime-type type="application/x-commodore-d80-disk">
+    <comment>Commodore 8050 floppy disk image</comment>
+    <generic-icon name="application-x-executable"/>
+    <!-- Disabled, the magic would be too far into the file
+    <magic>
+      <match type="string" offset="282112" value="\x26\x00\x43\x00"/>
+    </magic>
+    -->
+    <glob pattern="*.d80"/>
+  </mime-type>
+  <mime-type type="application/x-commodore-d82-disk">
+    <comment>Commodore 8250 floppy disk image</comment>
+    <generic-icon name="application-x-executable"/>
+    <!-- Disabled, the magic would be too far into the file
+    <magic>
+      <match type="string" offset="282112" value="\x26\x00\x43\x00"/>
+    </magic>
+    -->
+    <glob pattern="*.d82"/>
+  </mime-type>
+  <mime-type type="application/x-commodore-d90-disk">
+    <comment>Commodore D9090/D9060 hard disk image</comment>
+    <generic-icon name="application-x-executable"/>
+    <magic>
+      <match type="string" offset="0" value="\x00\x01\x00\xff"/>
+    </magic>
+    <glob pattern="*.d90"/>
+  </mime-type>
+
+  <mime-type type="application/x-commodore-crt">
+    <comment>Commodore cartridge</comment>
+    <generic-icon name="application-x-executable"/>
+    <magic>
+      <match type="string" offset="0" value="C64 CARTRIDGE   "/>
+      <match type="string" offset="0" value="C128 CARTRIDGE  "/>
+      <match type="string" offset="0" value="CBM2 CARTRIDGE  "/>
+      <match type="string" offset="0" value="VIC20 CARTRIDGE "/>
+      <match type="string" offset="0" value="PLUS4 CARTRIDGE "/>
+    </magic>
+    <glob pattern="*.crt" weight="40"/><!-- cf. application/x-x509-ca-cert -->
+  </mime-type>
+
   <mime-type type="application/vnd.debian.binary-package">
     <comment>Debian package</comment>
     <alias type="application/x-deb"/>
