@@ -763,6 +763,8 @@ classiq1.hfe application/x-hfe-floppy-image
 # Thomson cartridge and cassette formats
 blitz.m7 application/x-thomson-cartridge-memo7 oxo
 androide.k7 application/x-thomson-cassette oxo
+
+# Commodore emulation formats and disk images
 # Saved BASIC "hello world", truncated to 1Ko
 commodore-tape-hello-truncated.tap application/x-commodore-tape
 # Blasteroids, truncated to just the tape header & first file header
@@ -778,8 +780,44 @@ commodore-disk-blank-truncated.x64 application/x-commodore-x64-disk
 commodore-disk-name-only.d64 application/x-commodore-d64-disk ox
 commodore-disk-name-only.d71 application/x-commodore-d71-disk ox
 commodore-disk-name-only.d81 application/x-commodore-d81-disk ox
-commodore-disk-name-only.d80 application/x-commodore-d80-disk ox
+commodore-disk-name-only.d80 application/x-commodore-d80-disk oxx
 commodore-disk-name-only.d82 application/x-commodore-d82-disk ox
+
+# ZX Spectrum family emulation formats and disk images
+# Ricochet (1987) (Z80v1), truncated to 30o (format header only)
+spectrum-snapshot-z80v1-header.z80 application/x-spectrum-z80 ox
+# Rex (1988) part 2, truncated to 55o (format header only)
+spectrum-snapshot-z80v2-header.z80 application/x-spectrum-z80
+# 48K ZX BASIC, truncated to 86o (format header only)
+spectrum-snapshot-z80v3-header.z80 application/x-spectrum-z80
+# 48K ZX BASIC, truncated to 27o (format header only)
+spectrum-snapshot-header.sna application/x-spectrum-sna oxo
+# 48K ZX BASIC, truncated to 213o (headers only, before 1st RAM page)
+spectrum-snapshot-header.szx application/x-spectrum-szx
+# Gauntlet (1986), truncated to 86o (format header only)
+spectrum-multiload-snapshot-header.slt application/x-spectrum-slt oxo
+# Head over Heels (1987), truncated to 39o (header + reqd. creator block)
+spectrum-replay-snapshot-header.rzx application/x-spectrum-rzx
+spectrum-tape-hello.tzx application/x-spectrum-tzx
+spectrum-tape-hello.tap application/x-spectrum-tap xoo
+# Myth (1989), truncated to 257o (header only)
+spectrum-tape-header.pzx application/x-spectrum-pzx
+sinclair-microdrive-hello-truncated.mdr application/x-spectrum-mdr ox
+spectrum-plus3-disk-header.dsk application/x-spectrum-dsk
+# DISCiPLE and +D system disks, truncated to 256o (1st dir entry)
+spectrum-disciple-disk-system3a-truncated.mgt application/x-spectrum-mgt
+spectrum-disciple-disk-system3b-truncated.mgt application/x-spectrum-mgt
+spectrum-disciple-disk-system3d-truncated.mgt application/x-spectrum-mgt
+spectrum-plusd-disk-system2a-truncated.mgt application/x-spectrum-mgt
+# DISCiPLE and +D data disks, some bootable, truncated to 256o
+spectrum-disciple-disk-empty+boot3b-truncated.mgt application/x-spectrum-mgt
+spectrum-disciple-disk-hello+boot3b-truncated.mgt application/x-spectrum-mgt
+spectrum-plusd-disk-justhello-truncated.mgt application/x-spectrum-mgt oxo
+# Atomix, truncated to 512o (boot sector only)
+spectrum-ditaktik-disk-header.d40 application/x-spectrum-d80 o
+# Jet Story, truncated to 512o (boot sector only)
+spectrum-ditaktik-disk-header.d80 application/x-spectrum-d80 x
+spectrum-hard-disk-header.hdf application/x-spectrum-hdf
 
 # Video game ROMs
 # Super Tank truncated to 1Ko

@@ -2507,6 +2507,111 @@ command to generate the output files.
     <glob pattern="*.crt" weight="40"/><!-- cf. application/x-x509-ca-cert -->
   </mime-type>
 
+  <!-- Spectrum snapshots -->
+  <mime-type type="application/x-spectrum-z80">
+    <comment>ZX Spectrum Z80 snapshot</comment>
+    <magic>
+      <!-- Program Counter in v1, 0x0000 if v2 or v3 -->
+      <match type="little16" offset="6" value="0">
+        <!-- length of v2 or v3 addtional header -->
+        <match type="little16" offset="30" value="23"/><!-- v2 -->
+        <match type="little16" offset="30" value="54"/><!-- v3 -->
+        <match type="little16" offset="30" value="55"/><!-- v3 (longer) -->
+      </match>
+    </magic>
+    <glob pattern="*.z80"/>
+  </mime-type>
+  <mime-type type="application/x-spectrum-sna">
+    <comment>ZX Spectrum SNA snapshot</comment>
+    <glob pattern="*.sna"/>
+  </mime-type>
+  <mime-type type="application/x-spectrum-szx">
+    <comment>ZX Spectrum SZX snapshot</comment>
+    <magic>
+      <match type="string" offset="0" value="ZXST"/>
+    </magic>
+    <glob pattern="*.szx"/>
+    <glob pattern="*.zx-state"/>
+  </mime-type>
+  <mime-type type="application/x-spectrum-slt">
+    <comment>ZX Spectrum SLT multiload snapshot</comment>
+    <sub-class-of type="application/x-spectrum-z80"/>
+    <glob pattern="*.slt"/>
+  </mime-type>
+  <mime-type type="application/x-spectrum-rzx">
+    <comment>ZX Spectrum RZX replay snapshot</comment>
+    <magic>
+      <match type="string" offset="0" value="RZX!"/>
+    </magic>
+    <glob pattern="*.rzx"/>
+  </mime-type>
+  <!-- Spectrum tapes -->
+  <mime-type type="application/x-spectrum-tzx">
+    <comment>ZX Spectrum TZX tape image</comment>
+    <magic>
+      <match type="string" offset="0" value="ZXTape!\x1a"/>
+    </magic>
+    <glob pattern="*.tzx"/>
+  </mime-type>
+  <mime-type type="application/x-spectrum-tap">
+    <comment>ZX Spectrum TAP tape image</comment>
+    <magic>
+      <match type="string" offset="0" value="\x13\x00\x00\x00"/><!-- program -->
+      <match type="string" offset="0" value="\x13\x00\x00\x01"/><!-- number array -->
+      <match type="string" offset="0" value="\x13\x00\x00\x02"/><!-- char array -->
+      <match type="string" offset="0" value="\x13\x00\x00\x03"/><!-- code file -->
+    </magic>
+    <glob pattern="*.tap"/>
+  </mime-type>
+  <mime-type type="application/x-spectrum-pzx">
+    <comment>ZX Spectrum PZX tape archival image</comment>
+    <magic>
+      <match type="string" offset="0" value="PZXT"/>
+    </magic>
+    <glob pattern="*.pzx"/>
+  </mime-type>
+  <mime-type type="application/x-spectrum-mdr">
+    <comment>Sinclair Microdrive tape cartridge image</comment>
+    <glob pattern="*.mdr"/>
+  </mime-type>
+  <!-- Spectrum floppy disks -->
+  <mime-type type="application/x-spectrum-dsk">
+    <comment>Amstrad CPC/ZX Spectrum DSK floppy disk image</comment>
+    <magic>
+      <match type="string" offset="0" value="MV - CPCEMU Disk-File\x0d\x0aDisk-Info\x0d\x0a"/>
+      <match type="string" offset="0" value="EXTENDED CPC DSK File\x0d\x0aDisk-Info\x0d\x0a"/>
+    </magic>
+    <glob pattern="*.dsk"/>
+  </mime-type>
+  <mime-type type="application/x-spectrum-mgt">
+    <comment>ZX Spectrum/SAM Coupé MGT floppy disk image</comment>
+    <magic>
+      <!-- DISCiPLE -->
+      <match type="string" offset="0" value="\04Sys 3a    "/>
+      <match type="string" offset="0" value="\04Sys 3b    "/>
+      <match type="string" offset="0" value="\04SYSTEM 3d "/>
+      <!-- +D -->
+      <match type="string" offset="0" value="\04+SYS 2a   "/>
+    </magic>
+    <glob pattern="*.mgt"/>
+  </mime-type>
+  <mime-type type="application/x-spectrum-d80">
+    <comment>Didaktik D40/D80 floppy disk image</comment>
+    <magic>
+      <match type="string" offset="204" value="SDOS"/>
+    </magic>
+    <glob pattern="*.d80" weight="40"/>
+    <glob pattern="*.d40" weight="40"/>
+  </mime-type>
+  <!-- Spectrum hard disks -->
+  <mime-type type="application/x-spectrum-hdf">
+    <comment>ZX Spectrum HDF hard disk image</comment>
+    <magic>
+      <match type="string" offset="0" value="RS-IDE\x1a"/>
+    </magic>
+    <glob pattern="*.hdf"/>
+  </mime-type>
+
   <mime-type type="application/vnd.debian.binary-package">
     <comment>Debian package</comment>
     <alias type="application/x-deb"/>
