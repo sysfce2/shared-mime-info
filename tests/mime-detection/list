@@ -771,17 +771,18 @@ commodore-tape-hello-truncated.tap application/x-commodore-tape
 commodore-tape-header.t64 application/x-commodore-tape
 # Attack of the Mutant Camels, header-only hex dump example from VICE docs
 commodore-cartridge-c64-header.crt application/x-commodore-crt xo
-# Formatted floppy and HD images, truncated to 1Ko
-commodore-disk-blank-truncated.d90 application/x-commodore-d90-disk
-commodore-disk-blank-truncated.g64 application/x-commodore-g64-disk
-commodore-disk-blank-truncated.g71 application/x-commodore-g71-disk
-commodore-disk-blank-truncated.x64 application/x-commodore-x64-disk
-# Empty files: formats have nice magic, but it's too far into the file
-commodore-disk-name-only.d64 application/x-commodore-d64-disk ox
-commodore-disk-name-only.d71 application/x-commodore-d71-disk ox
-commodore-disk-name-only.d81 application/x-commodore-d81-disk ox
-commodore-disk-name-only.d80 application/x-commodore-d80-disk oxx
-commodore-disk-name-only.d82 application/x-commodore-d82-disk ox
+# Formatted floppy and HD images, truncated to just the format header
+commodore-disk-header.d90 application/x-commodore-d90-disk
+commodore-disk-header.g64 application/x-commodore-g64-disk
+commodore-disk-header.g71 application/x-commodore-g71-disk
+commodore-disk-header.x64 application/x-commodore-x64-disk
+# Magic is possible for these "nomagic" ones, but would be too far in.
+# Filled with junk data and hello world BASIC programs, truncated to 1Ko.
+commodore-disk-truncated-nomagic.d64 application/x-commodore-d64-disk ox
+commodore-disk-truncated-nomagic.d71 application/x-commodore-d71-disk ox
+commodore-disk-truncated-nomagic.d81 application/x-commodore-d81-disk ox
+commodore-disk-truncated-nomagic.d80 application/x-commodore-d80-disk ox
+commodore-disk-truncated-nomagic.d82 application/x-commodore-d82-disk ox
 
 # ZX Spectrum family emulation formats and disk images
 # Ricochet (1987) (Z80v1), truncated to 30o (format header only)
