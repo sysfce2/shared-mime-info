@@ -817,6 +817,10 @@ msx-penguin-adventure.msx application/x-msx-rom ox
 msx2-metal-gear.msx application/x-msx-rom ox
 # Wario Land for Virtual Boy truncated to 1Ko
 virtual-boy-wario-land.vb application/x-virtual-boy-rom ox
+# Advance Wars, truncated to 12o
+nintendo-gba-rom-to-sig.gba application/x-gba-rom
+# Plants vs Zombies truncated to 200o
+nintendo-ds-rom-to-sig.nds application/vnd.nintendo.nitro.rom
 # The Legend of Zelda: Majora's Mask 3D truncated to 1Ko
 3ds-tloz-mm.3ds application/x-nintendo-3ds-rom
 # TSI9 truncated to 1Ko

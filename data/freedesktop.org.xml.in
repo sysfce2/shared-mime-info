@@ -2281,6 +2281,9 @@ command to generate the output files.
   <mime-type type="application/vnd.nintendo.nitro.rom">
     <comment>Nintendo DS ROM</comment>
     <generic-icon name="application-x-executable"/>
+    <magic>
+      <match offset="192" type="string" value="\x24\xFF\xAE\x51\x69\x9A\xA2\x21"/>
+    </magic>
     <glob pattern="*.nds"/>
     <alias type="application/x-nintendo-ds-rom" />
   </mime-type>
@@ -2762,6 +2765,9 @@ command to generate the output files.
   <mime-type type="application/x-gba-rom">
     <comment>Game Boy Advance ROM</comment>
     <generic-icon name="application-x-executable"/>
+    <magic>
+      <match offset="4" type="string" value="\x24\xFF\xAE\x51\x69\x9A\xA2\x21"/>
+    </magic>
     <glob pattern="*.gba"/>
     <glob pattern="*.agb"/>
   </mime-type>
