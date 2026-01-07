@@ -2280,6 +2280,8 @@ command to generate the output files.
   </mime-type>
   <mime-type type="application/vnd.nintendo.nitro.rom">
     <comment>Nintendo DS ROM</comment>
+    <acronym>DS</acronym>
+    <expanded-acronym>Dual Screen/Developers' System</expanded-acronym>
     <generic-icon name="application-x-executable"/>
     <magic>
       <match offset="192" type="string" value="\x24\xFF\xAE\x51\x69\x9A\xA2\x21"/>
