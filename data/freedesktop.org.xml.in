@@ -2688,13 +2688,15 @@ command to generate the output files.
   </mime-type>
 
   <mime-type type="application/x-lowresnx-program">
-    <comment>Lowres NX program</comment>
+    <comment>LowRes NX program</comment>
     <sub-class-of type="text/plain"/>
     <glob pattern="*.nx"/>
   </mime-type>
 
   <mime-type type="application/x-tic80-item">
     <comment>TIC-80 cartridge</comment>
+    <acronym>TIC</acronym>
+    <expanded-acronym>TIny Computer</expanded-acronym>
     <sub-class-of type="application/x-executable"/>
     <glob pattern="*.tic"/>
   </mime-type>
