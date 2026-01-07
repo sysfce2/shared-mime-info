@@ -2535,6 +2535,8 @@ command to generate the output files.
   </mime-type>
   <mime-type type="application/x-spectrum-slt">
     <comment>ZX Spectrum SLT multiload snapshot</comment>
+    <acronym>SLT</acronym>
+    <expanded-acronym>Super Level loader Trap</expanded-acronym>
     <sub-class-of type="application/x-spectrum-z80"/>
     <glob pattern="*.slt"/>
   </mime-type>
@@ -2585,6 +2587,8 @@ command to generate the output files.
   </mime-type>
   <mime-type type="application/x-spectrum-mgt">
     <comment>ZX Spectrum/SAM Coupé MGT floppy disk image</comment>
+    <acronym>MGT</acronym>
+    <expanded-acronym>Miles Gordon Technology</expanded-acronym>
     <magic>
       <!-- DISCiPLE -->
       <match type="string" offset="0" value="\04Sys 3a    "/>
