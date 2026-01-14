@@ -21,7 +21,7 @@ Translations
 ------------
 
 Translations should go through Transifex.com, and the freedesktop.org team:
-http://www.transifex.com/projects/p/shared-mime-info/
+https://explore.transifex.com/freedesktop/shared-mime-info/
 
 Filing bugs
 -----------
