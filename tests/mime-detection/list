@@ -1214,6 +1214,13 @@ fishscript.fish application/x-fishscript
 nuscript.sh application/x-nuscript xox
 nuscript.nu application/x-nuscript
 
+# Things that start with unknown shebangs are either application/octet-stream,
+# or, heuristically, text/plain if they have enough printable chars.
+unknown-shebang-text1 text/plain x
+unknown-shebang-text2 text/plain x
+unknown-shebang-text3 text/plain x
+unknown-shebang-binary application/octet-stream
+
 # Perf Data file
 perf.data application/x-perf-data
 
