@@ -1861,16 +1861,14 @@ command to generate the output files.
     <sub-class-of type="text/plain"/>
     <generic-icon name="text-x-script"/>
     <magic>
-      <match type="string" value="#!/bin/gawk" offset="0"/>
-      <match type="string" value="#! /bin/gawk" offset="0"/>
-      <match type="string" value="#!/usr/bin/gawk" offset="0"/>
-      <match type="string" value="#! /usr/bin/gawk" offset="0"/>
-      <match type="string" value="#!/usr/local/bin/gawk" offset="0"/>
-      <match type="string" value="#! /usr/local/bin/gawk" offset="0"/>
-      <match type="string" value="#!/bin/awk" offset="0"/>
-      <match type="string" value="#! /bin/awk" offset="0"/>
-      <match type="string" value="#!/usr/bin/awk" offset="0"/>
-      <match type="string" value="#! /usr/bin/awk" offset="0"/>
+      <match type="string" value="#!" offset="0">
+        <match type="string" value="/bin/awk" offset="2:16"/>
+        <match type="string" value="/bin/nawk" offset="2:16"/>
+        <match type="string" value="/bin/gawk" offset="2:16"/>
+        <match type="string" value="/bin/env awk" offset="2:16"/>
+        <match type="string" value="/bin/env nawk" offset="2:16"/>
+        <match type="string" value="/bin/env gawk" offset="2:16"/>
+      </match>
     </magic>
     <glob pattern="*.awk"/>
   </mime-type>
@@ -4679,7 +4677,6 @@ command to generate the output files.
     <magic>
       <match type="string" value="# This is a shell archive" offset="10"/>
       <match type="string" value="/bin/bash" offset="2:16"/>
-      <match type="string" value="/bin/nawk" offset="2:16"/>
       <match type="string" value="/bin/zsh" offset="2:16"/>
       <match type="string" value="/bin/sh" offset="2:16"/>
       <match type="string" value="/bin/ksh" offset="2:16"/>
