@@ -2217,16 +2217,19 @@ command to generate the output files.
       <match type="string" value="PERFILE2" offset="0"/>
     </magic>
   </mime-type>
-  <mime-type type="application/x-csh">
+  <mime-type type="text/x-csh">
     <comment>C shell script</comment>
-    <sub-class-of type="application/x-shellscript"/>
-    <sub-class-of type="text/plain"/>
+    <sub-class-of type="text/x-shellscript"/>
+    <sub-class-of type="application/x-executable"/>
+    <alias type="application/x-csh"/>
     <generic-icon name="text-x-script"/>
     <magic>
-      <match type="string" value="/bin/tcsh" offset="2:16"/>
-      <match type="string" value="/bin/csh" offset="2:16"/>
-      <match type="string" value="/bin/env csh" offset="2:16"/>
-      <match type="string" value="/bin/env tcsh" offset="2:16"/>
+      <match type="string" value="#!" offset="0">
+        <match type="string" value="/bin/tcsh" offset="2:16"/>
+        <match type="string" value="/bin/csh" offset="2:16"/>
+        <match type="string" value="/bin/env csh" offset="2:16"/>
+        <match type="string" value="/bin/env tcsh" offset="2:16"/>
+      </match>
     </magic>
     <glob pattern="*.csh"/>
   </mime-type>
@@ -4668,23 +4671,26 @@ command to generate the output files.
     <glob pattern="*.so"/>
     <glob weight="60" pattern="*.so.[0-9]*"/>
   </mime-type>
-  <mime-type type="application/x-shellscript">
+  <mime-type type="text/x-shellscript">
     <comment>Shell script</comment>
     <sub-class-of type="application/x-executable"/>
-    <sub-class-of type="text/plain"/>
+    <alias type="application/x-shellscript"/>
     <alias type="text/x-sh"/>
     <generic-icon name="text-x-script"/>
     <magic>
       <match type="string" value="# This is a shell archive" offset="10"/>
-      <match type="string" value="/bin/bash" offset="2:16"/>
-      <match type="string" value="/bin/zsh" offset="2:16"/>
-      <match type="string" value="/bin/sh" offset="2:16"/>
-      <match type="string" value="/bin/ksh" offset="2:16"/>
-      <match type="string" value="/bin/dash" offset="2:16"/>
-      <match type="string" value="/bin/env sh" offset="2:16"/>
-      <match type="string" value="/bin/env bash" offset="2:16"/>
-      <match type="string" value="/bin/env zsh" offset="2:16"/>
-      <match type="string" value="/bin/env ksh" offset="2:16"/>
+      <match type="string" value="#!" offset="0">
+        <match type="string" value="/bin/bash" offset="2:16"/>
+        <match type="string" value="/bin/zsh" offset="2:16"/>
+        <match type="string" value="/bin/sh" offset="2:16"/>
+        <match type="string" value="/bin/ksh" offset="2:16"/>
+        <match type="string" value="/bin/dash" offset="2:16"/>
+        <match type="string" value="/bin/env sh" offset="2:16"/>
+        <match type="string" value="/bin/env bash" offset="2:16"/>
+        <match type="string" value="/bin/env zsh" offset="2:16"/>
+        <match type="string" value="/bin/env ksh" offset="2:16"/>
+        <match type="string" value="/bin/env dash" offset="2:16"/>
+      </match>
     </magic>
     <glob pattern="*.sh"/>
   </mime-type>

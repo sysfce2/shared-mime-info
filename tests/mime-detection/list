@@ -513,7 +513,7 @@ test.pl application/x-perl
 test.pm application/x-perl
 test.t application/x-perl
 # Not perl https://gitlab.freedesktop.org/xdg/shared-mime-info/-/issues/155
-shell-calls-awk application/x-shellscript x
+shell-calls-awk text/x-shellscript x
 # Copied from http://en.wikipedia.org/wiki/Turtle_%28syntax%29#Example
 test.ttl text/turtle ox
 # Twig template
@@ -1205,6 +1205,16 @@ test.mrpack application/x-modrinth-modpack+zip ox
 # ERIS link file
 # https://eris.codeberg.page/eer/linkfile.xml
 test.eris application/x-eris-link+cbor
+
+# Bourne-compatible shell scripts
+shscript.sh text/x-shellscript
+bashscript.sh text/x-shellscript
+zshscript.sh text/x-shellscript
+
+# Other, non-Bourne shells
+# file/libmagic calls this text/x-shellscript too, but we've always made a
+# distinction because the interpreter is different.
+tcshscript.csh text/x-csh
 
 # Fish script
 fishscript.sh application/x-fishscript xox
