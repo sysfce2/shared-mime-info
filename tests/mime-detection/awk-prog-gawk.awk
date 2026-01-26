@@ -1,4 +1,4 @@
-#!/usr/bin/env awk
+#!/usr/bin/env gawk
 
 BEGIN {
     print "hello world\n"
