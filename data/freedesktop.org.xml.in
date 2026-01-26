@@ -1864,11 +1864,35 @@ command to generate the output files.
     <magic>
       <match type="string" value="#!" offset="0">
         <match type="string" value="/bin/awk" offset="2:16"/>
-        <match type="string" value="/bin/nawk" offset="2:16"/>
-        <match type="string" value="/bin/gawk" offset="2:16"/>
         <match type="string" value="/bin/env awk" offset="2:16"/>
-        <match type="string" value="/bin/env nawk" offset="2:16"/>
+      </match>
+    </magic>
+    <glob pattern="*.awk"/>
+  </mime-type>
+  <mime-type type="text/x-gawk">
+    <comment>GNU AWK script</comment>
+    <acronym>GNU AWK</acronym>
+    <expanded-acronym>GNU's Not Unix['s] [Alfred Vaino] Aho, [Peter Jay] Weinberger and [Brian Wilson] Kernighan [language]</expanded-acronym>
+    <sub-class-of type="text/x-awk"/>
+    <generic-icon name="text-x-script"/>
+    <magic>
+      <match type="string" value="#!" offset="0">
+        <match type="string" value="/bin/gawk" offset="2:16"/>
         <match type="string" value="/bin/env gawk" offset="2:16"/>
+      </match>
+    </magic>
+    <glob pattern="*.awk"/>
+  </mime-type>
+  <mime-type type="text/x-nawk">
+    <comment>New (BWK) AWK script</comment>
+    <acronym>New (BWK) AWK</acronym>
+    <expanded-acronym>New (Brian Wilson Kernighan) [Alfred Vaino] Aho, [Peter Jay] Weinberger and [Brian Wilson] Kernighan [language]</expanded-acronym>
+    <sub-class-of type="text/x-awk"/>
+    <generic-icon name="text-x-script"/>
+    <magic>
+      <match type="string" value="#!" offset="0">
+        <match type="string" value="/bin/nawk" offset="2:16"/>
+        <match type="string" value="/bin/env nawk" offset="2:16"/>
       </match>
     </magic>
     <glob pattern="*.awk"/>
