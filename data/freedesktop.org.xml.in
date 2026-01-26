@@ -1857,6 +1857,8 @@ command to generate the output files.
   </mime-type>
   <mime-type type="text/x-awk">
     <comment>AWK script</comment>
+    <acronym>AWK</acronym>
+    <expanded-acronym>[Alfred Vaino] Aho, [Peter Jay] Weinberger and [Brian Wilson] Kernighan [language]</expanded-acronym>
     <sub-class-of type="application/x-executable"/>
     <generic-icon name="text-x-script"/>
     <magic>
