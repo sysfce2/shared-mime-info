@@ -1855,10 +1855,9 @@ command to generate the output files.
     <generic-icon name="text-x-script"/>
     <glob pattern="*.asp"/>
   </mime-type>
-  <mime-type type="application/x-awk">
+  <mime-type type="text/x-awk">
     <comment>AWK script</comment>
     <sub-class-of type="application/x-executable"/>
-    <sub-class-of type="text/plain"/>
     <generic-icon name="text-x-script"/>
     <magic>
       <match type="string" value="#!" offset="0">
