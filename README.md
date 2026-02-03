@@ -13,22 +13,35 @@ For more information about the database see the [Shared MIME Info Specification 
 ## Installation
 
 To install do:
+
 ```sh
 $ meson _build -Dprefix=/usr
 $ ninja -v -C _build install
 ```
 
-It requires the glib development package to be installed as well as
-gettext.
-This database is translated at Transifex.
+## Configuration and requirements
 
+We use [_meson_](https://mesonbuild.com) with the default _ninja_ backend. Run
+`meson configure` to show a full list of project options.
+
+* If `-Dbuild-spec` is enabled (the default), building also requires
+  [xmlto](https://pagure.io/xmlto/) and the [DocBook XSL stylesheet
+  distribution](https://github.com/docbook/wiki/wiki/DocBookXslStylesheets).
+
+* `-Dbuild-tools` and `-Dbuild-tests`, are both enabled by default. These
+  require that the glib development package is installed as well as gettext.
+
+## Contributing
+
+You can contribute by reporting bugs, requesting and implementing new MIME
+types, or by translating the database's strings into your language. See
+[`CONTRIBUTING.md`](CONTRIBUTING.md) for more details.
 
 Please report bugs here:
   https://gitlab.freedesktop.org/xdg/shared-mime-info/issues
 
 Getting involved in freedesktop.org projects guide:
   https://www.freedesktop.org/wiki/GettingInvolved/
-
 
 ## Useful reference links
 
