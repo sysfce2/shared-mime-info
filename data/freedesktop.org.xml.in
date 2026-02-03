@@ -2117,6 +2117,11 @@ command to generate the output files.
     <generic-icon name="media-optical"/>
     <glob pattern="*.cdi"/>
   </mime-type>
+  <mime-type type="application/x-nrg">
+    <comment>Nero Burning ROM disc image</comment>
+    <generic-icon name="media-optical"/>
+    <glob pattern="*.nrg"/>
+  </mime-type>
   <mime-type type="application/vnd.chess-pgn">
     <comment>PGN chess game notation</comment>
     <acronym>PGN</acronym>

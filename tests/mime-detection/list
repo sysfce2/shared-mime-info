@@ -403,6 +403,9 @@ test-cdda.toc application/x-cdrdao-toc
 test-cdrom.toc application/x-cdrdao-toc
 dreamcast-us-samba-de-amigo.gdi application/x-gd-rom-cue ox
 dreamcast-jet-set-radio.cdi application/x-discjuggler-cd-image ox
+# Nero Burning ROM samples from libcdio, 512o footer (for future magic)
+nero-NERO-footer.nrg application/x-nrg ox
+nero-NER5-footer.nrg application/x-nrg ox
 # Copied from /etc/sysconfig/iptables
 test.iptables text/x-iptables
 test-vpn.pcf application/x-cisco-vpn-settings x
