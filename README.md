@@ -25,11 +25,25 @@ We use [_meson_](https://mesonbuild.com) with the default _ninja_ backend. Run
 `meson configure` to show a full list of project options.
 
 * If `-Dbuild-spec` is enabled (the default), building also requires
-  [xmlto](https://pagure.io/xmlto/) and the [DocBook XSL stylesheet
+  [_xmlto_](https://pagure.io/xmlto/) and the [DocBook XSL stylesheet
   distribution](https://github.com/docbook/wiki/wiki/DocBookXslStylesheets).
+  The HTML build will be silently ignored if xmlto is not present.
 
 * `-Dbuild-tools` and `-Dbuild-tests`, are both enabled by default. These
-  require that the glib development package is installed as well as gettext.
+  require that the GLib development package for your system is installed,
+  as well as _gettext_.
+
+* Building and running the test suite additionally requires _xmllint_ from
+  [libxml2](https://gitlab.gnome.org/GNOME/libxml2)'s utilities.
+  The `test` target will not run any tests if xmllint is not installed.
+
+On Debian-like systems, these dependencies and helper utilities can be
+installed like so:
+
+```sh
+$ sudo apt install libxml2-utils xmlto
+$ sudo apt install libglib2.0-dev gettext
+```
 
 ## Contributing
 

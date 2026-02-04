@@ -22,7 +22,7 @@ config.set_quoted('VERSION', meson.project_version())
 ###############################################################################
 # Find tools
 
-xmllint = find_program('xmllint')
+xmllint = find_program('xmllint', required: false)
 xmlto   = find_program('xmlto', required: false)
 
 ###############################################################################
@@ -62,8 +62,7 @@ if meson.is_cross_build()
     warning('Cannot cross-compile tests due to https://github.com/mesonbuild/meson/issues/11121')
     build_tests = false
 endif
-
-if build_tests
+if build_tests and xmllint.found()
     # Find xdgmime. It needs to be a native dependency (i.e. compiled for the
     # build system rather than the host system) so we can run its programs as
     # part of the shared-mime-info build.
