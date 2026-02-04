@@ -14,7 +14,7 @@ For more information about the database see the [Shared MIME Info Specification 
 
 To install do:
 
-```sh
+```shell-session
 $ meson _build -Dprefix=/usr
 $ ninja -v -C _build install
 ```
@@ -40,7 +40,7 @@ We use [_meson_](https://mesonbuild.com) with the default _ninja_ backend. Run
 On Debian-like systems, these dependencies and helper utilities can be
 installed like so:
 
-```sh
+```shell-session
 $ sudo apt install libxml2-utils xmlto
 $ sudo apt install libglib2.0-dev gettext
 ```
@@ -51,19 +51,19 @@ You can contribute by reporting bugs, requesting and implementing new MIME
 types, or by translating the database's strings into your language. See
 [`CONTRIBUTING.md`](CONTRIBUTING.md) for more details.
 
-Please report bugs here:
-  https://gitlab.freedesktop.org/xdg/shared-mime-info/issues
+* Please report bugs here:  
+  <https://gitlab.freedesktop.org/xdg/shared-mime-info/issues>
 
-Getting involved in freedesktop.org projects guide:
-  https://www.freedesktop.org/wiki/GettingInvolved/
+* How to get involved in freedesktop.org projects:  
+  <https://www.freedesktop.org/wiki/GettingInvolved/>
 
 ## Useful reference links
 
-IANA:
-  https://www.iana.org/assignments/media-types/
+* IANA:  
+  <https://www.iana.org/assignments/media-types/>
 
-KDE's old mime-types:
-  http://websvn.kde.org/branches/KDE/3.5/kdelibs/mimetypes/
+* KDE's old mime-types:  
+  <http://websvn.kde.org/branches/KDE/3.5/kdelibs/mimetypes/>
 
-UNIX file tool and libmagic
-  https://github.com/file/file
+* UNIX file tool and libmagic:  
+  <https://github.com/file/file>
