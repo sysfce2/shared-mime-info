@@ -948,6 +948,7 @@ text1.PS.gz application/x-gzpostscript oxo
 test.cmake text/x-cmake ox
 meson.build text/x-meson ox
 meson_options.txt text/x-meson ox
+meson.options text/x-meson ox
 bluerect.mdi image/vnd.ms-modi
 # FictionBook eBook files
 Stallman_Richard_-_The_GNU_Manifesto.fb2 application/x-fictionbook+xml
