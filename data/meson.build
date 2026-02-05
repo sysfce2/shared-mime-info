@@ -18,7 +18,7 @@ install_data(
   install_dir : get_option('datadir') / 'gettext/its'
 )
 
-if get_option('build-spec') and xmlto.found()
+if get_option('build-spec')
     custom_target('shared-mime-info-spec-html',
         input : 'shared-mime-info-spec.xml',
         output: 'shared-mime-info-spec-html',

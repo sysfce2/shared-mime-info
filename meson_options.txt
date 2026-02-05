@@ -12,7 +12,7 @@ option('build-translations', type: 'boolean', value: true,
 )
 
 option('build-tests', type: 'boolean', value: true,
-    description: 'Build the test suite.  If not set then there will be no \'test\' build target. The test binaries are not part of the install.',
+    description: 'Build the test suite.  If not set then there will be no \'test\' build target. Requires xmllint. The test binaries are not part of the install.',
 )
 
 option('build-spec', type: 'boolean', value: true,
