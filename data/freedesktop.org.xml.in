@@ -2701,14 +2701,19 @@ command to generate the output files.
     <glob pattern="*.tic"/>
   </mime-type>
 
-  <mime-type type="application/x-pico8-cartridge">
-    <comment>PICO-8 cartridge</comment>
+  <mime-type type="application/x-pico8-cartridge-source">
+    <comment>PICO-8 cartridge source</comment>
     <sub-class-of type="text/plain"/>
     <magic>
       <match type="string" offset="0" value="pico-8 cartridge // http://www.pico-8.com\x0a"/>
       <match type="string" offset="0" value="pico-8 cartridge // http://www.pico-8.com\x0d"/>
     </magic>
     <glob pattern="*.p8"/>
+  </mime-type>
+  <mime-type type="application/x-pico8-cartridge-rom">
+    <comment>PICO-8 cartridge binary</comment>
+    <sub-class-of type="application/x-executable"/>
+    <glob pattern="*.p8.rom"/>
   </mime-type>
 
   <mime-type type="application/vnd.debian.binary-package">
