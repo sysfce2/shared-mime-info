@@ -926,7 +926,9 @@ helloworld.ch8 application/x-chip8-program ox
 helloworld.8o application/x-chip8-octo-source ox
 helloworld.nx application/x-lowresnx-program ox
 helloworld.tic application/x-tic80-item ox
-helloworld.p8 application/x-pico8-cartridge-source x
+helloworld.p8 application/x-pico8-cartridge-source xoo
+helloworld.p8.rom application/x-pico8-cartridge-rom oxo
+helloworld-tiny.p8.rom application/x-pico8-cartridge-rom ooo
 
 # Models
 cube.igs model/iges

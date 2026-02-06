@@ -2713,6 +2713,16 @@ command to generate the output files.
   <mime-type type="application/x-pico8-cartridge-rom">
     <comment>PICO-8 cartridge binary</comment>
     <sub-class-of type="application/x-executable"/>
+    <magic>
+      <!-- code-only "tiny" format -->
+      <match type="string" offset="0" value=":c:\x00"/>
+      <match type="string" offset="0" value="\x00pxa"/>
+      <!-- Disabled, the offset would be too far into the file.
+        Full .p8.rom format, after raw graphic/sound data.
+      <match type="string" offset="17152" value=":c:\x00"/>
+      <match type="string" offset=""17152 value="\x00pxa"/>
+      -->
+    </magic>
     <glob pattern="*.p8.rom"/>
   </mime-type>
 
