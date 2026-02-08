@@ -1897,6 +1897,22 @@ command to generate the output files.
       <match type="string" value="BLENDER" offset="0"/>
     </magic>
   </mime-type>
+  <mime-type type="application/x-brotli">
+    <comment>Brotli archive</comment>
+    <generic-icon name="package-x-generic"/>
+    <magic>
+      <match type="string" value="\xce\xb2" offset="0"/>
+    </magic>
+    <glob pattern="*.br"/>
+    <alias type="application/brotli"/>
+  </mime-type>
+  <mime-type type="application/x-brotli-compressed-tar">
+    <comment>Tar archive (brotli-compressed)</comment>
+    <generic-icon name="package-x-generic"/>
+    <sub-class-of type="application/x-brotli"/>
+    <glob pattern="*.tar.br"/>
+    <glob pattern="*.tbr"/>
+  </mime-type>
   <mime-type type="application/x-bzdvi">
     <comment>TeX DVI document (bzip2-compressed)</comment>
     <sub-class-of type="application/x-bzip2"/>
