@@ -9750,5 +9750,9 @@ command to generate the output files.
     <sub-class-of type="text/plain"/>
     <generic-icon name="text-x-script"/>
     <glob pattern="*.slint"/>
+    <magic>
+      <match value="std-widgets.slint" type="string" offset="0:256" />
+      <match value="export component" type="string" offset="0:256" />
+    </magic>
   </mime-type>
 </mime-info>

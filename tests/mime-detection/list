@@ -477,6 +477,8 @@ plugins.qmltypes text/x-qml
 text.qmlproject text/x-qml
 # QtiPlot (qti) file
 test.qti application/x-qtiplot
+# Slint file
+app-window.slint text/slint
 # Sass CSS pre-processor file
 test.sass text/x-sass ox
 # Scheme source code
