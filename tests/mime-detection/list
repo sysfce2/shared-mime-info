@@ -745,6 +745,11 @@ test.aaxc audio/vnd.audible.aaxc
 # MPEG-4 files
 mp4v1-video-header.mp4 video/mp4
 mp4v2-video-header.mp4 video/mp4
+mp4-isom-header.mp4 video/mp4
+mp4-iso2-header.mp4 video/mp4
+mp4-iso3-header.mp4 video/mp4
+mp4-iso4-header.mp4 video/mp4
+mp4-iso5-header.mp4 video/mp4
 
 # Disk and CD/DVD images
 iso-file.iso application/vnd.efi.iso oxo

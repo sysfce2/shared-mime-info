@@ -5490,6 +5490,11 @@ command to generate the output files.
     <alias type="video/mp4v-es"/>
     <magic>
       <match type="string" value="ftypisom" offset="4"/>
+      <match type="string" value="ftypiso2" offset="4"/>
+      <match type="string" value="ftypiso3" offset="4"/>
+      <match type="string" value="ftypiso4" offset="4"/>
+      <match type="string" value="ftypiso5" offset="4"/>
+      <match type="string" value="ftypiso6" offset="4"/>
       <match type="string" value="ftypmp41" offset="4"/>
       <match type="string" value="ftypmp42" offset="4"/>
       <match type="string" value="ftypMSNV" offset="4"/>
