@@ -150,6 +150,16 @@ Animated_PNG_example_bouncing_beach_ball.png image/apng x
 input_256.fpx image/vnd.fpx
 # From https://polyhaven.com/a/greenwich_park
 greenwich_park.hdr image/vnd.radiance
+# Taken from https://raw.pixls.us/ (truncated at 1024 bytes)
+dcraw_sample.3fr image/x-hasselblad-3fr ox
+dcraw_sample.erf image/x-epson-erf ox
+dcraw_sample.fff image/x-hasselblad-fff ox
+dcraw_sample.iiq image/x-phaseone-iiq ox
+dcraw_sample.mdc image/x-minolta-mdc ox
+dcraw_sample.mef image/x-mamiya-mef ox
+dcraw_sample.mos image/x-leaf-mos ox
+dcraw_sample.srw image/x-samsung-srw ox
+dcraw_sample.sti image/x-sinar-sti xx
 
 # Documents
 ooo-6.0.doc application/msword
