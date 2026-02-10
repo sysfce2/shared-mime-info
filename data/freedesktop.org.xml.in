@@ -2705,8 +2705,10 @@ command to generate the output files.
     <comment>PICO-8 editable code</comment>
     <sub-class-of type="text/plain"/>
     <magic>
-      <match type="string" offset="0" value="pico-8 cartridge // http://www.pico-8.com\x0a"/>
-      <match type="string" offset="0" value="pico-8 cartridge // http://www.pico-8.com\x0d"/>
+      <match type="string" offset="0" value="pico-8 cartridge // http://www.pico-8.com">
+        <match type="string" offset="41" value="\x0a"/>
+        <match type="string" offset="41" value="\x0d"/>
+      </match>
     </magic>
     <glob pattern="*.p8"/>
   </mime-type>
