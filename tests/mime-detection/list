@@ -13,6 +13,7 @@ test.bmp image/bmp
 test.cel image/x-kiss-cel
 test.dcm application/dicom
 test.eps image/x-eps
+test.dds image/vnd.ms-dds
 testcard_gray.pfm image/x-pfm
 testcard_rgb.pfm image/x-pfm
 testcard_gray.phm image/x-phm

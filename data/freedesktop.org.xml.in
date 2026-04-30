@@ -6321,12 +6321,13 @@ command to generate the output files.
     </magic>
     <glob pattern="*.ora"/>
   </mime-type>
-  <mime-type type="image/x-dds">
-    <comment>DirectDraw surface</comment>
+  <mime-type type="image/vnd.ms-dds">
+    <comment>DirectDraw Surface</comment>
     <magic>
-      <match value="DDS" type="string" offset="0"/>
+      <match value="DDS " type="string" offset="0"/>
     </magic>
     <glob pattern="*.dds"/>
+    <alias type="image/x-dds"/>
   </mime-type>
   <mime-type type="image/x-xcursor">
     <comment>X11 cursor</comment>
