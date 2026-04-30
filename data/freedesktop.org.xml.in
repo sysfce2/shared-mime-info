@@ -9981,6 +9981,14 @@ command to generate the output files.
     </magic>
   </mime-type>
 
+  <mime-type type="image/x-ff">
+    <comment>Farbfeld</comment>
+    <glob pattern="*.ff"/>
+    <magic>
+      <match type="string" value="farbfeld" offset="0"/>
+    </magic>
+  </mime-type>
+
   <mime-type type="text/x-nsis">
     <comment>NSIS Script</comment>
     <acronym>NSIS</acronym>
