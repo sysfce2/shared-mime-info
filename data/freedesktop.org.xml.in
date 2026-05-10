@@ -5129,6 +5129,17 @@ command to generate the output files.
     <glob pattern="*.ssa"/>
     <glob pattern="*.ass"/>
   </mime-type>
+  <mime-type type="text/x-lrc">
+    <comment>Song lyrics</comment>
+    <sub-class-of type="text/plain"/>
+    <magic>
+      <match type="string" value="[00:00.00]" mask="0xff3030ff3030ff3030ff" offset="0:256"/>
+      <match type="string" value="[00:00.000]" mask="0xff3030ff3030ff303030ff" offset="0:256"/>
+      <match type="string" value="[au: instrumental]" offset="0:256"/>
+      <match type="string" value="[au:instrumental]" offset="0:256"/>
+    </magic>
+    <glob pattern="*.lrc"/>
+  </mime-type>
   <mime-type type="text/x-ssh-public-key">
     <comment>OpenSSH public key</comment>
     <sub-class-of type="text/plain"/>
