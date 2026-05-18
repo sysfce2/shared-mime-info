@@ -9913,6 +9913,18 @@ command to generate the output files.
     </magic>
   </mime-type>
 
+  <mime-type type="model/x-brep">
+    <comment>BREP 3D model</comment>
+    <acronym>BREP</acronym>
+    <expanded-acronym>Boundary REPresentation</expanded-acronym>
+    <sub-class-of type="text/plain"/>
+    <generic-icon name="image-x-generic"/>
+    <glob pattern="*.brep"/>
+    <magic>
+      <match type="string" value="DBRep_DrawableShape" offset="0"/>
+    </magic>
+  </mime-type>
+
   <mime-type type="application/x-amf">
     <comment>AMF 3D model</comment>
     <acronym>AMF</acronym>
