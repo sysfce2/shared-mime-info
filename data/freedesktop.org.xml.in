@@ -3911,6 +3911,33 @@ command to generate the output files.
     <acronym>LZMA</acronym>
     <expanded-acronym>Lempel-Ziv-Markov chain-Algorithm</expanded-acronym>
     <generic-icon name="package-x-generic"/>
+    <magic priority="20">
+      <!-- default flags and highest 2 bytes of preset dict size too -->
+      <match type="string" value="\x5d\x00\x00" offset="0">
+        <!-- the little64 at offset 5-12 is the file size, or -1 if unknown -->
+        <match type="string" value="\xff\xff\xff\xff\xff\xff\xff\xff" offset="5">
+          <!-- lowest 2 bytes of preset dict sizes -->
+          <match type="little16" value="0x0004" offset="3"/><!-- -0 -->
+          <match type="little16" value="0x0010" offset="3"/><!-- -1 -->
+          <match type="little16" value="0x0020" offset="3"/><!-- -2 -->
+          <match type="little16" value="0x0040" offset="3"/><!-- -3,-4 -->
+          <match type="little16" value="0x0080" offset="3"/><!-- -5,-6 -->
+          <match type="little16" value="0x0100" offset="3"/><!-- -7 -->
+          <match type="little16" value="0x0200" offset="3"/><!-- -8 -->
+          <match type="little16" value="0x0400" offset="3"/><!-- -9 -->
+        </match>
+        <match type="string" value="\x00" offset="12">
+          <match type="little16" value="0x0004" offset="3"/>
+          <match type="little16" value="0x0010" offset="3"/>
+          <match type="little16" value="0x0020" offset="3"/>
+          <match type="little16" value="0x0040" offset="3"/>
+          <match type="little16" value="0x0080" offset="3"/>
+          <match type="little16" value="0x0100" offset="3"/>
+          <match type="little16" value="0x0200" offset="3"/>
+          <match type="little16" value="0x0400" offset="3"/>
+        </match>
+      </match>
+    </magic>
     <glob pattern="*.lzma"/>
   </mime-type>
   <mime-type type="application/x-lzma-compressed-tar">

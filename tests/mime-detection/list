@@ -660,7 +660,11 @@ copying.cab application/vnd.ms-cab-compressed
 # XZ test case found in the test cases in the sources
 good-1-delta-lzma2.tiff.xz application/x-xz
 # https://bugs.freedesktop.org/show_bug.cgi?id=55254
-sample.png.lzma application/x-lzma ox
+sample.png.lzma application/x-lzma
+# Created using xz "lzma"
+lzma-xz-7.lzma application/x-lzma
+# Created using LZMA Utils "lzma"
+lzma-lzmautils-3.lzma application/x-lzma
 spinboxes-0.1.1-Linux.tar.xz application/x-xz-compressed-tar ox
 # Created using brzip Version 0.2.2
 test.br application/x-brotli
@@ -678,6 +682,8 @@ test.tar.bz2 application/x-bzip2-compressed-tar ox
 test.bz3 application/vnd.bzip3
 # Created using GNU tar 1.34 and bzip3 1.2.2
 test.tar.bz3 application/x-bzip3-compressed-tar ox
+# Created using GNU tar 1.35 and xz 5.8.3 "lzma"
+test.tar.lzma application/x-lzma-compressed-tar ox
 # Created using go-car 0.6.3
 test.v1.car application/vnd.ipld.car ox
 # Created using go-car 2.16.0
