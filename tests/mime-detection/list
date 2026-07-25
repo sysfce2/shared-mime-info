@@ -1116,6 +1116,8 @@ ls application/x-executable x
 libldap-2.4.so.2 application/x-sharedlib oxo
 boardingpass.pkpass application/vnd.apple.pkpass
 boardingpasses.pkpasses application/vnd.apple.pkpasses
+# Extracted from https://gigenet.dl.sourceforge.net/project/refind/0.14.2/refind-bin-0.14.2.zip and truncated to 1 KiB
+refind_aa64.efi application/vnd.microsoft.portable-executable
 # AppImage created by following https://appimage-builder.readthedocs.io/en/latest/intro/tutorial.html
 appimage-demo-qt5-latest-x86_64.AppImage application/vnd.appimage
 # DOS/Windows batch file
