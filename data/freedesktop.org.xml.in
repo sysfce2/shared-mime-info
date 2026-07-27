@@ -1709,8 +1709,9 @@ command to generate the output files.
     <alias type="application/wordperfect"/>
     <generic-icon name="x-office-document"/>
     <magic priority="60">
-      <match type="string" value="WPC" offset="1"/>
-      <!-- <match type="big32" value="0xff575053c405" offset="0"/> -->
+      <match type="string" value="\xffWPC" offset="0">
+        <match type="byte" value="1" offset="8"/>
+      </match>
       <match type="string" value="\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1" offset="0">
         <match type="string" value="\xff\x73\x98\x51\xad\x2d\x20\x02\x19\x37\x00\x00\x92\x96\x79\xcd" offset="592:8192"/>
       </match>
@@ -4759,6 +4760,11 @@ command to generate the output files.
   <mime-type type="application/x-planperfect">
     <comment>PlanPerfect spreadsheet</comment>
     <generic-icon name="x-office-spreadsheet"/>
+    <magic>
+      <match type="string" value="\xffWPC" offset="0">
+        <match type="byte" value="9" offset="8"/>
+      </match>
+    </magic>
     <glob pattern="*.pln"/>
   </mime-type>
   <mime-type type="application/x-pocket-word">

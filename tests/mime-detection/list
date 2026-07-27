@@ -243,9 +243,21 @@ lo7.ppt application/vnd.ms-powerpoint
 # Created with LibreOffice 24.2
 lo24.odm application/vnd.oasis.opendocument.text-master
 lo24.otm application/vnd.oasis.opendocument.text-master-template
+# Created with WordPerfect 5.0
+wp50.wpd application/vnd.wordperfect
+# Created with WordPerfect 6.0
+wp60.wpd application/vnd.wordperfect
+# Created with WordPerfect 7.0
+wp70.wpd application/vnd.wordperfect
+# Created with WordPerfect 8.0
+wp80.wpd application/vnd.wordperfect
 # Created with WordPerfect 9
 regular.wpd application/vnd.wordperfect
 compound.wpd application/vnd.wordperfect
+# Created with PlanPerfect 3.0
+pl30.pln application/x-planperfect
+# Created with PlanPerfect 5.1
+pl51.pln application/x-planperfect
 # Created with Quattro Pro 6
 quattro6.wb2 application/x-quattropro ox
 # Created with Quattro Pro 9
