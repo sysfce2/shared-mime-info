@@ -10345,4 +10345,39 @@ command to generate the output files.
       <match value="@startfiles" type="string" offset="0:128"/>
     </magic>
   </mime-type>
+
+  <mime-type type="application/x-pwsafe3">
+    <comment>Password Safe V3 database</comment>
+    <magic>
+      <match type="string" value="PWS3" offset="0"/>
+    </magic>
+    <glob pattern="*.psafe3"/>
+  </mime-type>
+  <mime-type type="application/x-pwsafe4">
+    <comment>Password Safe V4 database</comment>
+    <glob pattern="*.psafe4"/>
+  </mime-type>
+  <mime-type type="application/x-keepass">
+    <comment>KeePass v1.x KDB database</comment>
+    <acronym>KDB</acronym>
+    <expanded-acronym>Keepass DataBase</expanded-acronym>
+    <magic>
+      <match type="little32" value="0x9AA2D903" offset="0">
+        <match type="little32" value="0xB54BFB65" offset="4"/>
+      </match>
+    </magic>
+    <glob pattern="*.kdb"/>
+  </mime-type>
+  <mime-type type="application/x-keepass2">
+    <comment>KeePass v2.x KDBX database</comment>
+    <acronym>KDBX</acronym>
+    <expanded-acronym>Keepass DataBase eXtensible markup language</expanded-acronym>
+    <magic>
+      <match type="little32" value="0x9AA2D903" offset="0">
+        <match type="little32" value="0xB54BFB67" offset="4"/>
+      </match>
+    </magic>
+    <glob pattern="*.kdbx"/>
+  </mime-type>
+
 </mime-info>
