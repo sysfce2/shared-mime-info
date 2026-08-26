@@ -8457,6 +8457,17 @@ command to generate the output files.
     </magic>
     <glob pattern="*.go"/>
   </mime-type>
+  <mime-type type="text/x-go-mod">
+    <comment>Go module file</comment>
+    <sub-class-of type="text/plain"/>
+    <magic priority="30">
+      <match type="string" value="module " offset="0">
+        <match type="string" value="\ngo 1." offset="8:256"/>
+        <match type="string" value="\ngo 2." offset="8:256"/>
+      </match>
+    </magic>
+    <glob pattern="go.mod"/>
+  </mime-type>
   <mime-type type="text/x-scons">
     <comment>SCons configuration file</comment>
     <sub-class-of type="text/x-python"/>
