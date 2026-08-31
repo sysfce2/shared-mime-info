@@ -3912,29 +3912,31 @@ command to generate the output files.
     <expanded-acronym>Lempel-Ziv-Markov chain-Algorithm</expanded-acronym>
     <generic-icon name="package-x-generic"/>
     <magic priority="20">
-      <!-- default flags and highest 2 bytes of preset dict size too -->
-      <match type="string" value="\x5d\x00\x00" offset="0">
-        <!-- the little64 at offset 5-12 is the file size, or -1 if unknown -->
+      <!-- flags byte: default lc,lp,pb values -->
+      <match type="string" value="\x5d" offset="0">
+        <!-- the little64 at offset 5-12 is the uncompressed file size, or -1 if unknown -->
         <match type="string" value="\xff\xff\xff\xff\xff\xff\xff\xff" offset="5">
-          <!-- lowest 2 bytes of preset dict sizes -->
-          <match type="little16" value="0x0004" offset="3"/><!-- -0 -->
-          <match type="little16" value="0x0010" offset="3"/><!-- -1 -->
-          <match type="little16" value="0x0020" offset="3"/><!-- -2 -->
-          <match type="little16" value="0x0040" offset="3"/><!-- -3,-4 -->
-          <match type="little16" value="0x0080" offset="3"/><!-- -5,-6 -->
-          <match type="little16" value="0x0100" offset="3"/><!-- -7 -->
-          <match type="little16" value="0x0200" offset="3"/><!-- -8 -->
-          <match type="little16" value="0x0400" offset="3"/><!-- -9 -->
+          <!-- dictionary sizes corresponding to the 8 xz compression preset flags -->
+          <match type="little32" value="0x00040000" offset="1"/><!-- -0 -->
+          <match type="little32" value="0x00100000" offset="1"/><!-- -1 -->
+          <match type="little32" value="0x00200000" offset="1"/><!-- -2 -->
+          <match type="little32" value="0x00400000" offset="1"/><!-- -3,-4 -->
+          <match type="little32" value="0x00800000" offset="1"/><!-- -5,-6 -->
+          <match type="little32" value="0x01000000" offset="1"/><!-- -7 -->
+          <match type="little32" value="0x02000000" offset="1"/><!-- -8 -->
+          <match type="little32" value="0x04000000" offset="1"/><!-- -9 -->
         </match>
-        <match type="string" value="\x00" offset="12">
-          <match type="little16" value="0x0004" offset="3"/>
-          <match type="little16" value="0x0010" offset="3"/>
-          <match type="little16" value="0x0020" offset="3"/>
-          <match type="little16" value="0x0040" offset="3"/>
-          <match type="little16" value="0x0080" offset="3"/>
-          <match type="little16" value="0x0100" offset="3"/>
-          <match type="little16" value="0x0200" offset="3"/>
-          <match type="little16" value="0x0400" offset="3"/>
+        <!-- known size: its MSB is zero for all values up to ~72.06 PiB -->
+        <match type="byte" value="0" offset="12">
+          <!-- dictionary sizes -->
+          <match type="little32" value="0x00040000" offset="1"/>
+          <match type="little32" value="0x00100000" offset="1"/>
+          <match type="little32" value="0x00200000" offset="1"/>
+          <match type="little32" value="0x00400000" offset="1"/>
+          <match type="little32" value="0x00800000" offset="1"/>
+          <match type="little32" value="0x01000000" offset="1"/>
+          <match type="little32" value="0x02000000" offset="1"/>
+          <match type="little32" value="0x04000000" offset="1"/>
         </match>
       </match>
     </magic>
