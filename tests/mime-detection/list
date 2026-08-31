@@ -1478,3 +1478,9 @@ pwsafe-v4.psafe4 application/x-pwsafe4 ox
 keepass-v1.x.kdb application/x-keepass
 keepass-v2.34.kdbx application/x-keepass2
 keepass-v2.x.kdbx application/x-keepass2
+
+test_bin.cpio application/x-cpio
+test_odc.cpio application/x-cpio
+test_newc.cpio application/x-sv4cpio x
+test_crc.cpio application/x-sv4crc x
+test_not_cpio.sha1 text/plain x

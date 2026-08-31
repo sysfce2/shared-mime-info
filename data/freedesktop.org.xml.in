@@ -2293,11 +2293,13 @@ command to generate the output files.
     <comment>CPIO archive</comment>
     <generic-icon name="package-x-generic"/>
     <magic priority="60">
-      <match type="host16" value="070707" offset="0"/>
-      <match type="string" value="070701" offset="0"/>
-      <match type="string" value="070702" offset="0"/>
-      <match type="host16" value="0143561" offset="0"/>
+      <match type="little16" value="070707" offset="0"/>
+      <match type="big16" value="070707" offset="0"/>
+      <match type="string" value="070707" offset="0">
+        <match type="string" value="000000000000000000" mask="0xf8f8f8f8f8f8f8f8f8f8f8f8fef8f8f8f8f8" offset="6"/>
+      </match>
     </magic>
+    <!-- See application/x-sv4cpio, application/x-sv4crc sub-classes for additional magic values -->
     <glob pattern="*.cpio"/>
   </mime-type>
   <mime-type type="application/x-cpio-compressed">
@@ -5383,13 +5385,27 @@ command to generate the output files.
   </mime-type>
   <mime-type type="application/x-sv4cpio">
     <comment>SV4 CPIO archive</comment>
+    <sub-class-of type="application/x-cpio"/>
     <generic-icon name="package-x-generic"/>
+    <magic priority="60">
+      <match type="string" value="070701" offset="0">
+        <match type="string" value="00000000" mask="0xffffffff80808080" offset="14"/>
+      </match>
+    </magic>
     <glob pattern="*.sv4cpio"/>
+    <glob pattern="*.cpio" weight="40"/>
   </mime-type>
   <mime-type type="application/x-sv4crc">
     <comment>SV4 CPIO archive (with CRC)</comment>
+    <sub-class-of type="application/x-cpio"/>
+    <magic priority="60">
+      <match type="string" value="070702" offset="0">
+        <match type="string" value="00000000" mask="0xffffffff80808080" offset="14"/>
+      </match>
+    </magic>
     <generic-icon name="package-x-generic"/>
     <glob pattern="*.sv4crc"/>
+    <glob pattern="*.cpio" weight="40"/>
   </mime-type>
   <mime-type type="application/x-tar">
     <comment>Tar archive</comment>
