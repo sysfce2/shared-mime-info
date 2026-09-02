@@ -6226,6 +6226,58 @@ command to generate the output files.
     </magic>
     <glob pattern="*.wav"/>
   </mime-type>
+  <mime-type type="audio/x-sf1">
+    <comment>SoundFont 1 audio</comment>
+    <sub-class-of type="application/x-riff"/>
+    <magic>
+      <match type="string" value="RIFF" offset="0">
+        <match type="string" value="sfbk" offset="8">
+          <match type="string" value="LIST" offset="12">
+            <match type="string" value="INFOifil" offset="20">
+              <match type="string" value="\x01\x00" offset="32"/>
+            </match>
+          </match>
+        </match>
+      </match>
+    </magic>
+    <glob pattern="*.sbk"/>
+  </mime-type>
+  <mime-type type="audio/soundfont">
+    <comment>SoundFont 2 audio</comment>
+    <alias type="audio/x-soundfont"/>
+    <alias type="audio/x-sf2"/>
+    <alias type="application/x-sf2"/>
+    <sub-class-of type="application/x-riff"/>
+    <magic>
+      <match type="string" value="RIFF" offset="0">
+        <match type="string" value="sfbk" offset="8">
+          <match type="string" value="LIST" offset="12">
+            <match type="string" value="INFOifil" offset="20">
+              <match type="string" value="\x02\x00" offset="32"/>
+            </match>
+          </match>
+        </match>
+      </match>
+    </magic>
+    <glob pattern="*.sf2"/>
+  </mime-type>
+  <mime-type type="audio/x-sf3">
+    <comment>SoundFont 3 audio</comment>
+    <alias type="application/x-sf3"/>
+    <sub-class-of type="application/x-riff"/>
+    <magic>
+      <match type="string" value="RIFF" offset="0">
+        <match type="string" value="sfbk" offset="8">
+          <match type="string" value="LIST" offset="12">
+            <match type="string" value="INFOifil" offset="20">
+              <match type="string" value="\x03\x00" offset="32"/>
+            </match>
+          </match>
+        </match>
+      </match>
+    </magic>
+    <glob pattern="*.sf3"/>
+  </mime-type>
   <mime-type type="audio/x-xi">
     <comment>FastTracker II instrument</comment>
     <magic>
