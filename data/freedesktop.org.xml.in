@@ -2952,6 +2952,22 @@ command to generate the output files.
       <match type="little16" value="0603" offset="0"/>
     </magic>
   </mime-type>
+  <mime-type type="application/x-linux-kernel">
+    <comment>Linux kernel</comment>
+    <sub-class-of type="application/x-executable"/>
+    <generic-icon name="application-x-executable"/>
+    <magic>
+      <match type="string" value="HdrS" offset="514"/><!-- x86 -->
+      <match type="little32" value="0x016f2818" offset="36"/><!-- aarch32 -->
+      <match type="big32" value="0x016f2818" offset="36"/><!-- aarch32 -->
+      <match type="string" value="ARMd" offset="56"/><!-- aarch64 -->
+      <match type="string" value="RSC\x05" offset="56"/><!-- RISC-V -->
+    </magic>
+    <glob pattern="bzImage*" case-sensitive="true"/>
+    <glob pattern="zImage*" case-sensitive="true"/>
+    <glob pattern="vmlinux*" case-sensitive="true"/>
+    <glob pattern="vmlinuz*" case-sensitive="true"/>
+  </mime-type>
   <mime-type type="application/x-fluid">
     <comment>FLTK Fluid file</comment>
     <acronym>FLTK</acronym>
@@ -4192,6 +4208,35 @@ command to generate the output files.
     <glob pattern="*.efi"/>
     <glob pattern="*.ocx"/>
     <glob pattern="*.sys"/>
+  </mime-type>
+  <mime-type type="application/x-efi-linux-kernel">
+    <comment>Linux kernel with EFI stub</comment>
+    <acronym>EFI</acronym>
+    <expanded-acronym>Extensible Firmware Interface</expanded-acronym>
+    <sub-class-of type="application/vnd.microsoft.portable-executable"/>
+    <sub-class-of type="application/x-linux-kernel"/>
+    <generic-icon name="application-x-executable"/>
+    <magic priority="95">
+      <match type="string" value="MZ" offset="0">
+        <match type="string" value="PE\0\0" offset="64">
+          <match type="little32" value="0x818223cd" offset="56">
+            <match type="string" value="HdrS" offset="514"/><!-- x86 -->
+            <match type="little16" value="0x6264" offset="68"/><!-- LoongArch -->
+          </match>
+          <match type="little32" value="0x016f2818" offset="36"/><!-- aarch32 -->
+          <match type="big32" value="0x016f2818" offset="36"/><!-- aarch32 -->
+          <match type="string" value="ARMd" offset="56"/><!-- aarch64 -->
+          <match type="string" value="RSC\x05" offset="56"/><!-- RISC-V -->
+        </match>
+      </match>
+    </magic>
+    <glob pattern="vmlinux.efi"/>
+    <glob pattern="vmlinuz.efi"/>
+    <glob pattern="*.efi" weight="40"/>
+    <glob pattern="bzImage*" case-sensitive="true" weight="40"/>
+    <glob pattern="zImage*" case-sensitive="true" weight="40"/>
+    <glob pattern="vmlinux*" case-sensitive="true" weight="40"/>
+    <glob pattern="vmlinuz*" case-sensitive="true" weight="40"/>
   </mime-type>
   <mime-type type="application/x-ms-pdb">
     <comment>Windows program database</comment>

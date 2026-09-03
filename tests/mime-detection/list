@@ -1118,6 +1118,22 @@ boardingpass.pkpass application/vnd.apple.pkpass
 boardingpasses.pkpasses application/vnd.apple.pkpasses
 # Extracted from https://gigenet.dl.sourceforge.net/project/refind/0.14.2/refind-bin-0.14.2.zip and truncated to 1 KiB
 refind_aa64.efi application/vnd.microsoft.portable-executable
+# Linux kernels built with `make tinyconfig` and CONFIG_EFI_STUB=n, truncated to 1 KiB
+vmlinux application/x-linux-kernel
+vmlinux-7.1.0-1-arm64 application/x-linux-kernel
+vmlinux-7.1.0-1-loongarch application/x-linux-kernel ox
+vmlinuz application/x-linux-kernel
+vmlinuz-7.1.0-1-amd64 application/x-linux-kernel
+vmlinuz-7.1.0-1-arm application/x-linux-kernel
+vmlinuz-7.1.0-1-riscv application/x-linux-kernel
+# Linux kernels built with `make tinyconfig` and CONFIG_EFI_STUB=y, truncated to 1 KiB
+vmlinux.efi application/x-efi-linux-kernel
+vmlinux-7.1.0-1-arm64.efi application/x-efi-linux-kernel x
+vmlinux-7.1.0-1-loongarch.efi application/x-efi-linux-kernel x
+vmlinuz.efi application/x-efi-linux-kernel
+vmlinuz-7.1.0-1-amd64.efi application/x-efi-linux-kernel x
+vmlinuz-7.1.0-1-arm.efi application/x-efi-linux-kernel x
+vmlinuz-7.1.0-1-riscv.efi application/x-efi-linux-kernel x
 # AppImage created by following https://appimage-builder.readthedocs.io/en/latest/intro/tutorial.html
 appimage-demo-qt5-latest-x86_64.AppImage application/vnd.appimage
 # DOS/Windows batch file
