@@ -84,6 +84,11 @@ command to generate the output files.
     <generic-icon name="application-x-executable"/>
     <glob pattern="*.a26"/>
   </mime-type>
+  <mime-type type="application/x-atari-5200-rom">
+    <comment>Atari 5200 ROM</comment>
+    <generic-icon name="application-x-executable"/>
+    <glob pattern="*.a52"/>
+  </mime-type>
   <mime-type type="application/x-atari-7800-rom">
     <comment>Atari 7800 ROM</comment>
     <generic-icon name="application-x-executable"/>
