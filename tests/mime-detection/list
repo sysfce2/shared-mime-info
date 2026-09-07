@@ -1339,6 +1339,9 @@ test.mrpack application/x-modrinth-modpack+zip ox
 # https://eris.codeberg.page/eer/linkfile.xml
 test.eris application/x-eris-link+cbor
 
+# Linux swap file
+swapfile-test application/x-linux-swap x
+
 # Bourne-compatible shell scripts
 shscript.sh text/x-shellscript
 bashscript.sh text/x-shellscript

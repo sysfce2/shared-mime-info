@@ -3077,6 +3077,24 @@ command to generate the output files.
     <generic-icon name="font-x-generic"/>
     <glob pattern="*.psf.gz"/>
   </mime-type>
+  <mime-type type="application/x-linux-swap">
+    <comment>Linux swap file</comment>
+    <magic>
+    <!-- Although we want to include offsets for 32k and 64k page sizes,
+     the identification buffer size used by Qt (at least) is limited to
+     16k from the start of the file, so we can only include offsets from
+     4k, 8k and 16k.-->
+      <!-- 4KB page header -->
+      <match type="string" offset="4086" value="SWAPSPACE2"/> <!-- v1 -->
+      <match type="string" offset="4086" value="SWAP-SPACE"/> <!-- v0 -->
+      <!-- 8KB page header -->
+      <match type="string" offset="8182" value="SWAPSPACE2"/> <!-- v1 -->
+      <match type="string" offset="8182" value="SWAP-SPACE"/> <!-- v0 -->
+      <!-- 16KB page header -->
+      <match type="string" offset="16374" value="SWAPSPACE2"/> <!-- v1 -->
+      <match type="string" offset="16374" value="SWAP-SPACE"/> <!-- v0 -->
+    </magic>
+  </mime-type>
   <mime-type type="application/x-font-pcf">
     <comment>PCF font</comment>
     <acronym>PCF</acronym>
